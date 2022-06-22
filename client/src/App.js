@@ -2,7 +2,6 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/footer";
-
 import Main from "./components/main";
 import Surfbreak from "./components/surfbreak";
 import Surfboard from "./components/surfboard";
