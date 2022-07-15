@@ -2,22 +2,23 @@
   background: #293232;
 }
 
-* {
-  color: #293232;
-}
-.container {
+.main-container {
+  margin: 0 2rem;
 }
 .main-title {
   color: white;
   background-color: #293232;
 }
 .description-and-image {
-  background-color: #293232;
+  border: 0.05rem solid black;
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
+  margin-bottom: 4rem;
 }
 
 .main-description {
+  font-size: 1rem;
+  padding: 0.5rem;
   color: white;
   background-color: #293232;
 }
@@ -26,8 +27,39 @@
   background-color: #293232;
 }
 .pegasus-bay-image {
-  max-width: 100%;
+  margin: 0.5rem;
+  max-width: 90%;
+  align-self: center;
+  border-radius: 0.25rem;
 }
 
-.breaks-grid {
+/* Single Surfbreaks Grid */
+
+.surfbreaks-grid-container {
+  border: 0.01rem solid black;
+}
+
+.surfbreaks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  padding: 0rem;
+}
+
+.single-surfbreak {
+  display: grid;
+  grid-template-rows: 1fr 0.1fr 0.5fr 0.5fr;
+  padding: 0 0.6rem;
+}
+
+.surfbreaks-image {
+  max-width: 100%;
+  border-radius: 0.25rem;
+}
+
+.surfbreaks-title {
+  color: white;
+}
+.surfbreaks-blurb {
+  color: white;
 }
