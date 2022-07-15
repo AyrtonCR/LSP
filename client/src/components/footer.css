@@ -1,0 +1,44 @@
+.footer {
+  margin-top: 20rem;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+}
+.navbar-container-footer {
+  background: linear-gradient(
+    180deg,
+    rgba(41, 50, 50, 1) 0%,
+    rgba(57, 91, 98, 1) 60%,
+    rgba(17, 231, 231, 1) 100%
+  );
+  justify-content: left;
+  align-items: left;
+}
+.footer a:active,
+.footer a:hover {
+  color: #eb212e;
+  text-decoration: underline;
+}
+
+.footer-title {
+  text-decoration: none;
+}
+
+.created-by {
+  color: white;
+}
+
+@media only screen and (min-width: 30rem) {
+}
+
+@media only screen and (min-width: 40rem) {
+  .navbar-container-footer {
+    display: grid;
+    justify-content: left;
+  }
+  .navbar-item-footer {
+    font-size: 0.9rem;
+  }
+}

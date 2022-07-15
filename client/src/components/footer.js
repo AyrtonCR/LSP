@@ -1,9 +1,16 @@
-const Footer = () => {
+import "./footer.css";
+
+const footer = () => {
   return (
-    <div className="container">
-      <p>Created By duffaku</p>
+    <div>
+      <header className="footer">
+        <div className="navbar-container-footer">
+          <li className="navbar-item-footer">
+            <p className="created-by">Created By Some Dude</p>
+          </li>
+        </div>
+      </header>
     </div>
   );
 };
-
-export default Footer;
+export default footer;

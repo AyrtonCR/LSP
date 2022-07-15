@@ -2,7 +2,12 @@
   width: 100%;
 }
 .navbar-container {
-  background: rgb(46, 74, 216);
+  background: linear-gradient(
+    180deg,
+    rgba(17, 231, 231, 1) 0%,
+    rgba(57, 91, 98, 1) 60%,
+    rgba(41, 50, 50, 1) 100%
+  );
 }
 .header a:active,
 .header a:hover {

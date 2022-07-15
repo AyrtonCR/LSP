@@ -1,0 +1,33 @@
+:root {
+  background: #293232;
+}
+
+* {
+  color: #293232;
+}
+.container {
+}
+.main-title {
+  color: white;
+  background-color: #293232;
+}
+.description-and-image {
+  background-color: #293232;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+}
+
+.main-description {
+  color: white;
+  background-color: #293232;
+}
+.main-links {
+  color: white;
+  background-color: #293232;
+}
+.pegasus-bay-image {
+  max-width: 100%;
+}
+
+.breaks-grid {
+}
