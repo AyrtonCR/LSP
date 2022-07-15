@@ -2,6 +2,9 @@
   "name": "local-surf-project",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "Ayrton Campbell",
+  "license": "ISC",
+  "description": "A project I am building in my spare time to display information about my hometown",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/server.js"
@@ -17,9 +20,5 @@
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
     "supertest": "^6.2.3"
-  },
-  "keywords": [],
-  "author": "Ayrton Campbell",
-  "license": "ISC",
-  "description": ""
+  }
 }
