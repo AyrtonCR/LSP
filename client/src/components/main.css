@@ -6,19 +6,21 @@
   margin: 0 2rem;
 }
 .main-title {
+  margin-left: 4rem;
   color: white;
   background-color: #293232;
 }
 .description-and-image {
-  border: 0.05rem solid black;
   display: grid;
+  gap: 2rem;
   grid-template-columns: 1.3fr 0.7fr;
   margin-bottom: 4rem;
 }
 
 .main-description {
+  box-shadow: 0.01rem 0.01rem 0.3rem 0.3rem rgb(215, 215, 215);
+  padding: 1rem;
   font-size: 1rem;
-  padding: 0.5rem;
   color: white;
   background-color: #293232;
 }
@@ -27,6 +29,8 @@
   background-color: #293232;
 }
 .pegasus-bay-image {
+  box-shadow: 0.01rem 0.01rem 0.3rem 0.3rem rgb(215, 215, 215);
+  padding: 1rem;
   margin: 0.5rem;
   max-width: 90%;
   align-self: center;
