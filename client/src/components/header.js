@@ -27,7 +27,7 @@ const header = () => {
                 className="nav-link"
                 element={<Surfbreak />}
               >
-                Breaks
+                <strong>Breaks</strong>
               </Link>
             </li>
             <li className="navbar-item">
@@ -36,7 +36,7 @@ const header = () => {
                 className="nav-link"
                 element={<Surfboard />}
               >
-                Boards
+                <strong> Boards</strong>
               </Link>
             </li>
             <li className="navbar-item">
@@ -45,27 +45,27 @@ const header = () => {
                 className="nav-link"
                 element={<Forecasts />}
               >
-                Forecasts
+                <strong>Forecasts</strong>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/forum" className="nav-link" element={<Forum />}>
-                Forum
+                <strong>Forum</strong>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/links" className="nav-link" element={<Links />}>
-                Links
+                <strong>Links</strong>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/about" className="nav-link" element={<About />}>
-                About
+                <strong> About</strong>
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/contact" className="nav-link" element={<Contact />}>
-                Contact
+                <strong>Contact</strong>
               </Link>
             </li>
           </ul>

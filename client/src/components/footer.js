@@ -6,7 +6,11 @@ const footer = () => {
       <header className="footer">
         <div className="navbar-container-footer">
           <li className="navbar-item-footer">
-            <p className="created-by">Created By Some Dude</p>
+            <p className="created-by">
+              <strong>
+                Created By <em>Some Dude</em>
+              </strong>
+            </p>
           </li>
         </div>
       </header>

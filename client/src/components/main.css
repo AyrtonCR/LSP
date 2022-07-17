@@ -1,69 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,300&display=swap");
+
 :root {
-  background: #293232;
+  background: linear-gradient(
+    180deg,
+    rgb(223, 186, 117) 0%,
+    rgb(223, 186, 117) 60%,
+    rgb(236, 142, 59) 100%
+  );
 }
 
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
 .main-container {
-  margin: 0 2rem;
+  margin-top: 2rem;
 }
 .main-title {
-  margin-left: 4rem;
-  color: white;
-  background-color: #293232;
+  font-size: 2.2rem;
+  text-shadow: 0.12rem 0.12rem 2rem;
+  margin-left: 8rem;
+  margin-bottom: 5rem;
+  color: black;
+  background-color: rgb(223, 186, 117);
 }
 .description-and-image {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: 1.3fr 0.7fr;
-  margin-bottom: 4rem;
+  position: relative;
+  color: black;
+  margin-bottom: 3rem;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
 }
 
 .main-description {
-  box-shadow: 0.01rem 0.01rem 0.3rem 0.3rem rgb(215, 215, 215);
+  box-shadow: 0 0 2rem -0.1rem rgb(223, 186, 117);
+  text-shadow: 0.12rem 0.12rem 2.5rem;
+  border-radius: 0.25rem;
+  margin-left: 1rem;
   padding: 1rem;
   font-size: 1rem;
-  color: white;
-  background-color: #293232;
+  color: whitesmoke;
+
+  width: 40rem;
 }
 .main-links {
-  color: white;
+  color: black;
   background-color: #293232;
 }
 .pegasus-bay-image {
-  box-shadow: 0.01rem 0.01rem 0.3rem 0.3rem rgb(215, 215, 215);
-  padding: 1rem;
-  margin: 0.5rem;
-  max-width: 90%;
+  box-shadow: 0 0 2rem -0.1rem black;
+  border-radius: 0.1rem;
+  max-width: 100%;
   align-self: center;
-  border-radius: 0.25rem;
 }
 
 /* Single Surfbreaks Grid */
 
 .surfbreaks-grid-container {
-  border: 0.01rem solid black;
+  box-shadow: 0 0 2rem -0.1rem black;
+  border-radius: 0.25rem;
+  margin: 0 12rem;
 }
 
 .surfbreaks-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem;
-  padding: 0rem;
+  padding: 0.5rem;
 }
 
 .single-surfbreak {
   display: grid;
-  grid-template-rows: 1fr 0.1fr 0.5fr 0.5fr;
-  padding: 0 0.6rem;
+  grid-template-rows: 0.5fr 0.2fr 0.5fr 0.1fr;
+  padding: 1rem;
+  border: 0.05rem solid black;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1rem -0.1rem black;
 }
 
 .surfbreaks-image {
+  box-shadow: 0 0 1rem -0.1rem black;
+  border: 0.1rem solid black;
   max-width: 100%;
   border-radius: 0.25rem;
 }
 
 .surfbreaks-title {
-  color: white;
+  color: black;
 }
 .surfbreaks-blurb {
-  color: white;
+  color: black;
+}
+
+.button-grid {
+}
+
+.button {
+  margin: 0 1rem 0 0;
+  padding: 0.3rem 0.9rem;
+  background: none;
+  border: 0.01rem solid black;
+  font-size: 0.9rem;
+}
+
+.button a:active,
+.button a:hover {
+  color: #eb212e;
+  text-decoration: underline;
 }
