@@ -27,7 +27,7 @@ const header = () => {
                 className="nav-link"
                 element={<Surfbreak />}
               >
-                <strong>Breaks</strong>
+                <strong>The Breaks</strong>
               </Link>
             </li>
             <li className="navbar-item">

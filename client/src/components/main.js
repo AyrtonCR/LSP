@@ -35,13 +35,12 @@ const Main = () => {
           <img className="pegasus-bay-image" src={Wall_1} alt="" />
           <div className="top-left">
             <h3 className="main-description">
-              Welcome surfers and swell-enthusiasts, here we will be displaying
-              some of the most well known and occasionally epic surfbreaks
-              around Christchurch! Here you can find some information about how
-              the breaks hold swell of different sizes, what boards are best to
-              take out, a little info about the forecasts as well as some tips
-              I've learnt over the years that might help you get some solid
-              waves.
+              Welcome surfers and swell-enthusiasts! Here will be displayed some
+              of the most well known and occasionally epic surfbreaks around
+              Christchurch. You can find some information about how the breaks
+              work, what boards are best to take out, a little info about the
+              forecasts as well as some tips I've learnt over the years that
+              might help you get some solid waves.
             </h3>
           </div>
         </div>
@@ -68,12 +67,12 @@ const Main = () => {
                   </p>
                   <div className="button-grid">
                     <Link to={`/surfbreaks/${surfbreak.id}`}>
-                      <button className="button">
+                      <button className="main-buttons">
                         <strong>Learn More</strong>
                       </button>
                     </Link>
                     <Link to={`/surfbreaks/${surfbreak.id}`}>
-                      <button className="button">
+                      <button className="main-buttons">
                         <strong>Check Forecast</strong>
                       </button>
                     </Link>

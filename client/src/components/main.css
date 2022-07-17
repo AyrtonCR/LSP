@@ -99,7 +99,7 @@
 .button-grid {
 }
 
-.button {
+.main-buttons {
   margin: 0 1rem 0 0;
   padding: 0.3rem 0.9rem;
   background: none;
@@ -107,8 +107,8 @@
   font-size: 0.9rem;
 }
 
-.button a:active,
-.button a:hover {
+.main-buttons a:active,
+.main-buttons a:hover {
   color: #eb212e;
   text-decoration: underline;
 }
