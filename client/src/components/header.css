@@ -1,72 +1,61 @@
-.header {
-  width: 100%;
+@media only screen and (min-width: 22.5rem) {
+  .nav {
+    display: none;
+  }
 }
-.navbar-container {
-  background: linear-gradient(
-    180deg,
-    rgb(226, 142, 68) 0%,
-    rgb(223, 186, 117) 60%,
-    rgb(223, 186, 117) 100%
-  );
-}
-.header a:active,
-.header a:hover {
-  color: #eb212e;
-  text-decoration: underline;
-}
-
-.header-title {
-  text-decoration: none;
-}
-
-.logo {
-  width: 1.8rem;
-}
-.navbar-item {
-  text-align: center;
-  padding: 0.7rem;
-  align-self: center;
-}
-.nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 2rem;
-  width: 100%;
-  list-style-type: none;
-  padding: 1rem;
-  white-space: nowrap;
-  text-align: center;
-  margin: 0;
-  padding: 0rem;
-  list-style-type: none;
-}
-
-.nav-link {
-  font-size: 1rem;
-  text-shadow: 0.12rem 0.12rem 2.5rem;
-  white-space: nowrap;
-  color: black;
-  text-decoration: none;
-}
-
 @media only screen and (min-width: 30rem) {
 }
 
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 50rem) {
   .header {
-    align-items: center;
-  }
-  .nav {
     width: 100%;
   }
   .navbar-container {
-    display: grid;
-    justify-content: center;
+    background: linear-gradient(
+      180deg,
+      rgb(226, 142, 68) 0%,
+      rgb(223, 186, 117) 60%,
+      rgb(223, 186, 117) 100%
+    );
   }
-  .navbar-item {
-    font-size: 0.9rem;
+  .header a:active,
+  .header a:hover {
+    color: #eb212e;
+    text-decoration: underline;
   }
+
+  .header-title {
+    text-decoration: none;
+  }
+
   .logo {
     width: 1.8rem;
+  }
+  .navbar-item {
+    text-align: center;
+    padding: 0.7rem;
+    align-self: center;
+  }
+  .nav {
+    display: contents;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    list-style-type: none;
+    padding: 1rem;
+    white-space: nowrap;
+    text-align: center;
+    margin: 0;
+    padding: 0rem;
+    list-style-type: none;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    text-shadow: 0.12rem 0.12rem 2.5rem;
+    white-space: nowrap;
+    color: black;
+    text-decoration: none;
   }
 }

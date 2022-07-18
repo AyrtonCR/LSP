@@ -32,7 +32,7 @@ const Main = () => {
           </em>
         </h1>
         <div className="description-and-image">
-          <img className="pegasus-bay-image" src={Wall_1} alt="" />
+          <img className="new-brighton-image" src={Wall_1} alt="" />
           <div className="top-left">
             <h3 className="main-description">
               Welcome surfers and swell-enthusiasts! Here will be displayed some
