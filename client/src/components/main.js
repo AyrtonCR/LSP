@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Peg from "../utils/pegasus_bay.jpg";
+import LowerNavBar from "./lowerNavBar";
 import Wall_1 from "../utils/wallpaper1.jpg";
 import Wall_2 from "../utils/wallpaper2.jpg";
 import Wall_3 from "../utils/wallpaper3.jpg";
@@ -81,6 +82,9 @@ const Main = () => {
               );
             })}
           </ul>
+        </div>
+        <div className="lowerNavBar">
+          <LowerNavBar />
         </div>
       </div>
     </>
