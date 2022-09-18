@@ -17,7 +17,7 @@ const Surfboard = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div className={styles.surfboardGridContainer}>
         <h2 className={styles.surfboardTitle}>Surfboards</h2>
         <ul className={styles.singleSurfboardGrid}>

@@ -1,7 +1,6 @@
 import "./header.css";
 import { Link } from "react-router-dom";
 import Main from "./main";
-import Surfbreak from "./surfbreak";
 import Surfboard from "./surfboard";
 import Forum from "./forum";
 import About from "./about";
@@ -19,15 +18,6 @@ const header = () => {
             <li className="navbar-item">
               <Link to="/" className="header-title" element={<Main />}>
                 <img className="logo" src={Logo} alt="" width="300" />
-              </Link>
-            </li>
-            <li className="navbar-item">
-              <Link
-                to="/surfbreak"
-                className="nav-link"
-                element={<Surfbreak />}
-              >
-                <strong>The Breaks</strong>
               </Link>
             </li>
             <li className="navbar-item">

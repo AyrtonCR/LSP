@@ -1,0 +1,50 @@
+.forecastsContainer {
+  padding: 1rem;
+}
+
+.forecastMainName {
+  text-align: center;
+}
+.forecastsGrid {
+  border: 0.1rem solid black;
+  padding: 1rem;
+}
+
+.forecastsSingleGrid {
+  border: 0.1rem solid black;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.forecastsSingleItem {
+  list-style-type: none;
+  border: 0.1rem solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+}
+
+.forecastsItemGridPart1 {
+  border: 0.1rem solid black;
+  display: grid;
+  grid-template-rows: 0.4fr 1fr;
+}
+
+.forecastName {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.forecastsImage {
+  max-width: 100%;
+}
+
+.forecastsItemGridPart2 {
+}
+
+.forecastsLink {
+}

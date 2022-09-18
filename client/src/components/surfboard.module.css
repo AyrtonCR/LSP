@@ -50,6 +50,7 @@
   display: grid;
   align-self: center;
   max-width: 100%;
+  max-height: 18rem;
   box-shadow: 0 0 1rem -0.1rem black;
   border: 0.1rem solid black;
   border-radius: 0.25rem;
@@ -57,4 +58,16 @@
 
 .surfboardContainer {
   border: 0.1rem solid black;
+}
+
+@media only screen and (min-width: 70rem) {
+  .container {
+    margin: 0 10rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .container {
+    margin: 0 16rem;
+  }
 }

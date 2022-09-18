@@ -1,0 +1,38 @@
+[
+  {
+    "forecasts_name": "New Brighton Beach",
+    "forecasts_image": "https://www.nzsurfjournal.com/wp-content/uploads/2020/03/20180920_Light_0309.jpg",
+    "forecasts_info_1": "https://magicseaweed.com/New-Brighton-Beach-Surf-Report/114/",
+    "forecasts_info_2": "https://www.surf-forecast.com/breaks/New-Brighton-Beach/forecasts/latest"
+  },
+  {
+    "forecasts_name": "Sumner Beach",
+    "forecasts_image": "https://www.nzsurfjournal.com/wp-content/uploads/2019/09/chris_malone__29F7252.jpg",
+    "forecasts_info_1": "https://magicseaweed.com/Scarborough-Surf-Report/6867/",
+    "forecasts_info_2": "https://www.surf-forecast.com/breaks/Scarborough_1/forecasts/latest/six_day"
+  },
+  {
+    "forecasts_name": "Taylors Mistake Beach",
+    "forecasts_image": "https://assets.bonappetit.com/photos/57d6cddbc204478524d87354/master/w_1200,c_limit/new-zealand-surfing.jpg",
+    "forecasts_info_1": "https://magicseaweed.com/Taylors-Mistake-Surf-Report/7131/",
+    "forecasts_info_2": "https://www.surf-forecast.com/breaks/Taylors-Mistake/forecasts/latest"
+  },
+  {
+    "forecasts_name": "Waikuku Beach",
+    "forecasts_image": "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2018/07/wave-1246560_1280.jpg",
+    "forecasts_info_1": "https://magicseaweed.com/Waikuku-Surf-Report/6884/",
+    "forecasts_info_2": "https://www.surf-forecast.com/breaks/Waikuku-Beach/forecasts/latest/six_day"
+  },
+  {
+    "forecasts_name": "Amberly Beach",
+    "forecasts_image": "https://i0.wp.com/beachmeter.com/wp-content/uploads/2018/09/Kahutara-sunset-surfing-new-zealand.jpg?resize=670%2C414",
+    "forecasts_info_1": "https://magicseaweed.com/Amberley-Beach-Surf-Report/6876/",
+    "forecasts_info_2": "https://www.surf-forecast.com/breaks/Amberley-Beach/forecasts/latest/six_day"
+  },
+  {
+    "forecasts_name": "Magnet Bay",
+    "forecasts_image": "https://i.pinimg.com/originals/6d/76/2a/6d762a0a421a8021413bcf86004f5195.jpg",
+    "forecasts_info_1": "https://magicseaweed.com/Magnet-Bay-Surf-Report/4075/",
+    "forecasts_info_2": "https://www.surf-forecast.com/breaks/Magnet-Bay/forecasts/latest/six_day"
+  }
+]

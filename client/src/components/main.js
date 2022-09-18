@@ -3,11 +3,6 @@ import React, { useState, useEffect } from "react";
 import Peg from "../utils/pegasus_bay.jpg";
 import LowerNavBar from "./lowerNavBar";
 import Wall_1 from "../utils/wallpaper1.jpg";
-import Wall_2 from "../utils/wallpaper2.jpg";
-import Wall_3 from "../utils/wallpaper3.jpg";
-import Wall_4 from "../utils/wallpaper4.jpg";
-import Wall_5 from "../utils/wallpaper5.jpg";
-import Wall_6 from "../utils/wallpaper6.jpg";
 
 import "./main.css";
 
