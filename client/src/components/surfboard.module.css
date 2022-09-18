@@ -1,0 +1,60 @@
+.surfboardGridContainer {
+  padding: 1rem;
+  margin: 1rem;
+}
+.surfboardTitle {
+  text-align: center;
+}
+
+.singleSurfboardGrid {
+  border: 0.1rem solid black;
+  padding: 0.5rem;
+  box-shadow: 0 0 2rem -0.1rem black;
+  border: 0.1rem solid black;
+  border-radius: 0.25rem;
+}
+
+.singleSurfboard {
+  display: grid;
+  border-right: 0.1rem solid black;
+  border-top: 0.1rem solid black;
+  border-left: 0.1rem solid black;
+  grid-template-columns: 0.5fr 1fr;
+  margin-top: 1rem 0;
+  padding: 1rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.surfboardDescription {
+  display: grid;
+  border-right: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
+  border-left: 0.1rem solid black;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  margin: 0rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+.surfboardStrength {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  font-size: 1rem;
+}
+.surfboardsImage {
+  display: grid;
+  align-self: center;
+  max-width: 100%;
+  box-shadow: 0 0 1rem -0.1rem black;
+  border: 0.1rem solid black;
+  border-radius: 0.25rem;
+}
+
+.surfboardContainer {
+  border: 0.1rem solid black;
+}

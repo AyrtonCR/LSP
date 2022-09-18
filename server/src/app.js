@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const SurfbreakModel = require("./models/SurfbreakModel");
+const SurfboardModel = require("./models/SurfboardModel");
 const cors = require("cors");
 
 app.use(cors());
@@ -29,10 +30,10 @@ app.get("/surfbreaks/:id", async (request, response) => {
   }
 });
 
-// app.get("/surfboards", async (request, response) => {
-//   const surfbreaks = await SurfbreakModel.find();
-//   return response.status(200).json(surfbreaks);
-// });
+app.get("/surfboards", async (request, response) => {
+  const surfboards = await SurfboardModel.find();
+  return response.status(200).json(surfboards);
+});
 
 // app.get("/forecasts", async (request, response) => {
 //   const surfbreaks = await SurfbreakModel.find();

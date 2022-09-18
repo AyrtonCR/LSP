@@ -1,0 +1,17 @@
+[
+  {
+    "surfboard_strength": "Weak",
+    "surfboard_description": "On smaller days and when starting out it is best to ride a board with more volume to help get you on the wave. Mid-lengths and longboards are the best, but bigger wide shortboards are also a good choice.",
+    "surfboard_image": "https://i.ytimg.com/vi/yrTI1Mdgi-4/maxresdefault.jpg"
+  },
+  {
+    "surfboard_strength": "Decent",
+    "surfboard_description": "For intermediate surfers and days when the conditions have a bit of power and good shape, you can branch out and ride boards with less volume. There is no fixed rule though so if you prefer longboards and mid-lengths they are still a good choice for these conditions.",
+    "surfboard_image": "https://waikikibeachstays.com/wp-content/uploads/2020/11/oahu-surf-spots-hawaii-facebook.jpeg"
+  },
+  {
+    "surfboard_strength": "Expert",
+    "surfboard_description": "When the conditions are heavy and pumping there are certain boards that are necessary to surf the waves. At this point it is worth considering that the board is going to be fast enough to make it through the barrels.For very large beach break waves a shortboard that is squashed and stretched out to mid-length size works. If the waves are barreling with an easier take off then a high performance shortboard should work. ",
+    "surfboard_image": "https://www.theinertia.com/wp-content/gallery/mckenna-teahupoo/dsc_1155.jpg"
+  }
+]
