@@ -6,13 +6,16 @@
   text-align: center;
 }
 .forecastsGrid {
-  border: 0.1rem solid black;
   padding: 1rem;
 }
 
 .forecastsSingleGrid {
   border: 0.1rem solid black;
+  box-shadow: 0 0 1rem -0.1rem black;
+  border: 0.1rem solid black;
+  border-radius: 0.25rem;
   margin: 1rem;
+  padding: 0rem;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -20,31 +23,96 @@
 .forecastsSingleItem {
   list-style-type: none;
   border: 0.1rem solid black;
+  box-shadow: 0 0 1rem -0.1rem black;
+  border: 0.1rem solid black;
+  border-radius: 0.25rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   margin: 1rem;
 }
 
 .forecastsItemGridPart1 {
-  border: 0.1rem solid black;
   display: grid;
-  grid-template-rows: 0.4fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  align-items: center;
+  justify-content: center;
 }
 
 .forecastName {
   display: grid;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: center;
 }
 
 .forecastsImage {
-  max-width: 100%;
+  max-width: 90%;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  box-shadow: 0 0 1rem -0.1rem black;
+  border: 0.1rem solid black;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 .forecastsItemGridPart2 {
+  display: grid;
 }
 
 .forecastsLink {
+  margin: 0.5rem 0;
+  margin-left: 1.4rem;
+  list-style-type: none;
+  text-decoration: none;
+}
+@media only screen and (min-width: 40rem) {
+  .forecastsSingleItem {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 0.6fr;
+  }
+
+  .forecastName {
+    font-size: 1.2rem;
+  }
+  .forecastsItemGridPart2 {
+    margin-top: 3.5rem;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 50rem) {
+  .forecastsItemGridPart2 {
+  }
+}
+@media only screen and (min-width: 60rem) {
+  .forecastsItemGridPart2 {
+    margin-bottom: 5rem;
+  }
+}
+@media only screen and (min-width: 70rem) {
+  .forecastsContainer {
+    margin: 0 10rem;
+  }
+  .forecastsItemGridPart2 {
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .forecastsItemGridPart2 {
+    margin-bottom: 5rem;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  .forecastsContainer {
+    margin: 0 16rem;
+  }
+  .forecastsItemGridPart2 {
+    margin-bottom: 6rem;
+  }
+}
+
+@media only screen and (min-width: 100rem) {
+  .forecastsItemGridPart2 {
+    margin-bottom: 8rem;
+  }
 }

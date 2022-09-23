@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./forecasts.module.css";
 import LowerNavBar from "./lowerNavBar";
 import React, { useState, useEffect } from "react";
-
+import ForecastIfStatement1 from "./forecastsIfStatement";
 const Forecasts = () => {
   const [forecasts, setForecasts] = useState([]);
 
@@ -11,7 +11,6 @@ const Forecasts = () => {
     const data = await response.json();
     setForecasts(data);
   };
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -25,10 +24,13 @@ const Forecasts = () => {
             {forecasts.map((forecast) => {
               return (
                 <>
-                  <li className={styles.forecastsSingleItem} key={forecasts.id}>
+                  <li
+                    className={styles.forecastsSingleItem}
+                    key={forecasts._id}
+                  >
                     <div className={styles.forecastsItemGridPart1}>
                       <h2 className={styles.forecastName}>
-                        {forecast.forecasts_name}
+                        <u>{forecast.forecasts_name}</u>
                       </h2>
                       <img
                         alt="forecasts"
@@ -37,12 +39,33 @@ const Forecasts = () => {
                       ></img>
                     </div>
                     <div className={styles.forecastsItemGridPart2}>
-                      <p className={styles.forecastsLink}>
-                        {forecast.forecasts_info_1}
-                      </p>
-                      <p className={styles.forecastsLink}>
-                        {forecast.forecasts_info_2}
-                      </p>
+                      <a
+                        href={forecast.forecasts_info_1}
+                        className={styles.forecastsLink}
+                      >
+                        {forecast.forecasts_name} Magic Seaweed Report
+                      </a>
+
+                      <a
+                        href={forecast.forecasts_info_2}
+                        className={styles.forecastsLink}
+                      >
+                        {forecast.forecasts_name} Surf-Forecast Report
+                      </a>
+
+                      <a
+                        href={forecast.forecasts_cam_1}
+                        className={styles.forecastsLink}
+                      >
+                        Surf Cam - 1
+                      </a>
+
+                      <a
+                        href={forecast.forecasts_cam_2}
+                        className={styles.forecastsLink}
+                      >
+                        Surf Cam - 2
+                      </a>
                     </div>
                   </li>
                 </>
