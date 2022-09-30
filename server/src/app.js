@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const SurfbreakModel = require("./models/SurfbreakModel");
 const SurfboardModel = require("./models/SurfboardModel");
 const ForecastModel = require("./models/ForecastModel");
+const ForumModel = require("./models/ForumModel");
 const cors = require("cors");
 
 app.use(cors());
@@ -41,9 +42,14 @@ app.get("/forecasts", async (request, response) => {
   return response.status(200).json(forecasts);
 });
 
-// app.get("/forecasts", async (request, response) => {
-//   const surfbreaks = await SurfbreakModel.find();
-//   return response.status(200).json(surfbreaks);
+app.get("/forum", async (request, response) => {
+  const forum = await ForumModel.find();
+  return response.status(200).json(forum);
+});
+
+// app.post("/forum", async (request, response) => {
+//   const forum = await ForumModel.find();
+//   return response.status(200).json(forum);
 // });
 
 module.exports = app;

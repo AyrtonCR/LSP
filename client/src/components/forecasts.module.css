@@ -66,6 +66,9 @@
   list-style-type: none;
   text-decoration: none;
 }
+
+.lowerNavBar {
+}
 @media only screen and (min-width: 40rem) {
   .forecastsSingleItem {
     grid-template-rows: none;
