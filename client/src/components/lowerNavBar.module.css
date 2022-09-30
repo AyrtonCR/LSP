@@ -1,5 +1,5 @@
 @media only screen and (min-width: 22.5rem) {
-  .lowerNavBar {
+  .lowerNavbarMain {
     margin: 6rem;
   }
 
@@ -35,19 +35,19 @@
 }
 
 @media only screen and (min-width: 40rem) {
-  .lowerNavBar {
+  .lowerNavbarMain {
     margin: 6rem 10rem;
   }
 }
 
 @media only screen and (min-width: 60rem) {
-  .lowerNavBar {
+  .lowerNavbarMain {
     margin: 6rem 16rem;
   }
 }
 
 @media only screen and (min-width: 90rem) {
-  .lowerNavBar {
+  .lowerNavbarMain {
     margin: 6rem 29rem;
   }
 }

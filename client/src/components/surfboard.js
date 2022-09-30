@@ -44,9 +44,7 @@ const Surfboard = () => {
           })}
         </ul>
       </div>
-      <div className="lowerNavBar">
-        <LowerNavBar />
-      </div>
+      <LowerNavBar />
     </div>
   );
 };

@@ -61,7 +61,7 @@
 }
 
 @media only screen and (min-width: 70rem) {
-  .container {
+  .surfboardGridContainer {
     margin: 0 10rem;
   }
   .surfboardStrength {
@@ -72,7 +72,7 @@
   }
 }
 @media only screen and (min-width: 90rem) {
-  .container {
+  .surfboardGridContainer {
     margin: 0 16rem;
   }
 }

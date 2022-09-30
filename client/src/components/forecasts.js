@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./forecasts.module.css";
+import forecastStyles from "./forecasts.module.css";
 import LowerNavBar from "./lowerNavBar";
 import React, { useState, useEffect } from "react";
 import ForecastIfStatement1 from "./forecastsIfStatement";
@@ -17,52 +17,52 @@ const Forecasts = () => {
 
   return (
     <div className="container">
-      <div className={styles.forecastsContainer}>
-        <div className={styles.forecastsGrid}>
-          <h2 className={styles.forecastMainName}>Forecasts</h2>
-          <ul className={styles.forecastsSingleGrid}>
+      <div className={forecastStyles.forecastsContainer}>
+        <div className={forecastStyles.forecastsGrid}>
+          <h2 className={forecastStyles.forecastMainName}>Forecasts</h2>
+          <ul className={forecastStyles.forecastsSingleGrid}>
             {forecasts.map((forecast) => {
               return (
                 <>
                   <li
-                    className={styles.forecastsSingleItem}
+                    className={forecastStyles.forecastsSingleItem}
                     key={forecasts._id}
                   >
-                    <div className={styles.forecastsItemGridPart1}>
-                      <h2 className={styles.forecastName}>
+                    <div className={forecastStyles.forecastsItemGridPart1}>
+                      <h2 className={forecastStyles.forecastName}>
                         <u>{forecast.forecasts_name}</u>
                       </h2>
                       <img
                         alt="forecasts"
-                        className={styles.forecastsImage}
+                        className={forecastStyles.forecastsImage}
                         src={forecast.forecasts_image}
                       ></img>
                     </div>
-                    <div className={styles.forecastsItemGridPart2}>
+                    <div className={forecastStyles.forecastsItemGridPart2}>
                       <a
                         href={forecast.forecasts_info_1}
-                        className={styles.forecastsLink}
+                        className={forecastStyles.forecastsLink}
                       >
                         {forecast.forecasts_name} Magic Seaweed Report
                       </a>
 
                       <a
                         href={forecast.forecasts_info_2}
-                        className={styles.forecastsLink}
+                        className={forecastStyles.forecastsLink}
                       >
                         {forecast.forecasts_name} Surf-Forecast Report
                       </a>
 
                       <a
                         href={forecast.forecasts_cam_1}
-                        className={styles.forecastsLink}
+                        className={forecastStyles.forecastsLink}
                       >
                         Surf Cam - 1
                       </a>
 
                       <a
                         href={forecast.forecasts_cam_2}
-                        className={styles.forecastsLink}
+                        className={forecastStyles.forecastsLink}
                       >
                         Surf Cam - 2
                       </a>
@@ -74,9 +74,8 @@ const Forecasts = () => {
           </ul>
         </div>
       </div>
-      <div className="lowerNavBar">
-        <LowerNavBar />
-      </div>
+
+      <LowerNavBar />
     </div>
   );
 };
