@@ -1,15 +1,22 @@
 .container {
 }
-
+.map {
+  box-shadow: 0 0 2rem -0.1rem black;
+  border-radius: 0.25rem;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 2rem;
+}
+.leaflet-container {
+  width: 30rem;
+}
 .mainGrid {
   margin: 0 3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.5fr;
 }
-.mainGridImage {
-  max-width: 100%;
-  border-radius: 50%;
-  margin-left: 2rem;
+.mainGridImageContainer {
+  justify-self: center;
 }
 .mainTitle {
   text-align: center;
