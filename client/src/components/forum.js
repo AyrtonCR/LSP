@@ -67,8 +67,8 @@ const Forum = () => {
         <div className={styles.mainGridImageContainer}>
           <div className={styles.map}>
             <MapContainer
-              center={[-43.5532164, 172.7282033, 9.71]}
-              zoom={8.4}
+              center={[-43.5642322, 172.6498945, 10.34]}
+              zoom={9}
               scrollWheelZoom={true}
             >
               <TileLayer

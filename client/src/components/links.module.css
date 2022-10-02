@@ -1,0 +1,69 @@
+.mainTitle {
+  text-align: center;
+}
+
+.mainContainer {
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin: 2rem;
+}
+
+.gridItem1 {
+  display: grid;
+  justify-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 0.1rem solid black;
+}
+
+.surfboardImage {
+  border: 0.01rem solid black;
+  max-width: 100%;
+}
+.gridItem2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.01rem;
+  border: 0.1rem solid black;
+  margin: 1rem;
+}
+
+.gridItem2Content1 {
+  border: 0.1rem solid black;
+  padding: 1rem;
+  margin: 1rem;
+}
+.gridItem2Content2 {
+  border: 0.1rem solid black;
+  padding: 1rem;
+  margin: 1rem;
+}
+.gridItem2Content3 {
+  border: 0.1rem solid black;
+  padding: 1rem;
+  margin: 1rem;
+}
+.gridItem2Content4 {
+  border: 0.1rem solid black;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.linksSubtitles {
+  font-size: 1.1rem;
+}
+@media only screen and (min-width: 40rem) {
+  .mainGrid {
+    grid-template-rows: none;
+    grid-template-columns: 0.7fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  .mainGrid {
+    grid-template-columns: 0.4fr 1fr;
+  }
+}
