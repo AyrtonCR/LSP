@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./links.module.css";
+import LowerNavBar from "./lowerNavBar";
 
 const Links = () => {
   return (
@@ -83,6 +84,7 @@ const Links = () => {
           </div>
         </div>
       </div>
+      <LowerNavBar />
     </div>
   );
 };

@@ -1,8 +1,51 @@
-.map {
-  width: 20rem;
-  height: 20rem;
-}
 .leaflet-container {
-  width: 20rem;
-  height: 20rem;
+  display: grid;
+  justify-self: center;
+  padding: 0rem;
+  margin: 0rem;
+  width: 22rem;
+  height: 15rem;
+  border-radius: 1rem;
+  border: 0.01rem solid black;
+  box-shadow: 0 0 1rem -0.1rem black;
+}
+
+.map {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 2rem;
+}
+
+@media only screen and (min-width: 30rem) {
+  .leaflet-container {
+    width: 28rem;
+    height: 18rem;
+  }
+}
+@media only screen and (min-width: 40rem) {
+  .leaflet-container {
+    width: 38rem;
+    height: 24rem;
+  }
+}
+@media only screen and (min-width: 50rem) {
+  .leaflet-container {
+    width: 20rem;
+    height: 31.5rem;
+    justify-self: unset;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    justify-items: center;
+  }
+}
+@media only screen and (min-width: 60rem) {
+  .leaflet-container {
+    width: 25rem;
+    height: 31.5rem;
+  }
+}
+@media only screen and (min-width: 70rem) {
+}
+@media only screen and (min-width: 80rem) {
 }

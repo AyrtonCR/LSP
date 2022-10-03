@@ -1,19 +1,10 @@
 .container {
 }
-.map {
-  box-shadow: 0 0 2rem -0.1rem black;
-  border-radius: 0.25rem;
-  width: fit-content;
-  height: fit-content;
-  margin-left: 2rem;
-}
-.leaflet-container {
-  width: 30rem;
-}
 .mainGrid {
-  margin: 0 3rem;
+  margin: 0 1rem;
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
+  gap: 3rem;
+  grid-template-rows: 1fr;
 }
 .mainGridImageContainer {
   justify-self: center;
@@ -24,16 +15,16 @@
 
 .mainDescription {
   font-size: 1rem;
-  margin-bottom: 7rem;
   border: 0.01rem solid black;
-  width: 25rem;
-  margin-left: 1rem;
+  width: 18rem;
+  padding: 1rem;
+  margin: 2rem;
+  margin-bottom: 4rem;
 }
 
 .singleItemMainGrid {
   display: grid;
   align-self: center;
-
   box-shadow: 0 0 2rem -0.1rem black;
   border-radius: 0.25rem;
 }
@@ -50,8 +41,8 @@
 .singleItemGrid1 {
   display: grid;
   justify-self: center;
-
   max-width: 100%;
+  margin: 0 1rem;
 }
 
 .accountImage {
@@ -74,4 +65,29 @@
 .accountMessage {
   display: grid;
   margin-left: 2rem;
+}
+
+@media only screen and (min-width: 50rem) {
+  .mainGrid {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 0.7fr;
+    margin: 0 2rem;
+  }
+}
+@media only screen and (min-width: 60rem) {
+  .mainGrid {
+    grid-template-columns: 1fr 0.6fr;
+  }
+}
+@media only screen and (min-width: 70rem) {
+  .mainGrid {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 0.5fr;
+  }
+}
+@media only screen and (min-width: 80rem) {
+  .mainGrid {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 0.4fr;
+  }
 }

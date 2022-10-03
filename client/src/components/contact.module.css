@@ -1,0 +1,168 @@
+.mainContainer {
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  /* border: 0.01rem solid black;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1rem -0.1rem;
+  margin: 1rem; */
+}
+
+.formContainer {
+  display: grid;
+  justify-content: center;
+  border: 0.01rem solid black;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1rem -0.1rem;
+  margin: 1rem;
+  max-height: fit-content;
+}
+.form {
+  border: 0.01rem solid black;
+  width: fit-content;
+  align-items: center;
+  margin: 1rem;
+  box-shadow: 0 0 1rem -0.1rem black;
+  border-radius: 0.25rem;
+}
+.formTitle {
+  text-align: center;
+  display: grid;
+}
+.MainTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.formGroup {
+  width: fit-content;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  border-radius: 0.15rem;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.formLabel {
+  display: grid;
+  justify-content: center;
+  margin-right: 0.3rem;
+  width: 5rem;
+  box-sizing: border-box;
+}
+
+.formControl {
+  border-radius: 0.25rem;
+  border: 0.125rem solid #999;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formButtonContainer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.formButton {
+  background: #f4e285;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 150ms;
+  cursor: pointer;
+  border: 0.01rem solid black;
+}
+
+.formButton:hover {
+  background-color: #f7f3f3;
+}
+.contactCardContainer {
+  border: 0.01rem solid black;
+  margin: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  max-width: 100%;
+  padding-bottom: 2rem;
+  box-shadow: 0 0 1rem -0.1rem black;
+  border-radius: 0.25rem;
+}
+.contactCard {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0.3rem;
+}
+
+.contactCardContent {
+  display: grid;
+  padding: 0.24rem;
+  margin: 0 2rem;
+  width: fit-content;
+}
+
+.imageContainer {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1rem;
+  margin: 0 1rem;
+}
+
+.everythingImage {
+  max-width: 100%;
+
+  border: 0.01rem solid black;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1rem -0.1rem black;
+}
+
+@media only screen and (min-width: 40rem) {
+  .mainGrid {
+    margin: 5rem;
+  }
+}
+@media only screen and (min-width: 50rem) {
+  .mainGrid {
+    grid-template-rows: none;
+    grid-template-columns: 0.8fr 1fr;
+  }
+  .everythingImage {
+    height: 50rem;
+    max-height: 96.4%;
+  }
+  .mainGrid {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 60rem) {
+  .mainGrid {
+    margin: 0 5rem;
+  }
+}
+
+@media only screen and (min-width: 70rem) {
+  .mainGrid {
+    margin: 0 8rem;
+    gap: 3rem;
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  .mainGrid {
+    margin: 0 12rem;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .mainGrid {
+    margin: 0 18rem;
+    gap: 4rem;
+  }
+}
