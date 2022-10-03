@@ -10,15 +10,21 @@
   box-shadow: 0 0 1rem -0.1rem;
   margin: 1rem; */
 }
-
-.formContainer {
+.formContainerContainer {
+  border: 0.01rem solid black;
   display: grid;
-  justify-content: center;
+  justify-self: center;
   border: 0.01rem solid black;
   border-radius: 0.25rem;
   box-shadow: 0 0 1rem -0.1rem;
   margin: 1rem;
+  width: fit-content;
   max-height: fit-content;
+}
+.formContainer {
+  display: grid;
+  justify-content: center;
+  width: 20rem;
 }
 .form {
   border: 0.01rem solid black;
@@ -115,7 +121,6 @@
 
 .everythingImage {
   max-width: 100%;
-
   border: 0.01rem solid black;
   border-radius: 0.25rem;
   box-shadow: 0 0 1rem -0.1rem black;
@@ -135,34 +140,39 @@
     height: 50rem;
     max-height: 96.4%;
   }
+  .formContainerContainer {
+    border: 0.01rem solid black;
+    display: grid;
+    justify-self: right;
+  }
   .mainGrid {
     margin: 0;
   }
 }
 
 @media only screen and (min-width: 60rem) {
-  .mainGrid {
-    margin: 0 5rem;
-  }
 }
 
 @media only screen and (min-width: 70rem) {
   .mainGrid {
-    margin: 0 8rem;
-    gap: 3rem;
+    margin: 0 4rem;
+    gap: 1rem;
   }
 }
 
 @media only screen and (min-width: 80rem) {
   .mainGrid {
-    margin: 0 12rem;
+    margin: 0 7rem;
     gap: 1rem;
+  }
+  .imageContainer {
+    justify-content: left;
   }
 }
 
 @media only screen and (min-width: 90rem) {
   .mainGrid {
-    margin: 0 18rem;
-    gap: 4rem;
+    margin: 0 10rem;
+    gap: 1rem;
   }
 }

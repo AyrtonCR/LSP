@@ -1,0 +1,101 @@
+.mainContainer {
+  display: grid;
+  margin: 1rem;
+}
+.mainTitle {
+  text-align: center;
+}
+.mainGrid {
+  display: grid;
+  grid-template-rows: 0.7fr 0.6fr;
+}
+
+.imageGrid {
+  display: grid;
+  margin: 3rem;
+  gap: 2rem;
+}
+
+.image1 {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  max-width: 100%;
+  border: 0.08rem solid black;
+  border-radius: 50%;
+  max-height: 20rem;
+}
+
+.image2 {
+}
+
+.textGrid {
+  display: grid;
+  border: 0.01rem solid black;
+  box-shadow: 0 0 1rem -0.1rem black;
+  border-radius: 0.25rem;
+  padding: 0 1rem;
+}
+
+.mainTextContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  border: 0.01rem solid black;
+  border-radius: 0.15rem;
+  padding: 0rem;
+  margin: 1rem 0;
+}
+
+.mainText {
+  display: grid;
+
+  padding: 0.5rem;
+}
+
+.subTextContainer {
+}
+
+.subText {
+}
+
+@media only screen and (min-width: 50rem) {
+  .mainGrid {
+    grid-template-columns: 1fr 0.6fr;
+  }
+  .image1 {
+    max-height: 25rem;
+  }
+}
+
+@media only screen and (min-width: 60rem) {
+  .mainGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 70rem) {
+  .mainGrid {
+    margin: 0 4rem;
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  .mainGrid {
+    margin: 0 7rem;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  .mainGrid {
+    margin: 0 10rem;
+  }
+}
+
+@media only screen and (min-width: 100rem) {
+  .mainGrid {
+    margin: 0 18rem;
+  }
+}
+@media only screen and (min-width: 110rem) {
+  .mainGrid {
+    margin: 0 22rem;
+  }
+}
