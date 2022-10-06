@@ -1,43 +1,28 @@
-# Local Surf Project (lsp)
+## Local Surf Project (lsp)
 
-### This is a project I am doing in my spare time that incorporates something I love doing with what I have learnt so far in my first few semesters of Front-end and Back-end web development.
-
-<br>
-
-### The goal is to build from scratch a responsive website that will display information about some of my local surf breaks, forecasts, surfboards, a forum and some more features to be implemented as I go (see wire frame for more info).
+#### This is a project I am building in my spare time that incorporates something I love doing with what I have learnt so far in my web development diploma.
 
 <br>
 
----
+#### The goal is to build from scratch a responsive website that will ...
 
 <br>
 
-## To run this project you will need to go through the following process ...
+- Display information about local surf breaks.
+- Display information about surf forecasts.
+- Include a Contact Page & About Page.
+- Display some content on choosing the right surfboard.
+- Include a Forum feature where a user can post to the database (if they have the correct permissions).
+- Include a Maps feature that shows the six breaks around Christchurch.
+- Have Auth0 Authentication that will change how the page is displayed depending on the user.
 
-<br>
+I have created json files with data that needs to be imported from the MongoDB database to be displayed on the page. I want to get this working with a docker-compose file but currently the data must be imported by doing the following.
 
-1. ### Run MongoDB through the following command ...
+     - Open MongoDB Compass
+     - Select the lsp Database
+     - Click on each Collection and select import data
+     - Locate the corresponding json file in lsp/db
 
-<br>
+Once the data has been imported all content on the site will display properly.
 
-docker run -d -p 27017:27017 --name local-surf-project mongo:latest
-
-<br>
-
-2. ### Import the json data from \lsp\data\surfbreak.json into the MongoDB database.
-
-<br>
-
-3. ### npm install in \server and \client
-
-<br>
-
-4. ### npm start in \server and \client
-
-<br>
-
----
-
-<br>
-
-### (Further down the track the project will be hosted online via Heroku and Netlify).
+#### (Further down the track the project will be hosted online via Render).
