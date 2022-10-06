@@ -1,10 +1,10 @@
 conn = new Mongo();
-db = conn.getDB("lspDatabase");
+db = conn.getDB("lsp");
 
 db.forecasts.createIndex("fc", { unique: false });
-db.forum.createIndex("fm", { unique: false });
-db.surfboard.createIndex("sbd", { unique: false });
-db.surfbreak.createIndex("sbk", { unique: false });
+db.forums.createIndex("fm", { unique: false });
+db.surfboards.createIndex("sbd", { unique: false });
+db.surfbreaks.createIndex("sbk", { unique: false });
 
 db.forecasts.insert([
   {
@@ -72,7 +72,7 @@ db.forecasts.insert([
     forecasts_cam_2: "",
   },
 ]);
-db.forum.insert([
+db.forums.insert([
   {
     forum_image:
       "https://res.cloudinary.com/allamerican/image/fetch/t_face_s270/https://speakerdata2.s3.amazonaws.com/photo/image/884089/SteveHarvey_Headshot.png",
@@ -98,7 +98,7 @@ db.forum.insert([
   },
 ]);
 
-db.surfboard.insert([
+db.surfboards.insert([
   {
     surfboard_strength: "Small",
     surfboard_description:
@@ -121,7 +121,7 @@ db.surfboard.insert([
   },
 ]);
 
-db.surfbreak.insert([
+db.surfbreaks.insert([
   {
     surfbreak_image:
       "https://live.staticflickr.com/296/32295736191_91afd2f192_b.jpg",
