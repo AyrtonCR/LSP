@@ -2,6 +2,8 @@
 
 ---
 
+<br>
+
 My goal for this project is to build from scratch a responsive website that will ...
 
 - Display information about local surf breaks.
@@ -19,6 +21,8 @@ My goal for this project is to build from scratch a responsive website that will
 
 ---
 
+<br>
+
 A `docker-compose.yml` file is made so all you need to run the app and install the dependencies is `Docker`. <br>
 In the root directory type the following command ...
 
@@ -32,15 +36,23 @@ docker-compose up
 
 This will locally ...
 
+<br>
+
 - Create the [React Application](http://localhost:3001/) and launch the `Client` which uses some external API's.
 - Create an [Express API](http://localhost:5001/) to communicate with `Database` and `Client`.
-- Create and populate a `MongoDB Database`.
+- Create and populate a MongoDB `Database`.
 - Create a [MongoDB Express](http://localhost:8111/) server that allows viewing of the `MongoDB Database` in the browser.
 
 ---
 
 <br>
 
-##### _Further down the track the project will be deployed online via Render._
+##### _Early progress can be tracked via commits directly to main branch._
+
+##### _From 7/10/22 I am using the GitHub Project board and working on separate branches for each issue._
+
+<br>
+
+##### _Further down the track the project will be deployed via Render._
 
 <br>
