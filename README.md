@@ -45,8 +45,6 @@ This will locally ...
 
 ---
 
-<br>
-
 ##### _Early progress can be tracked via commits directly to main branch._
 
 ##### _From 7/10/22 I am using the GitHub Project board and working on separate branches for each issue._
