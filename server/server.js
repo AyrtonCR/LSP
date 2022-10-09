@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 mongoose.connect("mongodb://surfing:rocks@mongo:27017/lsp?authSource=admin", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 // mongodb://surfing:rocks@localhost:27017/?authMechanism=DEFAULT
 app.listen(port, () => {

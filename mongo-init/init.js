@@ -1,5 +1,4 @@
-conn = new Mongo();
-db = conn.getDB("lsp");
+db = new Mongo().getDB("lsp");
 
 db.forecasts.createIndex("fc", { unique: false });
 db.forums.createIndex("fm", { unique: false });
