@@ -28,6 +28,10 @@ In the root directory type the following command ...
 
 <br>
 
+<i>Currently you will need to `npm install` in the /server folder first, this will be fixed later on</i>
+
+<br>
+
 ```shell
 docker-compose up
 ```
