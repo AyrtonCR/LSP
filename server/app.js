@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const { celebrate, Joi, errors, Segments } = require("celebrate");
 const SurfbreakModel = require("./models/SurfbreakModel");
 const SurfboardModel = require("./models/SurfboardModel");
 const ForecastModel = require("./models/ForecastModel");
 const ForumModel = require("./models/ForumModel");
+const FormatForum = require("./formatForum");
 const cors = require("cors");
 
 app.use(cors());
@@ -47,9 +49,20 @@ app.get("/forum", async (request, response) => {
   return response.status(200).json(forum);
 });
 
-// app.post("/forum", async (request, response) => {
-//   const forum = await ForumModel.find();
-//   return response.status(200).json(forum);
-// });
+app.post("/forum", async (request, response, next) => {
+  try {
+    const { body } = request;
+    const forumBody = {
+      ...body,
+    };
+    const forum = new ForumModel(forumBody);
+    await forum.save();
+    return response.status(201).send(forum);
+  } catch (error) {
+    error.status = 400;
+    next(error);
+  }
+});
+app.use(errors());
 
 module.exports = app;
