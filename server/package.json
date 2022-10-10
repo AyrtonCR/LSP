@@ -7,7 +7,7 @@
   "description": "A project I am building in my spare time to display information about my hometown",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon /server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "celebrate": "^15.0.1",
