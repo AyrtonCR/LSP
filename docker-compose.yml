@@ -9,6 +9,9 @@ services:
       - REACT_APP_API_URL=http://localhost:5001/api
     depends_on:
       - server
+    volumes:
+      - ./client:/app
+      - /app/node_modules
   server:
     build:
       context: ./server
@@ -21,6 +24,7 @@ services:
       - mongo
     volumes:
       - ./server:/app
+      - /app/node_modules
 
   mongo:
     container_name: mongo
