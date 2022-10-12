@@ -4,10 +4,11 @@ import Main from "./main";
 import Surfboard from "./surfboard";
 import Forum from "./forum";
 import About from "./about";
-import Links from "./links";
+import WebLinks from "./links";
 import Forecasts from "./forecasts";
 import Contact from "./contact";
 import Logo from "../utils/surfing-board.jpeg";
+import LoginButton from "./loginButton";
 
 const header = () => {
   return (
@@ -44,7 +45,7 @@ const header = () => {
               </Link>
             </li>
             <li className="navbar-item">
-              <Link to="/links" className="nav-link" element={<Links />}>
+              <Link to="/links" className="nav-link" element={<WebLinks />}>
                 <strong>Links</strong>
               </Link>
             </li>
@@ -57,6 +58,9 @@ const header = () => {
               <Link to="/contact" className="nav-link" element={<Contact />}>
                 <strong>Contact</strong>
               </Link>
+            </li>
+            <li className="navbar-item">
+              <LoginButton />
             </li>
           </ul>
         </div>

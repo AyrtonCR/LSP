@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./links.module.css";
 import LowerNavBar from "./lowerNavBar";
 
-const Links = () => {
+const WebLinks = () => {
   return (
     <div className="container">
       <h1 className={styles.mainTitle}>Links</h1>
@@ -89,4 +89,4 @@ const Links = () => {
   );
 };
 
-export default Links;
+export default WebLinks;
