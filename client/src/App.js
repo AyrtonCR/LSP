@@ -10,11 +10,12 @@ import About from "./components/about";
 import Links from "./components/links";
 import Forecasts from "./components/forecasts";
 import Contact from "./components/contact";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const App = () => {
   return (
     <>
-      <div></div>
       <Header />
       <div className="container">
         <Routes>
