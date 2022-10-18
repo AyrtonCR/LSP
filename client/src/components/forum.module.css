@@ -1,7 +1,16 @@
 .container {
+  background: linear-gradient(
+    180deg,
+    #767370 0%,
+    #767370 17.4%,
+    #393e46 18.5%,
+    #393e46 84.9%,
+    #f4c857 78%,
+    #f4c857 100%
+  );
 }
 .mainGrid {
-  margin: 0 1rem;
+  padding: 1rem;
   display: grid;
   gap: 3rem;
   grid-template-rows: 1fr;
@@ -11,15 +20,26 @@
 }
 .mainTitle {
   text-align: center;
+  font-size: 2.2rem;
+  color: white;
+  margin: 0rem;
+  padding: 3rem 2rem;
+  border-bottom: 0.01rem solid black;
 }
-
+.mainDescriptionContainer {
+  display: grid;
+  justify-content: center;
+  background-color: #f4c857;
+}
 .mainDescription {
-  font-size: 1rem;
-  border: 0.01rem solid black;
-  width: 18rem;
+  font-size: 1.1rem;
+  color: black;
+  width: fit-content;
   padding: 1rem;
   margin: 2rem;
   margin-bottom: 4rem;
+  text-align: center;
+  border-bottom: 0.01rem solid #393e46;
 }
 
 .singleItemMainGrid {
@@ -58,13 +78,16 @@
 }
 
 .accountName {
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
+  color: white;
 }
 
 .accountMessage {
   display: grid;
+  font-size: 1.1rem;
   margin-left: 2rem;
+  color: white;
 }
 
 @media only screen and (min-width: 50rem) {
@@ -72,6 +95,17 @@
     grid-template-rows: none;
     grid-template-columns: 1fr 0.7fr;
     margin: 0 2rem;
+  }
+  .container {
+    background: linear-gradient(
+      180deg,
+      #767370 0%,
+      #767370 24.4%,
+      #393e46 24.5%,
+      #393e46 77.9%,
+      #f4c857 78%,
+      #f4c857 100%
+    );
   }
 }
 @media only screen and (min-width: 60rem) {
