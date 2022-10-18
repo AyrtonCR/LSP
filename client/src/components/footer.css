@@ -1,13 +1,10 @@
 .footer {
-  margin-top: 6rem;
   width: 100%;
-}
-
-.footer {
-  width: 100%;
+  background: #767370;
+  padding: 1rem;
 }
 .navbar-container-footer {
-  background: rgb(236, 142, 59);
+  margin: 0rem;
 }
 .footer a:active,
 .footer a:hover {
@@ -21,6 +18,7 @@
 
 .created-by {
   color: black;
+  margin: 0rem;
 }
 .navbar-item-footer {
   padding-left: 0.5rem;
@@ -36,6 +34,6 @@
     justify-content: left;
   }
   .navbar-item-footer {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 }

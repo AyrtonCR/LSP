@@ -31,12 +31,11 @@ const Main = () => {
           <img className="new-brighton-image" src={Wall_1} alt="" />
           <div className="top-left">
             <h3 className="main-description">
-              Welcome surfers and swell-enthusiasts! Here will be displayed some
-              of the most well known and occasionally epic surfbreaks around
-              Christchurch. You can find some information about how the breaks
-              work, what boards are best to take out, a little info about the
-              forecasts as well as some tips I've learnt over the years that
-              might help you get some solid waves.
+              Welcome fellow surfers and swell-enthusiasts! Here you can find
+              out about our occasionally epic breaks in the Christchurch area.{" "}
+              <br></br>
+              <br></br>From Forecasts to Fibreglass you will find it all here at
+              Pegasus Bay Surf.
             </h3>
           </div>
         </div>

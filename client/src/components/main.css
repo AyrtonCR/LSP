@@ -1,41 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,300&display=swap");
 
-:root {
-  background: linear-gradient(
-    180deg,
-    rgb(223, 186, 117) 0%,
-    rgb(223, 186, 117) 60%,
-    rgb(236, 142, 59) 100%
-  );
-}
-
 * {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 .main-container {
-  margin-top: 2rem;
+  background: linear-gradient(
+    180deg,
+    #767370 0%,
+    #767370 32.9%,
+    #393e46 33%,
+    #393e46 55.9%,
+    #f4c857 56%,
+    #f4c857 77.9%,
+    #f0800c 78%,
+    #f0800c 100%
+  );
 }
 
 @media only screen and (min-width: 22.5rem) {
   .main-title {
     font-size: 1.3rem;
+    color: white;
     text-shadow: 0.12rem 0.12rem 2rem;
     margin-bottom: 5rem;
-    color: black;
-    background-color: rgb(223, 186, 117);
+    padding-top: 4rem;
     text-align: center;
+    margin-top: 0rem;
   }
   .description-and-image {
     position: relative;
     color: black;
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
   }
 
   /* Top left text */
   .top-left {
     position: absolute;
-    top: 0.5rem;
-    left: 1rem;
+    top: 4.5rem;
+    left: 4.5rem;
   }
 
   .main-description {
@@ -53,7 +55,8 @@
     background-color: #293232;
   }
   .new-brighton-image {
-    box-shadow: 0 0 2rem -0.1rem black;
+    box-shadow: 0 0.15rem 1rem -0.1rem rgb(19, 19, 19);
+    border: 0.07rem solid rgb(74, 74, 74);
     border-radius: 0.1rem;
     max-width: 100%;
     align-self: center;
@@ -121,7 +124,7 @@
   .main-title {
     font-size: 2.1rem;
     text-align: unset;
-    margin-left: 8rem;
+    margin-left: 5rem;
   }
   .surfbreaks-title {
     font-size: 1.2rem;
@@ -145,6 +148,7 @@
   .surfbreaks-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .surfbreaks-title {
     font-size: 1.2rem;
   }
@@ -240,11 +244,11 @@
 }
 @media only screen and (min-width: 80rem) {
   .main-description {
-    font-size: 1rem;
-    width: 30rem;
+    font-size: 1.3rem;
+    width: 35rem;
   }
   .main-title {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
   }
 
   .surfbreaks-grid-container {
@@ -254,12 +258,12 @@
   }
 
   .surfbreaks-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .surfbreaks-blurb {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .main-buttons {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
