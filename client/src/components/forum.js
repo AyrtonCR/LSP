@@ -36,7 +36,7 @@ const Forum = () => {
       <div className={styles.mainDescriptionContainer}>
         <h3 className={styles.mainDescription}>
           Stay connected with local updates on the surf and let others know when
-          the waves are good.
+          the waves are good near you.
         </h3>
       </div>
       <div className={styles.mainGrid}>

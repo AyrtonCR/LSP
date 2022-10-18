@@ -94,7 +94,6 @@
   .mainGrid {
     grid-template-rows: none;
     grid-template-columns: 1fr 0.7fr;
-    margin: 0 2rem;
   }
   .container {
     background: linear-gradient(
@@ -102,8 +101,8 @@
       #767370 0%,
       #767370 24.4%,
       #393e46 24.5%,
-      #393e46 77.9%,
-      #f4c857 78%,
+      #393e46 79.9%,
+      #f4c857 80%,
       #f4c857 100%
     );
   }
@@ -111,6 +110,7 @@
 @media only screen and (min-width: 60rem) {
   .mainGrid {
     grid-template-columns: 1fr 0.6fr;
+    margin: 0 2rem;
   }
 }
 @media only screen and (min-width: 70rem) {

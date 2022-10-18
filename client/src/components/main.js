@@ -31,11 +31,11 @@ const Main = () => {
           <img className="new-brighton-image" src={Wall_1} alt="" />
           <div className="top-left">
             <h3 className="main-description">
-              Welcome fellow surfers and swell-enthusiasts! Here you can find
-              out about our occasionally epic breaks in the Christchurch area.{" "}
+              Welcome my fellow surfers and swell-enthusiasts!<br></br>
+              <br></br> From Forecasts to Fibreglass, this site hopes to offer a
+              place where you can learn all about the wonderful and occasionally
+              epic breaks around Christchurch.
               <br></br>
-              <br></br>From Forecasts to Fibreglass you will find it all here at
-              Pegasus Bay Surf.
             </h3>
           </div>
         </div>

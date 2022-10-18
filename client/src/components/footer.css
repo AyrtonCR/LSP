@@ -1,7 +1,7 @@
 .footer {
   border: 0.06rem solid black;
   box-shadow: 0 0 0.5rem -0.1rem black;
-  width: 100%;
+  max-width: 100%;
   background: #767370;
   padding: 1rem;
 }
