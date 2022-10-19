@@ -8,7 +8,7 @@ const footer = () => {
           <li className="navbar-item-footer">
             <p className="created-by">
               <strong>
-                Created By <em>Some Dude</em>
+                Created By <em>Ayrton Campbell</em>
               </strong>
             </p>
           </li>

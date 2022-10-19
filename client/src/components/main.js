@@ -31,51 +31,56 @@ const Main = () => {
           <img className="new-brighton-image" src={Wall_1} alt="" />
           <div className="top-left">
             <h3 className="main-description">
-              Welcome my fellow surfers and swell-enthusiasts!<br></br>
+              Welcome fellow surfers and swell-enthusiasts!<br></br>
               <br></br> From Forecasts to Fibreglass, this site hopes to offer a
               place where you can learn all about the wonderful and occasionally
-              epic breaks around Christchurch.
+              epic breaks around Canterbury.
               <br></br>
             </h3>
           </div>
         </div>
-        <div className="surfbreaks-grid-container">
-          <ul className="surfbreaks-grid">
-            {surfbreaks.map((surfbreak) => {
-              return (
-                <li className="single-surfbreak" key={surfbreak.id}>
-                  <img
-                    alt="pegasus-bay"
-                    className="surfbreaks-image"
-                    src={surfbreak.surfbreak_image}
-                  />
+        <div className="main-color-wrapper">
+          <div className="surfbreaks-grid-container">
+            <ul className="surfbreaks-grid">
+              {surfbreaks.map((surfbreak) => {
+                return (
+                  <li className="single-surfbreak" key={surfbreak.id}>
+                    <img
+                      alt="pegasus-bay"
+                      className="surfbreaks-image"
+                      src={surfbreak.surfbreak_image}
+                    />
 
-                  <p className="surfbreaks-title">
-                    <strong>
-                      <em>
-                        <u>{surfbreak.surfbreak_title}</u>
-                      </em>
-                    </strong>
-                  </p>
-                  <p className="surfbreaks-blurb">
-                    {surfbreak.surfbreak_blurb}
-                  </p>
-                  <div className="button-grid">
-                    <Link to={`/surfbreaks/${surfbreak.id}`}>
-                      <button className="main-buttons">
-                        <strong>Learn More</strong>
-                      </button>
-                    </Link>
-                    <Link to={`/surfbreaks/${surfbreak.id}`}>
-                      <button className="main-buttons">
-                        <strong>Check Forecast</strong>
-                      </button>
-                    </Link>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+                    <p className="surfbreaks-title">
+                      <strong>
+                        <em>
+                          <u>{surfbreak.surfbreak_title}</u>
+                        </em>
+                      </strong>
+                    </p>
+                    <p className="surfbreaks-blurb">
+                      {surfbreak.surfbreak_blurb}
+                    </p>
+                    <div className="button-grid">
+                      <Link
+                        to={`/surfbreaks/${surfbreak.id}`}
+                        className="button-link"
+                      >
+                        <button className="main-buttons">
+                          <strong>Learn More</strong>
+                        </button>
+                      </Link>
+                      <Link to={`/surfbreaks/${surfbreak.id}`}>
+                        <button className="main-buttons">
+                          <strong>Check Forecast</strong>
+                        </button>
+                      </Link>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
         <div className="lowerNavBar">
           <LowerNavBar />
