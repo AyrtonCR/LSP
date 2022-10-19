@@ -17,6 +17,8 @@ db.forecasts.insert([
     forecasts_cam_1:
       "https://www.surfline.com/surf-report/new-brighton/584204204e65fad6a770967d?camId=618dc0b3285443cca6282eeb",
     forecasts_cam_2: "http://www.waimairisurf.org.nz/webcam4",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/new-brighton",
   },
   {
     forecasts_name: "Sumner Beach",
@@ -27,6 +29,7 @@ db.forecasts.insert([
       "https://www.surf-forecast.com/breaks/Scarborough_1/forecasts/latest/six_day",
     forecasts_cam_1: "https://sumnersurf.nz/",
     forecasts_cam_2: "http://www.surfcam.co.nz/",
+    forecast_info: "http://surfseeker.co.nz/surf_breaks/canterbury/scarborough",
   },
   {
     forecasts_name: "Taylors Mistake Beach",
@@ -38,6 +41,8 @@ db.forecasts.insert([
       "https://www.surf-forecast.com/breaks/Taylors-Mistake/forecasts/latest",
     forecasts_cam_1: "https://www.taylorssurf.co.nz/",
     forecasts_cam_2: "",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/taylors-mistake",
   },
   {
     forecasts_name: "Waikuku Beach",
@@ -48,6 +53,8 @@ db.forecasts.insert([
       "https://www.surf-forecast.com/breaks/Waikuku-Beach/forecasts/latest/six_day",
     forecasts_cam_1: "https://sumnersurf.nz/",
     forecasts_cam_2: "http://www.surfcam.co.nz/",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/waikuku-beach",
   },
   {
     forecasts_name: "Amberly Beach",
@@ -59,6 +66,8 @@ db.forecasts.insert([
       "https://www.surf-forecast.com/breaks/Amberley-Beach/forecasts/latest/six_day",
     forecasts_cam_1: "",
     forecasts_cam_2: "",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/amberley-beach",
   },
   {
     forecasts_name: "Magnet Bay",
@@ -69,6 +78,7 @@ db.forecasts.insert([
       "https://www.surf-forecast.com/breaks/Magnet-Bay/forecasts/latest/six_day",
     forecasts_cam_1: "",
     forecasts_cam_2: "",
+    forecast_info: "http://surfseeker.co.nz/surf_breaks/canterbury/magnet-bay",
   },
 ]);
 db.forums.insert([

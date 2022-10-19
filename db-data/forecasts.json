@@ -5,7 +5,8 @@
     "forecasts_info_1": "https://magicseaweed.com/New-Brighton-Beach-Surf-Report/114/",
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/New-Brighton-Beach/forecasts/latest",
     "forecasts_cam_1": "https://www.surfline.com/surf-report/new-brighton/584204204e65fad6a770967d?camId=618dc0b3285443cca6282eeb",
-    "forecasts_cam_2": "http://www.waimairisurf.org.nz/webcam4"
+    "forecasts_cam_2": "http://www.waimairisurf.org.nz/webcam4",
+    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/new-brighton"
   },
   {
     "forecasts_name": "Sumner Beach",
@@ -13,7 +14,8 @@
     "forecasts_info_1": "https://magicseaweed.com/Scarborough-Surf-Report/6867/",
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/Scarborough_1/forecasts/latest/six_day",
     "forecasts_cam_1": "https://sumnersurf.nz/",
-    "forecasts_cam_2": "http://www.surfcam.co.nz/"
+    "forecasts_cam_2": "http://www.surfcam.co.nz/",
+    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/scarborough"
   },
   {
     "forecasts_name": "Taylors Mistake Beach",
@@ -21,7 +23,8 @@
     "forecasts_info_1": "https://magicseaweed.com/Taylors-Mistake-Surf-Report/7131/",
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/Taylors-Mistake/forecasts/latest",
     "forecasts_cam_1": "https://www.taylorssurf.co.nz/",
-    "forecasts_cam_2": ""
+    "forecasts_cam_2": "",
+    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/taylors-mistake"
   },
   {
     "forecasts_name": "Waikuku Beach",
@@ -29,7 +32,8 @@
     "forecasts_info_1": "https://magicseaweed.com/Waikuku-Surf-Report/6884/",
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/Waikuku-Beach/forecasts/latest/six_day",
     "forecasts_cam_1": "https://sumnersurf.nz/",
-    "forecasts_cam_2": "http://www.surfcam.co.nz/"
+    "forecasts_cam_2": "http://www.surfcam.co.nz/",
+    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/waikuku-beach"
   },
   {
     "forecasts_name": "Amberly Beach",
@@ -37,7 +41,8 @@
     "forecasts_info_1": "https://magicseaweed.com/Amberley-Beach-Surf-Report/6876/",
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/Amberley-Beach/forecasts/latest/six_day",
     "forecasts_cam_1": "",
-    "forecasts_cam_2": ""
+    "forecasts_cam_2": "",
+    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/amberley-beach"
   },
   {
     "forecasts_name": "Magnet Bay",
@@ -45,6 +50,7 @@
     "forecasts_info_1": "https://magicseaweed.com/Magnet-Bay-Surf-Report/4075/",
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/Magnet-Bay/forecasts/latest/six_day",
     "forecasts_cam_1": "",
-    "forecasts_cam_2": ""
+    "forecasts_cam_2": "",
+    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/magnet-bay"
   }
 ]
