@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Peg from "../utils/pegasus_bay.jpg";
 import LowerNavBar from "./lowerNavBar";
 import Wall_1 from "../utils/wallpaper1.jpg";
-
+import Wave from "../utils/wave3.png";
 import "./main.css";
 
 const Main = () => {
@@ -38,6 +38,12 @@ const Main = () => {
               <br></br>
             </h3>
           </div>
+        </div>
+        <div className="sub-title-container">
+          <h3 className="sub-title">
+            <i>The Breaks</i>
+          </h3>
+          <img className="mini-image" src={Wave} alt="wave"></img>
         </div>
         <div className="main-color-wrapper">
           <div className="surfbreaks-grid-container">
