@@ -18,7 +18,9 @@
   }
   .header a:active,
   .header a:hover {
-    color: #eb212e;
+    color: black;
+    color: #ed7a0e;
+    background-color: #293232;
     text-decoration: underline;
   }
 
@@ -31,8 +33,9 @@
   }
   .navbar-item {
     text-align: center;
-    padding: 0.7rem;
     align-self: center;
+
+    margin: 1rem 0.3rem;
   }
   .nav {
     display: contents;
@@ -54,7 +57,10 @@
     color: white;
     text-shadow: 0.12rem 0.12rem 2.5rem;
     white-space: nowrap;
-
+    padding: 0.3rem 1rem;
+    transition: background-color 100ms;
+    cursor: pointer;
+    border-radius: 0.35rem;
     text-decoration: none;
   }
 }

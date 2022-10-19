@@ -4,6 +4,7 @@ import Peg from "../utils/pegasus_bay.jpg";
 import LowerNavBar from "./lowerNavBar";
 import Wall_1 from "../utils/wallpaper1.jpg";
 import Wave from "../utils/wave3.png";
+
 import "./main.css";
 
 const Main = () => {
@@ -22,11 +23,13 @@ const Main = () => {
   return (
     <>
       <div className="main-container">
-        <h1 className="main-title">
-          <em>
-            <strong>Pegasus Bay Surf</strong>
-          </em>
-        </h1>
+        <div className="title-container">
+          <h1 className="main-title">
+            <em>
+              <strong>Pegasus Bay Surf</strong>
+            </em>
+          </h1>
+        </div>
         <div className="description-and-image">
           <img className="new-brighton-image" src={Wall_1} alt="" />
           <div className="top-left">
