@@ -9,22 +9,14 @@ import "./main.css";
 
 const Main = () => {
   const [surfbreaks, setSurfbreaks] = useState([]);
-  const [forecasts, setForecasts] = useState([]);
   const fetchData = async () => {
     const response = await fetch("http://localhost:5001/surfbreaks");
     const data = await response.json();
     setSurfbreaks(data);
   };
 
-  const fetchMoreData = async () => {
-    const response = await fetch("http://localhost:5001/forecasts");
-    const data = await response.json();
-    setForecasts(data);
-  };
-
   useEffect(() => {
     fetchData();
-    fetchMoreData();
   }, []);
 
   return (
@@ -68,21 +60,21 @@ const Main = () => {
                       src={surfbreak.surfbreak_image}
                     />
 
-                    <p className="surfbreaks-title">
+                    <a
+                      href={surfbreak.forecast_info}
+                      className="surfbreaks-title"
+                    >
                       <strong>
                         <em>
                           <u>{surfbreak.surfbreak_title}</u>
                         </em>
                       </strong>
-                    </p>
+                    </a>
                     <p className="surfbreaks-blurb">
                       {surfbreak.surfbreak_blurb}
                     </p>
                     <div className="button-grid">
-                      <Link
-                        to={`/surfbreaks/${surfbreak.id}`}
-                        className="button-link"
-                      >
+                      <Link to={`/surfboard`} className="button-link">
                         <button className="main-buttons">
                           <strong>Learn More</strong>
                         </button>

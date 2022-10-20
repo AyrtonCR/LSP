@@ -10,13 +10,18 @@
   }
   .lowerNavbarItem a:active,
   .lowerNavbarItem a:hover {
-    color: #eb212e;
+    color: #f27c0e;
     text-decoration: underline;
   }
   .lowerNavbarItem {
     text-align: center;
     padding: 0.7rem;
     align-self: center;
+    transition: 0.3s ease;
+  }
+
+  .lowerNavbarItem:hover {
+    transform: scale(1.3);
   }
   .lowerNav {
     display: grid;

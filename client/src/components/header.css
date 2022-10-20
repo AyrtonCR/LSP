@@ -16,13 +16,6 @@
     box-shadow: 0rem 0 0.3rem -0.01rem black;
     margin: 0 0.05rem;
   }
-  .header a:active,
-  .header a:hover {
-    color: black;
-    color: #ed7a0e;
-    background-color: #293232;
-    text-decoration: underline;
-  }
 
   .header-title {
     text-decoration: none;
@@ -34,14 +27,13 @@
   .navbar-item {
     text-align: center;
     align-self: center;
-
     margin: 1rem 0.3rem;
   }
   .nav {
     display: contents;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     list-style-type: none;
     padding: 1rem;
@@ -53,14 +45,29 @@
   }
 
   .nav-link {
+    display: block;
     font-size: 1.2rem;
     color: white;
     text-shadow: 0.12rem 0.12rem 2.5rem;
     white-space: nowrap;
-    padding: 0.3rem 1rem;
-    transition: background-color 100ms;
+    padding: 0.3rem 0.7rem;
+    transition: all 0.3s ease;
     cursor: pointer;
     border-radius: 0.35rem;
     text-decoration: none;
+    width: fit-content;
+    padding: 0.2rem 1.4rem;
+  }
+  .nav-link:hover {
+  }
+
+  .header a:active,
+  .header a:hover {
+    transform: scale(1.2);
+    color: black;
+    color: #ed7a0e;
+    background-color: #293232;
+    text-decoration: underline;
+    transform: scale(1.2);
   }
 }

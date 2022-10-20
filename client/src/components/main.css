@@ -107,7 +107,16 @@
 
   .surfbreaks-title {
     font-size: 0.9rem;
+    width: fit-content;
     color: white;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  .surfbreaks-title:hover {
+    color: #f27c0e;
+    margin-left: 2rem;
+    transform: scale(1.2);
   }
   .surfbreaks-blurb {
     font-size: 0.85rem;
@@ -124,7 +133,7 @@
     font-size: 0.6rem;
     background-color: #f4c857;
     border-radius: 0.15rem;
-    transition: background-color 150ms;
+    transition: all 0.2s ease;
     cursor: pointer;
   }
   .main-buttons:active,
@@ -132,6 +141,7 @@
     color: #ed7a0e;
     background-color: #293232;
     text-decoration: underline;
+    transform: scale(1.15);
   }
 
   .button-grid {
@@ -346,5 +356,14 @@
   .sub-title {
     width: 27rem;
     font-size: 3.3rem;
+  }
+  .surfbreaks-title:hover {
+    margin-left: 2.7rem;
+  }
+}
+
+@media only screen and (min-width: 95rem) {
+  .surfbreaks-title:hover {
+    margin-left: 3.4rem;
   }
 }
