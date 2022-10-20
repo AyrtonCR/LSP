@@ -21,6 +21,11 @@
 .created-by {
   color: black;
   margin: 0rem;
+  transition: all 0.3s ease;
+}
+.created-by:hover {
+  cursor: default;
+  transform: scale(1.1);
 }
 .navbar-item-footer {
   padding-left: 0.5rem;
@@ -36,6 +41,11 @@
     justify-content: left;
   }
   .navbar-item-footer {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 70rem) {
+  .navbar-item-footer {
+    font-size: 1.1rem;
   }
 }

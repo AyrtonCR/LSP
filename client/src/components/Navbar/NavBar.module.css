@@ -13,7 +13,6 @@
     right: 0;
     width: 30%;
     margin: 0 0.2rem;
-
     background: #293232;
     border: 0.1rem solid rgb(0, 0, 0);
     box-shadow: 0 0 1rem -0.1rem;
@@ -49,6 +48,7 @@
   .logo {
     width: 2.5rem;
     margin-top: 1rem;
+    padding: 0 1rem;
   }
   .navbarItem {
     text-align: center;
@@ -62,7 +62,7 @@
     display: contents;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+    gap: 0.7rem;
     width: 100%;
     list-style-type: none;
     padding: 1rem;
@@ -75,7 +75,7 @@
 
   .navLink {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: white;
     text-shadow: 0.12rem 0.12rem 2.5rem;
     white-space: nowrap;
@@ -86,7 +86,7 @@
     text-decoration: none;
     width: fit-content;
     transition: all 0.3s ease;
-    padding: 0.2rem 1.4rem;
+    padding: 0.2rem 1rem;
   }
   .navLink:hover {
     color: #ed7a0e;
@@ -111,7 +111,7 @@
   /* ---------- */
 }
 
-@media only screen and (min-width: 63rem) {
+@media only screen and (min-width: 55rem) {
   .NavBar .MobileNavigation {
     display: none;
   }
@@ -121,7 +121,7 @@
   }
   .NavBar nav ul {
     display: grid;
-    position: relative;
+    position: unset;
     top: unset;
     right: unset;
     width: 100%;
@@ -161,7 +161,29 @@
   .logo:hover {
     transform: scale(1.2);
   }
+  .NavBar {
+    background-color: #767370;
+    padding: 0 1rem;
+  }
+}
+@media only screen and (min-width: 58rem) {
+  .navLink {
+    font-size: 1.1rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .NavBar {
+    background-color: #767370;
+    padding: 0 1rem;
+  }
+}
+@media only screen and (min-width: 60rem) {
+  .navLink {
+    font-size: 1.1rem;
+  }
 }
 
 @media only screen and (min-width: 80rem) {
+  .navLink {
+    font-size: 1.3rem;
+  }
 }

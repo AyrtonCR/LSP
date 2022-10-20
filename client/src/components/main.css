@@ -33,6 +33,11 @@
     margin-top: 4rem;
     border-bottom: 0.07rem solid rgb(80, 80, 80);
     width: 18rem;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+  .main-title:hover {
+    transform: scale(1.2);
   }
   .description-and-image {
     position: relative;
@@ -55,6 +60,11 @@
     color: whitesmoke;
     font-size: 0.65rem;
     width: 11rem;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+  .main-description:hover {
+    transform: scale(1.1);
   }
   .main-links {
     color: black;
@@ -124,6 +134,7 @@
   .surfbreaks-blurb {
     font-size: 0.85rem;
     color: white;
+    cursor: default;
   }
 
   .main-buttons {
@@ -170,6 +181,12 @@
     margin-bottom: 0;
     font-size: 2.3em;
     width: 20rem;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .sub-title:hover {
+    transform: scale(1.2);
   }
   .mini-image {
     display: grid;
