@@ -9,15 +9,22 @@ import "./main.css";
 
 const Main = () => {
   const [surfbreaks, setSurfbreaks] = useState([]);
-
+  const [forecasts, setForecasts] = useState([]);
   const fetchData = async () => {
     const response = await fetch("http://localhost:5001/surfbreaks");
     const data = await response.json();
     setSurfbreaks(data);
   };
 
+  const fetchMoreData = async () => {
+    const response = await fetch("http://localhost:5001/forecasts");
+    const data = await response.json();
+    setForecasts(data);
+  };
+
   useEffect(() => {
     fetchData();
+    fetchMoreData();
   }, []);
 
   return (
@@ -30,6 +37,7 @@ const Main = () => {
             </em>
           </h1>
         </div>
+
         <div className="description-and-image">
           <img className="new-brighton-image" src={Wall_1} alt="" />
           <div className="top-left">
@@ -91,6 +99,7 @@ const Main = () => {
             </ul>
           </div>
         </div>
+
         <div className="lowerNavBar">
           <LowerNavBar />
         </div>
