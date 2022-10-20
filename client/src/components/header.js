@@ -13,7 +13,7 @@ import LoginButton from "./loginButton";
 const header = () => {
   return (
     <div>
-      <header className="header">
+      <nav className="header">
         <div className="navbar-container">
           <ul className="nav">
             <li className="navbar-item">
@@ -63,9 +63,18 @@ const header = () => {
               <LoginButton />
             </li>
           </ul>
+          <div
+            className="hamburger"
+            onClick={() => console.log("STUPID FUCKING NAVBARS")}
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
         </div>
-      </header>
+      </nav>
     </div>
   );
 };
+
 export default header;

@@ -172,6 +172,10 @@
     display: grid;
     justify-self: center;
     width: 7rem;
+    transition: all 0.2s ease;
+  }
+  .mini-image:hover {
+    transform: scale(1.5);
   }
   .title-container {
     display: grid;
