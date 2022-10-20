@@ -4,7 +4,29 @@
   }
   .NavBar .MobileNavigation {
     display: flex;
-    background: red;
+  }
+  .NavBar nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 30%;
+    margin: 0 0.2rem;
+
+    background: #293232;
+    border: 0.1rem solid rgb(0, 0, 0);
+    box-shadow: 0 0 1rem -0.1rem;
+    border-radius: 0.25rem;
+    z-index: 9;
+  }
+
+  .NavBar nav ul li {
+    align-items: center;
+  }
+
+  .NavBar {
+    opacity: 1;
   }
 
   .NavBar .MobileNavigation .Hamburger {
@@ -14,13 +36,10 @@
     cursor: pointer;
   }
   .header {
-    width: 100%;
     background: #767370;
   }
   .navbarContainer {
     display: grid;
-    box-shadow: 0rem 0 0.3rem -0.01rem black;
-    margin: 0 0.05rem;
   }
 
   .headerTitle {
@@ -28,12 +47,16 @@
   }
 
   .logo {
-    width: 1.8rem;
+    width: 2.5rem;
+    margin-top: 1rem;
   }
   .navbarItem {
     text-align: center;
     align-self: center;
     margin: 1rem 0.3rem;
+    transition: all 0.3s ease;
+    width: fit-content;
+    border-radius: 0.25rem;
   }
   .nav {
     display: contents;
@@ -62,25 +85,33 @@
     border-radius: 0.35rem;
     text-decoration: none;
     width: fit-content;
+    transition: all 0.3s ease;
     padding: 0.2rem 1.4rem;
+  }
+  .navLink:hover {
+    color: #ed7a0e;
   }
   .navLink:hover {
   }
 
-  .header a:active,
-  .header a:hover {
+  .navbarItem:active,
+  .navbarItem:hover {
     transform: scale(1.2);
-    color: black;
-    color: #ed7a0e;
+
     background-color: #293232;
-    text-decoration: underline;
+
     transform: scale(1.2);
   }
-
+  .NavBar .Hamburger {
+    transition: all 0.2s ease-in-out;
+  }
+  .NavBar:hover .Hamburger:hover {
+    transform: scale(1.4);
+  }
   /* ---------- */
 }
 
-@media only screen and (min-width: 73rem) {
+@media only screen and (min-width: 63rem) {
   .NavBar .MobileNavigation {
     display: none;
   }
@@ -88,6 +119,49 @@
   .NavBar .Navigation {
     display: grid;
   }
+  .NavBar nav ul {
+    display: grid;
+    position: relative;
+    top: unset;
+    right: unset;
+    width: 100%;
+    margin: 0rem;
+    background: none;
+    border: unset;
+    box-shadow: unset;
+    border-radius: 0;
+  }
+
+  .NavBar nav ul li {
+    align-items: center;
+  }
+
+  .NavBar {
+    opacity: none;
+  }
+  .navbarItem {
+    display: grid;
+    justify-self: center;
+  }
+  .navbarItem .logo {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    width: 2rem;
+    margin-top: 0rem;
+    background: none;
+  }
+  .navbarItem:hover {
+    background-color: unset;
+  }
+
+  .logo {
+    transition: all 0.3s ease;
+  }
+  .logo:hover {
+    transform: scale(1.2);
+  }
 }
+
 @media only screen and (min-width: 80rem) {
 }
