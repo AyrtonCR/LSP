@@ -1,30 +1,36 @@
-/* @media only screen and (min-width: 22.5rem) {
-  .nav {
+@media only screen and (min-width: 22.5rem) {
+  .NavBar .Navigation {
     display: none;
   }
-}
-@media only screen and (min-width: 30rem) {
-}
+  .NavBar .MobileNavigation {
+    display: flex;
+    background: red;
+  }
 
-@media only screen and (min-width: 50rem) {
+  .NavBar .MobileNavigation .Hamburger {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    cursor: pointer;
+  }
   .header {
     width: 100%;
     background: #767370;
   }
-  .navbar-container {
+  .navbarContainer {
     display: grid;
     box-shadow: 0rem 0 0.3rem -0.01rem black;
     margin: 0 0.05rem;
   }
 
-  .header-title {
+  .headerTitle {
     text-decoration: none;
   }
 
   .logo {
     width: 1.8rem;
   }
-  .navbar-item {
+  .navbarItem {
     text-align: center;
     align-self: center;
     margin: 1rem 0.3rem;
@@ -44,7 +50,7 @@
     list-style-type: none;
   }
 
-  .nav-link {
+  .navLink {
     display: block;
     font-size: 1.2rem;
     color: white;
@@ -58,7 +64,7 @@
     width: fit-content;
     padding: 0.2rem 1.4rem;
   }
-  .nav-link:hover {
+  .navLink:hover {
   }
 
   .header a:active,
@@ -72,3 +78,16 @@
   }
 
   /* ---------- */
+}
+
+@media only screen and (min-width: 73rem) {
+  .NavBar .MobileNavigation {
+    display: none;
+  }
+
+  .NavBar .Navigation {
+    display: grid;
+  }
+}
+@media only screen and (min-width: 80rem) {
+}
