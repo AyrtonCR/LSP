@@ -16,11 +16,27 @@
 .surfboardContainer {
 }
 .surfboardGridContainer {
+  display: grid;
   padding: 1rem;
-  margin: 0 1rem;
 }
 .surfboardTitle {
+  display: grid;
+  justify-self: center;
   text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 0.12rem 0.12rem 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  margin: 2rem 0;
+  width: 15rem;
+  border-bottom: 0.07rem solid rgb(80, 80, 80);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+.surfboardTitle:hover {
+  transform: scale(1.2);
 }
 
 .singleSurfboardGrid {
@@ -31,6 +47,9 @@
   border-radius: 0.25rem;
   background-color: #f4c857;
   padding-bottom: 5rem;
+  margin: 0 1rem;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
 }
 
 .singleSurfboardDescriptionContainer {
@@ -45,11 +64,11 @@
 
 .surfboardDescription {
   display: grid;
-  margin: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   padding: 1rem;
   padding-bottom: 0rem;
   font-size: 1rem;
+  cursor: default;
 }
 
 .surfboardStrength {
@@ -62,6 +81,12 @@
   width: fit-content;
   padding: 0.4rem 3rem;
   margin-bottom: 0rem;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.surfboardStrength:hover {
+  transform: scale(1.2);
 }
 .singleSurfboardImage {
   display: grid;
@@ -76,60 +101,128 @@
   box-shadow: 0 0 1rem -0.1rem black;
   border: 0.1rem solid black;
   border-radius: 0.25rem;
+  transition: all 0.3s ease;
 }
 
+.surfboardsImage:hover {
+  transform: scale(1.2);
+}
 .surfboardContainer {
   border: 0.1rem solid black;
+  box-shadow: 0 0 0.1rem -1rem black;
+}
+
+.surfboardsBlurbContainer {
+  display: grid;
+  justify-self: center;
+  border: 0.01rem solid black;
+  box-shadow: 0 0 2rem -0.1rem black;
+  border-radius: 0.25rem;
+  margin: 2rem 0;
+  padding: 0.6rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+.surfboardsBlurbContainer:hover {
+  transform: scale(1.1);
+}
+.surfboardsBlurb {
+  text-align: center;
+  color: white;
+  font-size: 1rem;
 }
 @media only screen and (min-width: 50rem) {
-  .surfboardGridContainer {
+  .singleSurfboardGrid {
     margin: 0 5rem;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+  }
+  .surfboardsBlurbContainer {
+    width: 92%;
+    transition: all 0.3s ease;
   }
 }
 @media only screen and (min-width: 60rem) {
   .surfboardGridContainer {
-    margin: 0 8rem;
+  }
+  .singleSurfboardGrid {
+    margin: 0 10rem;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+  }
+  .surfboardsBlurbContainer {
+    width: 85%;
     transition: all 0.3s ease;
   }
 }
 @media only screen and (min-width: 70rem) {
   .surfboardGridContainer {
-    display: grid;
-    justify-self: center;
-    margin: 0 10rem;
-    transition: all 0.5s ease;
   }
   .surfboardStrength {
     font-size: 1.5rem;
   }
   .surfboardDescription {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
+  }
+  .singleSurfboardGrid {
+    display: grid;
+    justify-self: center;
+    margin: 0 14rem;
+    margin-top: 2rem;
+    transition: all 0.5s ease;
+  }
+  .surfboardsBlurbContainer {
+    width: 80%;
+    transition: all 0.3s ease;
+  }
+  .surfboardsBlurb {
+    font-size: 1.1rem;
   }
 }
 @media only screen and (min-width: 90rem) {
   .surfboardGridContainer {
-    margin: 0 16rem;
+  }
+  .singleSurfboardGrid {
+    margin: 0 22rem;
+    transition: all 0.3s ease;
+  }
+  .surfboardsBlurbContainer {
+    width: 70%;
     transition: all 0.3s ease;
   }
 }
 
 @media only screen and (min-width: 100rem) {
   .surfboardGridContainer {
-    margin: 0 22rem;
+  }
+  .singleSurfboardGrid {
+    margin: 0 28rem;
+    transition: all 0.3s ease;
+  }
+  .surfboardsBlurbContainer {
+    width: 65%;
     transition: all 0.3s ease;
   }
 }
 
 @media only screen and (min-width: 110rem) {
   .surfboardGridContainer {
-    margin: 0 26rem;
+  }
+  .singleSurfboardGrid {
+    margin: 0 32rem;
+    transition: all 0.3s ease;
+  }
+  .surfboardsBlurbContainer {
+    width: 55%;
     transition: all 0.3s ease;
   }
 }
 
 @media only screen and (min-width: 125rem) {
   .surfboardGridContainer {
-    margin: 0 30rem;
+  }
+  .singleSurfboardGrid {
+    margin: 0 38rem;
     transition: all 0.3s ease;
   }
 }
