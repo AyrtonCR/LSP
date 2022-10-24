@@ -6,6 +6,8 @@
 
 My goal for this project is to build from scratch a responsive web app that will help surfers find out information about the surfbreaks around Pegasus Bay. This is the first solo project I have undertaken and is meant to showcase the different skills and technologies I have learnt while undertaking my Diploma in Web Development & Design. The app should ...
 
+<br>
+
 - Display information about local surf breaks.
 - Display information about local surf forecasts.
 - Include a Contact Page & About Page.
@@ -43,7 +45,7 @@ This will locally ...
 <br>
 
 - Create the [React Application (http://localhost:3001/)](http://localhost:3001/) and launch the `Client` which uses some external API's.
-- Create an [Express API (http://localhost:5001/)](http://localhost:5001/) to communicate with `Database` and `Client`.\*\*\*\*
+- Create an [Express API (http://localhost:5001/)](http://localhost:5001/) to communicate with `Database` and `Client`.
 - Create and populate a MongoDB `Database`.
 - Create a [MongoDB Express (http://localhost:8111/)](http://localhost:8111/) server that allows viewing of the `MongoDB Database` in the browser.
 
