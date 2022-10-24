@@ -1,9 +1,25 @@
+.container {
+  background: #767370;
+  background: linear-gradient(
+    180deg,
+    #767370 0%,
+    #767370 13.99%,
+    #767370 14%,
+    #f27c0e 49.9%,
+    #f27c0e 50%,
+    #f27c0e 62%,
+    #f27c0e 75%,
+    #767370 96%
+  );
+}
+
 .mainContainer {
   display: grid;
-  margin: 1rem;
+  padding: 1rem;
 }
 .mainTitle {
   text-align: center;
+  padding: 2rem;
 }
 .mainGrid {
   display: grid;
@@ -35,6 +51,7 @@
   box-shadow: 0 0 1rem -0.1rem black;
   border-radius: 0.25rem;
   padding: 0 1rem;
+  background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
 }
 
 .mainTextContainer {

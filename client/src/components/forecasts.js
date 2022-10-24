@@ -16,7 +16,7 @@ const Forecasts = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className={forecastStyles.container}>
       <div className={forecastStyles.forecastsContainer}>
         <div className={forecastStyles.forecastsGrid}>
           <h2 className={forecastStyles.forecastMainName}>Forecasts</h2>
@@ -28,44 +28,55 @@ const Forecasts = () => {
                     className={forecastStyles.forecastsSingleItem}
                     key={forecasts._id}
                   >
-                    <div className={forecastStyles.forecastsItemGridPart1}>
+                    <div className={forecastStyles.mainGridPart1}>
                       <h2 className={forecastStyles.forecastName}>
-                        <u>{forecast.forecasts_name}</u>
+                        {forecast.forecasts_name}
                       </h2>
-                      <img
-                        alt="forecasts"
-                        className={forecastStyles.forecastsImage}
-                        src={forecast.forecasts_image}
-                      ></img>
                     </div>
-                    <div className={forecastStyles.forecastsItemGridPart2}>
-                      <a
-                        href={forecast.forecasts_info_1}
-                        className={forecastStyles.forecastsLink}
-                      >
-                        {forecast.forecasts_name} Magic Seaweed Report
-                      </a>
+                    <div className={forecastStyles.mainGridPart2}>
+                      <div className={forecastStyles.forecastsItemGridPart1}>
+                        <img
+                          alt="forecasts"
+                          className={forecastStyles.forecastsImage}
+                          src={forecast.forecasts_image}
+                        ></img>
+                      </div>
+                      <div className={forecastStyles.forecastsItemGridPart2}>
+                        <a
+                          href={forecast.forecasts_info_1}
+                          className={forecastStyles.forecastButton}
+                        >
+                          <button className={forecastStyles.nestedButton}>
+                            <strong>MS Surf Report</strong>
+                          </button>
+                        </a>
 
-                      <a
-                        href={forecast.forecasts_info_2}
-                        className={forecastStyles.forecastsLink}
-                      >
-                        {forecast.forecasts_name} Surf-Forecast Report
-                      </a>
+                        <a
+                          href={forecast.forecasts_info_2}
+                          className={forecastStyles.forecastButton}
+                        >
+                          <button className={forecastStyles.nestedButton}>
+                            <strong>SF Surf Report</strong>
+                          </button>
+                        </a>
+                        <a
+                          href={forecast.forecasts_cam_1}
+                          className={forecastStyles.forecastButton}
+                        >
+                          <button className={forecastStyles.nestedButton}>
+                            <strong>Surf Cam - 1</strong>
+                          </button>
+                        </a>
 
-                      <a
-                        href={forecast.forecasts_cam_1}
-                        className={forecastStyles.forecastsLink}
-                      >
-                        Surf Cam - 1
-                      </a>
-
-                      <a
-                        href={forecast.forecasts_cam_2}
-                        className={forecastStyles.forecastsLink}
-                      >
-                        Surf Cam - 2
-                      </a>
+                        <a
+                          href={forecast.forecasts_cam_2}
+                          className={forecastStyles.forecastButton}
+                        >
+                          <button className={forecastStyles.nestedButton}>
+                            <strong>Surf Cam - 2</strong>
+                          </button>
+                        </a>
+                      </div>
                     </div>
                   </li>
                 </>
@@ -74,7 +85,6 @@ const Forecasts = () => {
           </ul>
         </div>
       </div>
-
       <LowerNavBar />
     </div>
   );

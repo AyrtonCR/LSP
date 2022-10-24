@@ -1,6 +1,23 @@
+.container {
+  background: #767370;
+  background: linear-gradient(
+    180deg,
+    #767370 0%,
+    #767370 13.99%,
+    #767370 14%,
+    #f27c0e 49.9%,
+    #f27c0e 50%,
+    #f27c0e 62%,
+    #f27c0e 75%,
+    #767370 96%
+  );
+  margin-top: 0rem;
+}
+.surfboardContainer {
+}
 .surfboardGridContainer {
   padding: 1rem;
-  margin: 1rem;
+  margin: 0 1rem;
 }
 .surfboardTitle {
   text-align: center;
@@ -12,14 +29,14 @@
   box-shadow: 0 0 2rem -0.1rem black;
   border: 0.1rem solid black;
   border-radius: 0.25rem;
+  background-color: #f4c857;
+  padding-bottom: 5rem;
 }
 
-.singleSurfboard {
+.singleSurfboardDescriptionContainer {
   display: grid;
-  border-right: 0.1rem solid black;
-  border-top: 0.1rem solid black;
-  border-left: 0.1rem solid black;
-  grid-template-columns: 0.5fr 1fr;
+
+  grid-template-rows: 0.7fr 1fr;
   margin-top: 1rem 0;
   padding: 1rem;
   border-top-left-radius: 0.25rem;
@@ -28,23 +45,28 @@
 
 .surfboardDescription {
   display: grid;
-  border-right: 0.1rem solid black;
-  border-bottom: 0.1rem solid black;
-  border-left: 0.1rem solid black;
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  margin: 0rem;
+  margin: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  font-size: 0.8rem;
+  padding-bottom: 0rem;
+  font-size: 1rem;
 }
 
 .surfboardStrength {
-  display: grid;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  align-self: center;
+  justify-self: center;
   list-style-type: none;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  border-bottom: 0.01rem solid black;
+  width: fit-content;
+  padding: 0.4rem 3rem;
+  margin-bottom: 0rem;
+}
+.singleSurfboardImage {
+  display: grid;
+  justify-content: center;
+  margin: 0rem 2rem;
 }
 .surfboardsImage {
   display: grid;
@@ -59,10 +81,23 @@
 .surfboardContainer {
   border: 0.1rem solid black;
 }
-
+@media only screen and (min-width: 50rem) {
+  .surfboardGridContainer {
+    margin: 0 5rem;
+  }
+}
+@media only screen and (min-width: 60rem) {
+  .surfboardGridContainer {
+    margin: 0 8rem;
+    transition: all 0.3s ease;
+  }
+}
 @media only screen and (min-width: 70rem) {
   .surfboardGridContainer {
+    display: grid;
+    justify-self: center;
     margin: 0 10rem;
+    transition: all 0.5s ease;
   }
   .surfboardStrength {
     font-size: 1.5rem;
@@ -74,5 +109,27 @@
 @media only screen and (min-width: 90rem) {
   .surfboardGridContainer {
     margin: 0 16rem;
+    transition: all 0.3s ease;
+  }
+}
+
+@media only screen and (min-width: 100rem) {
+  .surfboardGridContainer {
+    margin: 0 22rem;
+    transition: all 0.3s ease;
+  }
+}
+
+@media only screen and (min-width: 110rem) {
+  .surfboardGridContainer {
+    margin: 0 26rem;
+    transition: all 0.3s ease;
+  }
+}
+
+@media only screen and (min-width: 125rem) {
+  .surfboardGridContainer {
+    margin: 0 30rem;
+    transition: all 0.3s ease;
   }
 }

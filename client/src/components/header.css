@@ -1,4 +1,4 @@
-@media only screen and (min-width: 22.5rem) {
+/* @media only screen and (min-width: 22.5rem) {
   .nav {
     display: none;
   }
@@ -9,19 +9,12 @@
 @media only screen and (min-width: 50rem) {
   .header {
     width: 100%;
+    background: #767370;
   }
   .navbar-container {
-    background: linear-gradient(
-      180deg,
-      rgb(226, 142, 68) 0%,
-      rgb(223, 186, 117) 60%,
-      rgb(223, 186, 117) 100%
-    );
-  }
-  .header a:active,
-  .header a:hover {
-    color: #eb212e;
-    text-decoration: underline;
+    display: grid;
+    box-shadow: 0rem 0 0.3rem -0.01rem black;
+    margin: 0 0.05rem;
   }
 
   .header-title {
@@ -33,14 +26,14 @@
   }
   .navbar-item {
     text-align: center;
-    padding: 0.7rem;
     align-self: center;
+    margin: 1rem 0.3rem;
   }
   .nav {
     display: contents;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     list-style-type: none;
     padding: 1rem;
@@ -52,10 +45,30 @@
   }
 
   .nav-link {
-    font-size: 1rem;
+    display: block;
+    font-size: 1.2rem;
+    color: white;
     text-shadow: 0.12rem 0.12rem 2.5rem;
     white-space: nowrap;
-    color: black;
+    padding: 0.3rem 0.7rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 0.35rem;
     text-decoration: none;
+    width: fit-content;
+    padding: 0.2rem 1.4rem;
   }
-}
+  .nav-link:hover {
+  }
+
+  .header a:active,
+  .header a:hover {
+    transform: scale(1.2);
+    color: black;
+    color: #ed7a0e;
+    background-color: #293232;
+    text-decoration: underline;
+    transform: scale(1.2);
+  }
+
+  /* ---------- */

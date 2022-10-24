@@ -6,7 +6,7 @@ import EverythingImage from "../utils/everythingCr.png";
 const Contact = () => {
   return (
     <>
-      <div className="container">
+      <div className={styles.container}>
         <div className={styles.mainContainer}>
           <h1 className={styles.MainTitle}>Feel free to get in touch ...</h1>
           <div className={styles.mainGrid}>

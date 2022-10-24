@@ -1,0 +1,193 @@
+@media only screen and (min-width: 22.5rem) {
+  .NavBar .Navigation {
+    display: none;
+  }
+  .NavBar .MobileNavigation {
+    display: flex;
+  }
+  .NavBar nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 30%;
+    margin: 0 0.2rem;
+    background: #293232;
+    border: 0.1rem solid rgb(0, 0, 0);
+    box-shadow: 0 0 1rem -0.1rem;
+    border-radius: 0.25rem;
+    z-index: 9;
+  }
+
+  .NavBar nav ul li {
+    align-items: center;
+  }
+
+  .NavBar {
+  }
+
+  .NavBar .MobileNavigation .Hamburger {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    cursor: pointer;
+  }
+  .header {
+    background: #767370;
+  }
+  .navbarContainer {
+    display: grid;
+  }
+
+  .headerTitle {
+    text-decoration: none;
+  }
+
+  .logo {
+    width: 2.5rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+  .navbarItem {
+    text-align: center;
+    align-self: center;
+    margin: 1rem 0.3rem;
+    transition: all 0.3s ease;
+    width: fit-content;
+    border-radius: 0.25rem;
+  }
+  .nav {
+    display: contents;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.7rem;
+    width: 100%;
+    list-style-type: none;
+    padding: 1rem;
+    white-space: nowrap;
+    text-align: center;
+    margin: 0;
+    padding: 0rem;
+    list-style-type: none;
+  }
+
+  .navLink {
+    display: block;
+    font-size: 1.15rem;
+    color: white;
+    text-shadow: 0.12rem 0.12rem 2.5rem;
+    white-space: nowrap;
+    padding: 0.3rem 0.7rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 0.35rem;
+    text-decoration: none;
+    width: fit-content;
+    transition: all 0.3s ease;
+    padding: 0.2rem 1rem;
+  }
+  .navLink:hover {
+    color: #ed7a0e;
+  }
+  .navLink:hover {
+  }
+
+  .navbarItem:active,
+  .navbarItem:hover {
+    transform: scale(1.2);
+
+    background-color: #293232;
+
+    transform: scale(1.2);
+  }
+  .NavBar .Hamburger {
+    transition: all 0.2s ease-in-out;
+  }
+  .NavBar:hover .Hamburger:hover {
+    transform: scale(1.4);
+  }
+  /* ---------- */
+}
+
+@media only screen and (min-width: 55rem) {
+  .NavBar .MobileNavigation {
+    display: none;
+  }
+
+  .NavBar .Navigation {
+    display: grid;
+  }
+  .NavBar nav ul {
+    display: grid;
+    position: unset;
+    top: unset;
+    right: unset;
+    width: 100%;
+    margin: 0rem;
+    background: none;
+    border: unset;
+    box-shadow: unset;
+    border-radius: 0;
+  }
+
+  .NavBar nav ul li {
+    align-items: center;
+  }
+
+  .NavBar {
+    opacity: none;
+  }
+  .navbarItem {
+    display: grid;
+    justify-self: center;
+  }
+  .navbarItem .logo {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    width: 2rem;
+    margin-top: 0rem;
+    background: none;
+  }
+  .navbarItem:hover {
+    background-color: unset;
+  }
+
+  .logo {
+    transition: all 0.3s ease;
+  }
+  .logo:hover {
+    transform: scale(1.2);
+  }
+  .NavBar {
+    background-color: #767370;
+    padding: 0 1rem;
+  }
+}
+@media only screen and (min-width: 58rem) {
+  .navLink {
+    font-size: 1.1rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .NavBar {
+    background-color: #767370;
+    padding: 0 1rem;
+  }
+}
+@media only screen and (min-width: 60rem) {
+  .navLink {
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+
+  .navLink:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+  .navLink {
+    font-size: 1.3rem;
+  }
+}

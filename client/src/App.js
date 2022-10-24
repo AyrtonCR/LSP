@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/header";
+import NavBar from "./components/Navbar/Navbar";
 import Footer from "./components/footer";
 import Main from "./components/main";
 import Surfbreak from "./components/surfbreak";
@@ -10,13 +10,11 @@ import About from "./components/about";
 import Links from "./components/links";
 import Forecasts from "./components/forecasts";
 import Contact from "./components/contact";
-import ProtectedRoute from "./components/ProtectedRoute";
-import { useAuth0 } from "@auth0/auth0-react";
 
 const App = () => {
   return (
     <>
-      <Header />
+      <NavBar />
       <div className="container">
         <Routes>
           <Route path="/" element={<Main />}></Route>

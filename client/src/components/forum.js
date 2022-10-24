@@ -33,10 +33,12 @@ const Forum = () => {
   return (
     <div className={styles.container}>
       <h2 className={styles.mainTitle}>Swell Watcher</h2>
-      <h3 className={styles.mainDescription}>
-        Description about what how this page is a forum where people can create
-        an account and let people know if the surf is cranking near them.
-      </h3>
+      <div className={styles.mainDescriptionContainer}>
+        <h3 className={styles.mainDescription}>
+          Stay connected with local updates on the surf and let others know when
+          the waves are good near you.
+        </h3>
+      </div>
       <div className={styles.mainGrid}>
         <div className={styles.singleItemMainGrid}>
           {forumInfo.map((forumData) => {

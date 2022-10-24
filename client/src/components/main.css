@@ -1,41 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,300&display=swap");
 
-:root {
+* {
+  font-family: "Nunito", sans-serif;
+}
+.main-container {
+  background: #767370;
   background: linear-gradient(
     180deg,
-    rgb(223, 186, 117) 0%,
-    rgb(223, 186, 117) 60%,
-    rgb(236, 142, 59) 100%
+    #767370 0%,
+    #767370 13.99%,
+    #767370 14%,
+    #f27c0e 49.9%,
+    #f27c0e 50%,
+    #f27c0e 62%,
+    #f27c0e 75%,
+    #767370 96%
   );
 }
 
-* {
-  font-family: "Nunito Sans", sans-serif;
-}
-.main-container {
-  margin-top: 2rem;
+.main-color-wrapper {
+  background: linear-gradient(#f4c857);
 }
 
 @media only screen and (min-width: 22.5rem) {
   .main-title {
     font-size: 1.3rem;
+    color: white;
     text-shadow: 0.12rem 0.12rem 2rem;
-    margin-bottom: 5rem;
-    color: black;
-    background-color: rgb(223, 186, 117);
+    margin-bottom: 0rem;
+    padding-top: 1rem;
     text-align: center;
+    margin-top: 4rem;
+    border-bottom: 0.07rem solid rgb(80, 80, 80);
+    width: 18rem;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+  .main-title:hover {
+    transform: scale(1.2);
   }
   .description-and-image {
     position: relative;
     color: black;
-    margin-bottom: 3rem;
   }
 
   /* Top left text */
   .top-left {
     position: absolute;
-    top: 0.5rem;
-    left: 1rem;
+    top: 1rem;
+    left: 1.5rem;
   }
 
   .main-description {
@@ -47,23 +60,34 @@
     color: whitesmoke;
     font-size: 0.65rem;
     width: 11rem;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+  .main-description:hover {
+    transform: scale(1.1);
   }
   .main-links {
     color: black;
     background-color: #293232;
   }
   .new-brighton-image {
-    box-shadow: 0 0 2rem -0.1rem black;
+    box-shadow: 0 0.15rem 1rem -0.1rem rgb(19, 19, 19);
+    border-top: 0.07rem solid rgb(74, 74, 74);
+    border-bottom: 0.07rem solid rgb(74, 74, 74);
     border-radius: 0.1rem;
     max-width: 100%;
     align-self: center;
+    transition: all 0.3s ease;
+  }
+  .new-brighton-image:hover {
+    transform: scale(1.01);
   }
 
   /* Single Surfbreaks Grid */
 
   .surfbreaks-grid-container {
     box-shadow: 0 0 2rem -0.1rem black;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     margin: 0 2rem;
   }
 
@@ -72,6 +96,10 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     padding: 0.5rem;
+    background-color: #f4c857;
+    background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
+    border: 0.01rem solid black;
+    border-radius: 0.5rem;
   }
 
   .single-surfbreak {
@@ -81,6 +109,7 @@
     border: 0.05rem solid black;
     border-radius: 0.25rem;
     box-shadow: 0 0 1rem -0.1rem black;
+    background-color: #393e46;
   }
 
   .surfbreaks-image {
@@ -88,40 +117,107 @@
     border: 0.1rem solid black;
     max-width: 100%;
     border-radius: 0.25rem;
+    transition: all 0.3s ease;
   }
-
+  .surfbreaks-image:hover {
+    transform: scale(1.05);
+  }
   .surfbreaks-title {
     font-size: 0.9rem;
-    color: black;
+    width: fit-content;
+    color: white;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  .surfbreaks-title:hover {
+    color: #f27c0e;
+    margin-left: 2rem;
+    transform: scale(1.2);
   }
   .surfbreaks-blurb {
     font-size: 0.85rem;
-    color: black;
+    color: white;
+    cursor: default;
   }
 
   .main-buttons {
     margin: 0 1rem 0 0;
     padding: 0.3rem 0.9rem;
     background: none;
+    width: fit-content;
+    color: black;
     border: 0.01rem solid black;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    background-color: #f4c857;
+    border-radius: 0.15rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .main-buttons:active,
+  .main-buttons:hover {
+    color: #ed7a0e;
+    background-color: #293232;
+    text-decoration: underline;
+    transform: scale(1.15);
   }
 
-  .main-buttons a:active,
-  .main-buttons a:hover {
-    color: #eb212e;
-    text-decoration: underline;
+  .button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+
+  .button-link {
+    width: fit-content;
+  }
+  .sub-title-container {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 0.6fr 0.9fr;
+  }
+  .sub-title {
+    margin-top: 3rem;
+    text-align: center;
+    color: rgb(37, 37, 37);
+    text-shadow: 0.12rem 0.12rem 2rem;
+    border-bottom: 0.07rem solid #393e46;
+    margin-bottom: 0;
+    font-size: 2.3em;
+    width: 20rem;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .sub-title:hover {
+    transform: scale(1.2);
+  }
+  .mini-image {
+    display: grid;
+    justify-self: center;
+    width: 7rem;
+    transition: all 0.2s ease;
+  }
+  .mini-image:hover {
+    transform: scale(1.5);
+  }
+  .title-container {
+    display: grid;
+    margin-bottom: 6rem;
   }
 }
 @media only screen and (min-width: 30rem) {
   .main-description {
-    font-size: 0.75rem;
-    width: 10rem;
+    font-size: 0.7rem;
+    width: 17rem;
   }
   .main-title {
-    font-size: 2.1rem;
-    text-align: unset;
-    margin-left: 8rem;
+    display: grid;
+    justify-self: center;
+    font-size: 2.3rem;
+    text-align: center;
+    margin-left: 0;
+    padding: 0 2rem;
   }
   .surfbreaks-title {
     font-size: 1.2rem;
@@ -131,7 +227,7 @@
   }
   .main-buttons {
     font-size: 0.8rem;
-    padding: 0.3rem;
+    padding: 0.3rem 0.9rem;
   }
 }
 @media only screen and (min-width: 40rem) {
@@ -140,11 +236,12 @@
     width: 12rem;
   }
   .main-title {
-    font-size: 1.9rem;
+    border-bottom: 0.07rem solid rgb(80, 80, 80);
   }
   .surfbreaks-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .surfbreaks-title {
     font-size: 1.2rem;
   }
@@ -152,7 +249,7 @@
     font-size: 0.95rem;
   }
   .main-buttons {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 0.3rem;
   }
 }
@@ -162,7 +259,10 @@
     width: 14rem;
   }
   .main-title {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    width: 24rem;
+    border-bottom: 0.07rem solid rgb(80, 80, 80);
+    padding: 0 1rem;
   }
   .surfbreaks-title {
     font-size: 1.2rem;
@@ -173,6 +273,12 @@
   .main-buttons {
     font-size: 0.8rem;
     padding: 0.3rem;
+  }
+  .title-container {
+    display: grid;
+    justify-content: start;
+    margin-bottom: 6rem;
+    margin-left: 6rem;
   }
 }
 
@@ -183,7 +289,6 @@
   }
   .surfbreaks-grid-container {
     box-shadow: 0 0 2rem -0.1rem black;
-    border-radius: 0.25rem;
     margin: 0 3rem;
   }
 
@@ -192,11 +297,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
     padding: 0.5rem;
+    margin-top: 3rem;
   }
 
   .single-surfbreak {
     display: grid;
-    grid-template-rows: 0.5fr 0.2fr 0.5fr 0.1fr;
+    grid-template-rows: 0.3fr 0.1fr 0.5fr;
     padding: 1rem;
     border: 0.05rem solid black;
     border-radius: 0.25rem;
@@ -216,8 +322,16 @@
     font-size: 0.95rem;
   }
   .main-buttons {
-    font-size: 0.8rem;
-    padding: 0.3rem;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.68rem;
+  }
+  .sub-title {
+    width: 24rem;
+    margin-top: 4rem;
+    font-size: 2.8em;
+  }
+  .mini-image {
+    width: 10rem;
   }
 }
 @media only screen and (min-width: 70rem) {
@@ -235,31 +349,54 @@
     font-size: 1rem;
   }
   .main-buttons {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 80rem) {
   .main-description {
-    font-size: 1rem;
-    width: 30rem;
+    font-size: 1.1rem;
+    width: 35rem;
   }
   .main-title {
-    font-size: 2.2rem;
+    font-size: 3rem;
+    width: 34rem;
   }
-
+  .top-left {
+    position: absolute;
+    top: 4.5rem;
+    left: 4.5rem;
+  }
   .surfbreaks-grid-container {
     box-shadow: 0 0 2rem -0.1rem black;
     border-radius: 0.25rem;
-    margin: 0 2rem;
+    margin: 0 12rem;
   }
 
   .surfbreaks-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .surfbreaks-blurb {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .main-buttons {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+  .sub-title {
+    width: 27rem;
+    font-size: 3.3rem;
+  }
+  .surfbreaks-title:hover {
+    margin-left: 2.7rem;
+  }
+}
+
+@media only screen and (min-width: 95rem) {
+  .surfbreaks-title:hover {
+    margin-left: 3.4rem;
+  }
+  .surfbreaks-grid-container {
+    box-shadow: 0 0 2rem -0.1rem black;
+    border-radius: 0.25rem;
+    margin: 0 14rem;
   }
 }

@@ -6,7 +6,7 @@ import Southshore from "../utils/southshore.png";
 
 const About = () => {
   return (
-    <div className="container">
+    <div className={styles.container}>
       <div className={styles.mainContainer}>
         <h1 className={styles.mainTitle}>About Me</h1>
         <div className={styles.mainGrid}>

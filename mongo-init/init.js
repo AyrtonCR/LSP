@@ -17,6 +17,8 @@ db.forecasts.insert([
     forecasts_cam_1:
       "https://www.surfline.com/surf-report/new-brighton/584204204e65fad6a770967d?camId=618dc0b3285443cca6282eeb",
     forecasts_cam_2: "http://www.waimairisurf.org.nz/webcam4",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/new-brighton",
   },
   {
     forecasts_name: "Sumner Beach",
@@ -27,6 +29,7 @@ db.forecasts.insert([
       "https://www.surf-forecast.com/breaks/Scarborough_1/forecasts/latest/six_day",
     forecasts_cam_1: "https://sumnersurf.nz/",
     forecasts_cam_2: "http://www.surfcam.co.nz/",
+    forecast_info: "http://surfseeker.co.nz/surf_breaks/canterbury/scarborough",
   },
   {
     forecasts_name: "Taylors Mistake Beach",
@@ -38,6 +41,8 @@ db.forecasts.insert([
       "https://www.surf-forecast.com/breaks/Taylors-Mistake/forecasts/latest",
     forecasts_cam_1: "https://www.taylorssurf.co.nz/",
     forecasts_cam_2: "",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/taylors-mistake",
   },
   {
     forecasts_name: "Waikuku Beach",
@@ -48,6 +53,8 @@ db.forecasts.insert([
       "https://www.surf-forecast.com/breaks/Waikuku-Beach/forecasts/latest/six_day",
     forecasts_cam_1: "https://sumnersurf.nz/",
     forecasts_cam_2: "http://www.surfcam.co.nz/",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/waikuku-beach",
   },
   {
     forecasts_name: "Amberly Beach",
@@ -59,6 +66,8 @@ db.forecasts.insert([
       "https://www.surf-forecast.com/breaks/Amberley-Beach/forecasts/latest/six_day",
     forecasts_cam_1: "",
     forecasts_cam_2: "",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/amberley-beach",
   },
   {
     forecasts_name: "Magnet Bay",
@@ -69,6 +78,7 @@ db.forecasts.insert([
       "https://www.surf-forecast.com/breaks/Magnet-Bay/forecasts/latest/six_day",
     forecasts_cam_1: "",
     forecasts_cam_2: "",
+    forecast_info: "http://surfseeker.co.nz/surf_breaks/canterbury/magnet-bay",
   },
 ]);
 db.forums.insert([
@@ -129,6 +139,8 @@ db.surfbreaks.insert([
       "New Brighton is one of the main local beach breaks in Christchurch, just 10 minutes drive from the city, it can offer anything from hollow inside sections to fat walls peeling from way out the back depending on swell. Generally though, the waves are average, and it's best to know what the forecasts will translate to when surfing here so you are not disappointed.",
     surfbreak_button: "Read More",
     surfbreak_button_forecast: "Check Forecast",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/new-brighton",
   },
   {
     surfbreak_image:
@@ -138,6 +150,7 @@ db.surfbreaks.insert([
       "Also referred to as Scarborough Beach, this is the main beginner break around Christchurch, about a 15 minute drive from the city it offers a generally more wally and weak wave that can peel for a  pretty good distance making it great for all levels of surfer. This break can also hold quite large short-interval swells when everywhere else is too big and messy.",
     surfbreak_button: "Read More",
     surfbreak_button_forecast: "Check Forecast",
+    forecast_info: "http://surfseeker.co.nz/surf_breaks/canterbury/scarborough",
   },
   {
     surfbreak_image:
@@ -147,6 +160,8 @@ db.surfbreaks.insert([
       "A solid wave when the swell and tides are right, Taylors Mistake can put out a solid hollow inside section on low tide and generally has more punch in it than other spots, though the ride is normally shorter. The sand bars can be better than other local breaks, but due to its size overcrowding is common",
     surfbreak_button: "Read More",
     surfbreak_button_forecast: "Check Forecast",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/taylors-mistake",
   },
   {
     surfbreak_image:
@@ -156,6 +171,8 @@ db.surfbreaks.insert([
       "Heading further north, Waikuku is a beach break that has better sand bars than further south at Brighton. Not often crowded, it catches the south swells a bit better than local Christchurch breaks making it a good idea when looking for more solid waves on a SSE swell or similair.",
     surfbreak_button: "Read More",
     surfbreak_button_forecast: "Check Forecast",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/waikuku-beach",
   },
   {
     surfbreak_image:
@@ -165,6 +182,8 @@ db.surfbreaks.insert([
       "Amberly Beach sits at the top of Pegasus Bay and is often the southern-most local beach break worth going to (gas permitting). The beach drops off quickly with an unsurfable dumping inside, but turns into a fairly consistent, wally wave best surfed at low-tide on a decent sized SSE swell.",
     surfbreak_button: "Read More",
     surfbreak_button_forecast: "Check Forecast",
+    forecast_info:
+      "http://surfseeker.co.nz/surf_breaks/canterbury/amberley-beach",
   },
   {
     surfbreak_image:
@@ -174,5 +193,6 @@ db.surfbreaks.insert([
       "A little over an hours drive south of Christchurch in Banks Penninsula lies one of the best left-hand point break in the region. Although a great wave on a decent sized south-swell, Magnet Bay gets crowded very quickly and breaks quite close to sharp rocks. While this bay is probably not considered overly dangerous to the more experienced surfers, it has surely claimed many fins and flesh over the years.",
     surfbreak_button: "Read More",
     surfbreak_button_forecast: "Check Forecast",
+    forecast_info: "http://surfseeker.co.nz/surf_breaks/canterbury/magnet-bay",
   },
 ]);

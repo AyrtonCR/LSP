@@ -1,21 +1,27 @@
 .button a:active,
 .button:hover {
-  color: #eb212e;
   text-decoration: underline;
-  background: rgb(245, 207, 138);
+  transform: scale(1.1);
 }
 
 .button {
   text-decoration: none;
   list-style-type: none;
   border: 0.06rem solid black;
-  box-shadow: 0.2rem 0.4rem 0.9rem -0.1rem black;
-  padding: 0.2rem 1.4rem;
-  background: none;
+  box-shadow: 0.1rem 0.2rem 0.5rem -0.1rem black;
+  padding: 0.2rem 1rem;
+  background: #eea93b;
   border-radius: 0.25rem;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
   cursor: pointer;
-  font-size: 1rem;
   white-space: nowrap;
   color: black;
+}
+
+@media only screen and (min-width: 65rem) {
+  .button {
+    font-size: 1.2rem;
+    padding: 0.2rem 1.4rem;
+  }
 }

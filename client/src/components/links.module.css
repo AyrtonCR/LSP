@@ -1,5 +1,22 @@
+.container {
+  background: #767370;
+  background: linear-gradient(
+    180deg,
+    #767370 0%,
+    #767370 13.99%,
+    #767370 14%,
+    #f27c0e 49.9%,
+    #f27c0e 50%,
+    #f27c0e 62%,
+    #f27c0e 75%,
+    #767370 96%
+  );
+}
+
 .mainTitle {
   text-align: center;
+  margin: 0rem;
+  padding: 2rem;
 }
 
 .mainContainer {
@@ -17,6 +34,7 @@
   margin: 1rem;
   padding: 1rem;
   border: 0.1rem solid black;
+  background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
 }
 
 .surfboardImage {
@@ -29,6 +47,7 @@
   gap: 0.01rem;
   border: 0.1rem solid black;
   margin: 1rem;
+  background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
 }
 
 .gridItem2Content1 {
