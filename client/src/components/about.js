@@ -20,31 +20,32 @@ const About = () => {
           <div className={styles.textGrid}>
             <div className={styles.mainTextContainer}>
               <p className={styles.mainText}>
-                Hi there, my name is Ayrton and I am a 26yo student in the last
-                stages of completing a Diploma in Web Development and Design. I
-                am based out of Christchurch and as you can probably tell I am
-                quite passionate about surfing!
+                Hi, my name is Ayrton and I am a student in the last stages of
+                completing my Diploma in Web Development and Design. I am based
+                out of Christchurch and as you can probably tell I am quite
+                passionate about surfing!
               </p>
               <p className={styles.mainText}>
-                The goal of this project has been to use the different sills I
+                The goal of this project has been to use the different skills I
                 have learnt to build a functional site for people in
                 Christchurch who are looking to find some waves. Once the
                 project is complete I will do a full retrospective on the
-                process and find areas which can be improved. The plan is then
-                to rebuild the site a few times, possibly in different
-                languages, improving on the previous version each time!
+                process and find areas to be improved. The plan is to then
+                rebuild the site, possibly in a different language, improving on
+                the previous version!
               </p>
               <p className={styles.mainText}>
-                I am really enjoying the transition from trade work to Web
-                Development, and am finding the learning and designing process
-                stimulating and surprisingly fun.{" "}
+                I am really enjoying the transition from physical trade work to
+                coding, and am finding the learning and designing process
+                stimulating and really fun. It is great to have found a new
+                hobby.{" "}
               </p>
             </div>
 
             <div className={styles.subTextContainer}>
-              <p className={styles.subText}>
-                Links to reference material will go here.
-              </p>
+              <a href="https://github.com/AyrtonCR" className={styles.subText}>
+                <i>https://github.com/AyrtonCR</i>
+              </a>
             </div>
           </div>
         </div>

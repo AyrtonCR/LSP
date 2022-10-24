@@ -20,6 +20,13 @@ const Forecasts = () => {
       <div className={forecastStyles.forecastsContainer}>
         <div className={forecastStyles.forecastsGrid}>
           <h2 className={forecastStyles.forecastMainName}>Forecasts</h2>
+          <h4 className={forecastStyles.mainBlurb}>
+            Here you can find access to the top forecast websites on the web.
+            'Magicseaweed' offers great swell information and an easy to read
+            star rating, and 'Surf Forecast' does the same but does not give out
+            stars so easily. By comparing the two and using the surf cams you
+            can find out what the waves are like before heading to the beach!
+          </h4>
           <ul className={forecastStyles.forecastsSingleGrid}>
             {forecasts.map((forecast) => {
               return (

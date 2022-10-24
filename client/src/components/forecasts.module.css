@@ -14,7 +14,7 @@
 }
 .nestedButton {
   display: grid;
-  align-items: center;
+
   border: 0rem;
   padding: 0rem;
   background: none;
@@ -58,9 +58,30 @@
 }
 
 .forecastMainName {
+  display: grid;
   text-align: center;
+  color: white;
+  display: grid;
+  justify-self: center;
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 0.12rem 0.12rem 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  margin: 2rem 0;
+  width: 15rem;
+  border-bottom: 0.07rem solid rgb(80, 80, 80);
+  transition: all 0.3s ease;
+  cursor: default;
+  margin-bottom: 4rem;
+}
+.forecastMainName:hover {
+  transform: scale(1.2);
 }
 .forecastsGrid {
+  display: grid;
   padding: 1rem;
 }
 
@@ -77,6 +98,8 @@
 }
 
 .forecastsSingleItem {
+  display: grid;
+  justify-self: center;
   list-style-type: none;
   border: 0.1rem solid black;
   box-shadow: 0 0 1rem -0.1rem black;
@@ -86,8 +109,12 @@
   grid-template-rows: 0.2fr 1fr;
   margin: 1rem;
   padding-bottom: 2rem;
+  max-width: 49rem;
 }
-
+.forecastsSingleGrid {
+  display: grid;
+  padding: 0rem;
+}
 .mainGridPart1 {
   display: grid;
   align-items: center;
@@ -129,8 +156,13 @@
   box-shadow: 0 0 1rem -0.1rem black;
   border: 0.1rem solid black;
   border-radius: 0.25rem;
+  transition: all 0.3s ease;
 }
 
+.forecastsImage:hover {
+  transform: scale(1.1);
+  margin-left: 1rem;
+}
 .forecastsItemGridPart1 {
   display: grid;
   align-self: center;
@@ -144,6 +176,16 @@
 }
 
 .lowerNavBar {
+}
+.mainBlurb {
+  display: grid;
+  justify-self: center;
+  color: white;
+  border: 0.01rem solid black;
+  padding: 1rem;
+  box-shadow: 0 0 1rem -0.1rem black;
+  margin-bottom: 3rem;
+  max-width: 70rem;
 }
 @media only screen and (min-width: 40rem) {
   .forecastsSingleItem {
@@ -161,33 +203,43 @@
 }
 @media only screen and (min-width: 60rem) {
   .forecastsItemGridPart1 {
-    margin-bottom: 5rem;
+  }
+  .forecastsSingleGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 1rem;
   }
 }
 @media only screen and (min-width: 70rem) {
   .forecastsContainer {
-    margin: 0 10rem;
   }
   .forecastsItemGridPart1 {
-    margin-bottom: 3rem;
+  }
+  .forecastsSingleGrid {
+    margin: 0 4rem;
+  }
+  .nestedButton {
+    font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 80rem) {
   .forecastsItemGridPart1 {
-    margin-bottom: 5rem;
+  }
+  .forecastsSingleGrid {
+    margin: 0 6rem;
   }
 }
 @media only screen and (min-width: 90rem) {
   .forecastsContainer {
-    margin: 0 16rem;
   }
   .forecastsItemGridPart1 {
-    margin-bottom: 6rem;
+  }
+  .forecastsSingleGrid {
+    margin: 0 10rem;
   }
 }
 
 @media only screen and (min-width: 100rem) {
   .forecastsItemGridPart1 {
-    margin-bottom: 8rem;
   }
 }

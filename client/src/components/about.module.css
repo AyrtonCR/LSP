@@ -17,10 +17,31 @@
   display: grid;
   padding: 1rem;
 }
+
 .mainTitle {
+  display: grid;
   text-align: center;
-  padding: 2rem;
+  color: white;
+  display: grid;
+  justify-self: center;
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 0.12rem 0.12rem 2rem;
+  padding: 1rem;
+  text-align: center;
+  width: 15rem;
+  border-bottom: 0.07rem solid rgb(80, 80, 80);
+  transition: all 0.3s ease;
+  cursor: default;
+  margin-bottom: 3.5rem;
 }
+
+.mainTitle:hover {
+  transform: scale(1.2);
+}
+
 .mainGrid {
   display: grid;
   grid-template-rows: 0.7fr 0.6fr;
@@ -40,20 +61,26 @@
   border: 0.08rem solid black;
   border-radius: 50%;
   max-height: 20rem;
+  transition: all 0.3s ease;
 }
 
-.image2 {
+.image1:hover {
+  transform: scale(1.05);
 }
-
 .textGrid {
   display: grid;
   border: 0.01rem solid black;
-  box-shadow: 0 0 1rem -0.1rem black;
+  box-shadow: 0 0 2rem -0.1rem black;
   border-radius: 0.25rem;
   padding: 0 1rem;
   background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
+  cursor: default;
+  transition: all 0.3s ease;
 }
 
+.textGrid:hover {
+  transform: scale(1.02);
+}
 .mainTextContainer {
   display: grid;
   grid-template-rows: 1fr;
@@ -61,18 +88,27 @@
   border-radius: 0.15rem;
   padding: 0rem;
   margin: 1rem 0;
+  box-shadow: 0 0 0.5rem -0.1rem black;
 }
 
 .mainText {
   display: grid;
-
-  padding: 0.5rem;
+  padding: 0 1.5rem;
+  font-size: 1.1rem;
 }
 
 .subTextContainer {
+  padding: 1rem;
+  transition: all 0.3s ease;
 }
-
+.subTextContainer:hover {
+  transform: scale(1.05);
+  margin-left: 2rem;
+}
 .subText {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
 }
 
 @media only screen and (min-width: 50rem) {

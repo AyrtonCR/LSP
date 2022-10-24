@@ -1,4 +1,5 @@
 .container {
+  display: grid;
   background: #767370;
   background: linear-gradient(
     180deg,
@@ -12,20 +13,45 @@
     #767370 96%
   );
 }
-
 .mainTitle {
   text-align: center;
   margin: 0rem;
   padding: 2rem;
+  color: white;
+}
+.mainTitle {
+  display: grid;
+  text-align: center;
+  color: white;
+  display: grid;
+  justify-self: center;
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 0.12rem 0.12rem 2rem;
+  padding-top: 3rem;
+  text-align: center;
+  width: 15rem;
+  border-bottom: 0.07rem solid rgb(80, 80, 80);
+  transition: all 0.3s ease;
+  cursor: default;
+  margin-bottom: 2.5rem;
 }
 
+.mainTitle:hover {
+  transform: scale(1.2);
+}
 .mainContainer {
+  display: grid;
 }
 
 .mainGrid {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  justify-self: center;
+  grid-template-rows: 1fr;
   margin: 2rem;
+  max-width: 34rem;
 }
 
 .gridItem1 {
@@ -35,11 +61,22 @@
   padding: 1rem;
   border: 0.1rem solid black;
   background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 2rem -0.1rem black;
 }
 
 .surfboardImage {
+  display: grid;
+  align-self: center;
   border: 0.01rem solid black;
   max-width: 100%;
+  transition: all 0.3s ease;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem -0.1rem black;
+}
+
+.surfboardImage:hover {
+  transform: scale(1.01);
 }
 .gridItem2 {
   display: grid;
@@ -48,27 +85,27 @@
   border: 0.1rem solid black;
   margin: 1rem;
   background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
+  border-radius: 0.25rem;
+  box-shadow: 0 0 2rem -0.1rem black;
 }
 
-.gridItem2Content1 {
-  border: 0.1rem solid black;
-  padding: 1rem;
-  margin: 1rem;
-}
-.gridItem2Content2 {
-  border: 0.1rem solid black;
-  padding: 1rem;
-  margin: 1rem;
-}
-.gridItem2Content3 {
-  border: 0.1rem solid black;
-  padding: 1rem;
-  margin: 1rem;
-}
+.gridItem2Content1,
+.gridItem2Content2,
+.gridItem2Content3,
 .gridItem2Content4 {
   border: 0.1rem solid black;
   padding: 1rem;
   margin: 1rem;
+  box-shadow: 0 0 0.5rem 0.1rem rgb(80, 80, 80);
+  transition: all 0.3s ease;
+}
+
+.gridItem2Content1:hover,
+.gridItem2Content2:hover,
+.gridItem2Content3:hover,
+.gridItem2Content4:hover {
+  transform: scale(1.003);
+  margin-left: 0.8rem;
 }
 
 .linksSubtitles {
@@ -77,12 +114,18 @@
 @media only screen and (min-width: 40rem) {
   .mainGrid {
     grid-template-rows: none;
-    grid-template-columns: 0.7fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
-@media only screen and (min-width: 80rem) {
+@media only screen and (min-width: 50rem) {
   .mainGrid {
-    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: none;
+  }
+}
+@media only screen and (min-width: 81rem) {
+  .mainGrid {
+    grid-template-columns: 0.7fr 1fr;
+    max-width: none;
   }
 }
