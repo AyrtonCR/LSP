@@ -4,7 +4,7 @@ import LowerNavBar from "./lowerNavBar";
 
 const WebLinks = () => {
   return (
-    <div className="container">
+    <div className={styles.container}>
       <h1 className={styles.mainTitle}>Links</h1>
       <div className={styles.mainContainer}>
         <div className={styles.mainGrid}>

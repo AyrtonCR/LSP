@@ -79,7 +79,7 @@ const Main = () => {
                           <strong>Learn More</strong>
                         </button>
                       </Link>
-                      <Link to={`/surfbreaks/${surfbreak.id}`}>
+                      <Link to={`/forecasts`}>
                         <button className="main-buttons">
                           <strong>Check Forecast</strong>
                         </button>

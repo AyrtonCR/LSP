@@ -1,3 +1,22 @@
+.container {
+  background: #767370;
+  background: linear-gradient(
+    180deg,
+    #767370 0%,
+    #767370 13.99%,
+    #767370 14%,
+    #f27c0e 49.9%,
+    #f27c0e 50%,
+    #f27c0e 62%,
+    #f27c0e 75%,
+    #767370 96%
+  );
+}
+.MainTitle {
+  margin: 0rem;
+  text-align: center;
+  padding: 3rem;
+}
 .mainContainer {
 }
 
@@ -20,6 +39,7 @@
   margin: 1rem;
   width: fit-content;
   max-height: fit-content;
+  background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
 }
 .formContainer {
   display: grid;
@@ -38,10 +58,7 @@
   text-align: center;
   display: grid;
 }
-.MainTitle {
-  text-align: center;
-  margin-bottom: 3rem;
-}
+
 .formGroup {
   width: fit-content;
   margin: 1rem;

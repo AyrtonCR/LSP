@@ -20,105 +20,117 @@ const NavLinks = (props) => {
       <nav className={styles.header}>
         <div className={styles.navbarContainer}>
           <ul className={styles.nav}>
-            <li className={styles.navbarItem}>
+            <motion.li
+              className={styles.navbarItem}
+              initial={animateFrom}
+              animate={animateTo}
+              transition={{ delay: 0.05 }}
+            >
               <Link
-                initial={animateFrom}
-                animate={animateTo}
-                transition={{ delay: 0.05 }}
                 to="/"
                 className={styles.headerTitle}
                 element={<Main />}
                 onClick={() => props.isMobile && props.closeMobileMenu()}
               >
-                <motion.img
+                <img
                   className={styles.logo}
                   src={Logo}
-                  alt=""
+                  alt="surfboard_logo"
                   width="300"
                 />
               </Link>
-            </li>
-            <li
+            </motion.li>
+            <motion.li
               className={styles.navbarItem}
               onClick={() => props.isMobile && props.closeMobileMenu()}
+              initial={animateFrom}
+              animate={animateTo}
+              transition={{ delay: 0.1 }}
             >
-              <motion.Link
-                initial={animateFrom}
-                animate={animateTo}
-                transition={{ delay: 0.1 }}
+              <Link
                 to="/surfboard"
                 className={styles.navLink}
                 element={<Surfboard />}
                 onClick={() => props.isMobile && props.closeMobileMenu()}
               >
                 <strong> Boards</strong>
-              </motion.Link>
-            </li>
-            <li className={styles.navbarItem}>
-              <motion.Link
-                initial={animateFrom}
-                animate={animateTo}
-                transition={{ delay: 0.2 }}
+              </Link>
+            </motion.li>
+            <motion.li
+              className={styles.navbarItem}
+              initial={animateFrom}
+              animate={animateTo}
+              transition={{ delay: 0.2 }}
+            >
+              <Link
                 to="/forecasts"
                 className={styles.navLink}
                 element={<Forecasts />}
                 onClick={() => props.isMobile && props.closeMobileMenu()}
               >
                 <strong>Forecasts</strong>
-              </motion.Link>
-            </li>
-            <li className={styles.navbarItem}>
-              <motion.Link
-                initial={animateFrom}
-                animate={animateTo}
-                transition={{ delay: 0.3 }}
+              </Link>
+            </motion.li>
+            <motion.li
+              className={styles.navbarItem}
+              initial={animateFrom}
+              animate={animateTo}
+              transition={{ delay: 0.3 }}
+            >
+              <Link
                 to="/forum"
                 className={styles.navLink}
                 element={<Forum />}
                 onClick={() => props.isMobile && props.closeMobileMenu()}
               >
                 <strong>Forum</strong>
-              </motion.Link>
-            </li>
-            <li className={styles.navbarItem}>
-              <motion.Link
-                initial={animateFrom}
-                animate={animateTo}
-                transition={{ delay: 0.4 }}
+              </Link>
+            </motion.li>
+            <motion.li
+              className={styles.navbarItem}
+              initial={animateFrom}
+              animate={animateTo}
+              transition={{ delay: 0.4 }}
+            >
+              <Link
                 to="/links"
                 className={styles.navLink}
                 element={<WebLinks />}
                 onClick={() => props.isMobile && props.closeMobileMenu()}
               >
                 <strong>Links</strong>
-              </motion.Link>
-            </li>
-            <li className={styles.navbarItem}>
-              <motion.Link
-                initial={animateFrom}
-                animate={animateTo}
-                transition={{ delay: 0.5 }}
+              </Link>
+            </motion.li>
+            <motion.li
+              className={styles.navbarItem}
+              initial={animateFrom}
+              animate={animateTo}
+              transition={{ delay: 0.5 }}
+            >
+              <Link
                 to="/about"
                 className={styles.navLink}
                 element={<About />}
                 onClick={() => props.isMobile && props.closeMobileMenu()}
               >
                 <strong> About</strong>
-              </motion.Link>
-            </li>
-            <li className={styles.navbarItem}>
-              <motion.Link
-                initial={animateFrom}
-                animate={animateTo}
-                transition={{ delay: 0.6 }}
+              </Link>
+            </motion.li>
+            <motion.li
+              className={styles.navbarItem}
+              initial={animateFrom}
+              animate={animateTo}
+              transition={{ delay: 0.6 }}
+            >
+              <Link
                 to="/contact"
                 className={styles.navLink}
                 element={<Contact />}
                 onClick={() => props.isMobile && props.closeMobileMenu()}
               >
                 <strong>Contact</strong>
-              </motion.Link>
-            </li>
+              </Link>
+            </motion.li>
             <li className={styles.navbarItem}>
               <LoginButton />
             </li>
