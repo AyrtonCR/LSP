@@ -35,7 +35,7 @@ In the root directory type the following command ...
 <br>
 
 ```shell
-docker-compose up
+docker-compose up --build
 ```
 
 <br>
