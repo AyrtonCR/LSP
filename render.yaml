@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: lsp-client
+    env: static
+    rootDir: client
+    buildCommand: npm run build
+    staticPublishPath: ./build
+    envVars:
+      - key: REACT_APP_API_URL
+        fromService:
+          type: web
+          name: api
+          envVarKey: RENDER_EXTERNAL_URL
+  - type: web
+    name: lsp-api
+    env: docker
+    rootDir: api
+    region: singapore
+    envVars:
+      - key: API_PORT
+        value: 80
+      - key: DATABASE_URL
+        fromDatabase:
+          name: db
+          property: connectionString
+    plan: free
+databases:
+  - name: lsp-db
+    region: singapore
+    plan: free
+    ipAllowList: []
