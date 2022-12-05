@@ -4,13 +4,14 @@ import Peg from "../utils/pegasus_bay.jpg";
 import LowerNavBar from "./lowerNavBar";
 import Wall_1 from "../utils/wallpaper1.jpg";
 import Wave from "../utils/wave3.png";
-
 import "./main.css";
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 const Main = () => {
   const [surfbreaks, setSurfbreaks] = useState([]);
   const fetchData = async () => {
-    const response = await fetch("http://localhost:5001/surfbreaks");
+    const response = await fetch(`${API_URL}/surfbreaks`);
     const data = await response.json();
     setSurfbreaks(data);
   };
