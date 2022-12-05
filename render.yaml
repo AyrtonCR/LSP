@@ -14,7 +14,7 @@ services:
   - type: web
     name: lsp-api
     env: docker
-    rootDir: api
+    rootDir: server
     region: singapore
     envVars:
       - key: API_PORT
