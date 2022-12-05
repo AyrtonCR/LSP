@@ -22,8 +22,11 @@ services:
       - key: DATABASE_URL
         value: mongodb://surfing:rocks@mongo:27017/lsp?authSource=admin
     plan: free
-databases:
-  - name: lsp-db
-    region: singapore
-    plan: free
-    ipAllowList: []
+  - type: pserv
+    name: lsp-mongodb
+    env: docker
+    autoDeploy: false
+    disk:
+      name: data
+      mountPath: /data/db
+      sizeGB: 10
