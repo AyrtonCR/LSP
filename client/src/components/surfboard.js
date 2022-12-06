@@ -3,11 +3,13 @@ import styles from "./surfboard.module.css";
 import LowerNavBar from "./lowerNavBar";
 import React, { useState, useEffect } from "react";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 const Surfboard = () => {
   const [surfboards, setSurfboards] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch("http://localhost:5001/surfboards");
+    const response = await fetch(`${API_URL}/surfboards`);
     const data = await response.json();
     setSurfboards(data);
   };

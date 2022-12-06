@@ -3,11 +3,14 @@ import forecastStyles from "./forecasts.module.css";
 import LowerNavBar from "./lowerNavBar";
 import React, { useState, useEffect } from "react";
 import ForecastIfStatement1 from "./forecastsIfStatement";
+
+const API_URL = process.env.REACT_APP_API_URL;
+
 const Forecasts = () => {
   const [forecasts, setForecasts] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch("http://localhost:5001/forecasts");
+    const response = await fetch(`${API_URL}/forecasts`);
     const data = await response.json();
     setForecasts(data);
   };
