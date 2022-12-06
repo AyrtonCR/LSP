@@ -9,7 +9,7 @@ const Surfboard = () => {
   const [surfboards, setSurfboards] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch(`${API_URL}/surfboards`);
+    const response = await fetch("http://localhost:5001/surfboards");
     const data = await response.json();
     setSurfboards(data);
   };

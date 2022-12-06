@@ -1,7 +1,7 @@
 FROM node:14-alpine
 WORKDIR /app
 COPY package*.json /app/
-RUN ["npm", "install"]
+RUN ["npm", "ci"]
 COPY . /app/
 EXPOSE 5001
-ENTRYPOINT ["npm", "start-dev"]
+ENTRYPOINT ["npm", "run", "start:dev"]

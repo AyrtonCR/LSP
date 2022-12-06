@@ -11,7 +11,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 const Forum = () => {
   const [forumInfo, setForumInfo] = useState([]);
   const fetchData = async () => {
-    const response = await fetch(`${API_URL}/forum`);
+    const response = await fetch("http://localhost:5001/forum");
     const data = await response.json();
     setForumInfo(data);
   };

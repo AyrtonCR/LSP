@@ -10,7 +10,7 @@ const Forecasts = () => {
   const [forecasts, setForecasts] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch(`${API_URL}/forecasts`);
+    const response = await fetch("http://localhost:5001/forecasts");
     const data = await response.json();
     setForecasts(data);
   };

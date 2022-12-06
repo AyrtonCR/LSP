@@ -11,7 +11,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 const Main = () => {
   const [surfbreaks, setSurfbreaks] = useState([]);
   const fetchData = async () => {
-    const response = await fetch(`${API_URL}/surfbreaks`);
+    const response = await fetch("http://localhost:5001/surfbreaks");
     const data = await response.json();
     setSurfbreaks(data);
   };
