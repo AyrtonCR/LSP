@@ -2,8 +2,6 @@
 
 ---
 
-<br>
-
 ### <u> Overview</u>
 
 <br>
@@ -31,8 +29,6 @@ Some of the features this app will include are ...
 <br>
 
 ---
-
-<br>
 
 ### <u> Developer Environment </u>
 
@@ -80,8 +76,6 @@ This will locally ...
 
 ---
 
-<br>
-
 ### <u>Deployed Environment </u>
 
 <br>
@@ -95,8 +89,6 @@ When a pull request is made to the main branch and changes are merged, Render wi
 <br>
 
 ---
-
-<br>
 
 ### <u>`Deployed App`</u> - https://lsp-client.onrender.com/
 
