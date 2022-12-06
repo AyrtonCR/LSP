@@ -2,11 +2,14 @@ const port = process.env.PORT || 5001;
 const app = require("./app");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://surfing:rocks@mongo:27017/lsp?authSource=admin", {
+mongoose.connect("mongodb+srv://auth-user:auth-password@lsp.slfpy.mongodb.net/?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-// mongodb://surfing:rocks@localhost:27017/?authMechanism=DEFAULT
+
+// This is the old connection for local database //
+// mongodb://surfing:rocks@mongo:27017/lsp?authSource=admin //
+
 app.listen(port, () => {
   console.log(`API server started at http://localhost:${port}`);
 });
