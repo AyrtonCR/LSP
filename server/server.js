@@ -2,7 +2,7 @@ const port = process.env.PORT || 5001;
 const app = require("./app");
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://auth-user:auth-password@lsp.slfpy.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://auth-user:auth-password@lsp.slfpy.mongodb.net/lsp?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
