@@ -1,3 +1,4 @@
+@media only screen and (min-width: 14.5rem) {
 .container {
   background: #767370;
   background: linear-gradient(
@@ -26,12 +27,12 @@
   justify-self: center;
   text-align: center;
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: white;
   text-shadow: 0.12rem 0.12rem 2rem;
   padding: 1rem;
   text-align: center;
-  width: 15rem;
+  width: 7rem;
   border-bottom: 0.07rem solid rgb(80, 80, 80);
   transition: all 0.3s ease;
   cursor: default;
@@ -83,7 +84,6 @@
 }
 .mainTextContainer {
   display: grid;
-  grid-template-rows: 1fr;
   border: 0.01rem solid black;
   border-radius: 0.15rem;
   padding: 0rem;
@@ -93,8 +93,8 @@
 
 .mainText {
   display: grid;
-  padding: 0 1.5rem;
-  font-size: 1.1rem;
+  padding: 0 1rem;
+  font-size: 0.7rem;
 }
 
 .subTextContainer {
@@ -106,11 +106,24 @@
   margin-left: 2rem;
 }
 .subText {
-  font-size: 1.1rem;
+  font-size: 0.7rem;
   text-decoration: none;
   color: black;
 }
-
+}
+@media only screen and (min-width: 21.5rem) {
+  .mainTitle {
+    font-size: 1.5rem;
+    width: 15rem;
+  }
+  .subText {
+    font-size: 1rem;
+  }
+  .mainText {
+    padding: 0 1.5rem;
+    font-size: 0.9rem;
+  }
+}
 @media only screen and (min-width: 50rem) {
   .mainGrid {
     grid-template-columns: 1fr 0.6fr;

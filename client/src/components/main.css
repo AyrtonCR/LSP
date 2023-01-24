@@ -45,11 +45,13 @@
   }
 
   /* Top left text */
+
   .top-left {
     position: absolute;
     top: 1rem;
     left: 1.5rem;
   }
+
 
   .main-description {
     box-shadow: 0 0 2rem -0.1rem rgb(223, 186, 117);
@@ -58,7 +60,7 @@
     margin-right: 1rem;
     padding: 1rem;
     color: whitesmoke;
-    font-size: 0.65rem;
+    font-size: 0.55rem;
     width: 11rem;
     transition: all 0.3s ease;
     cursor: default;
@@ -145,7 +147,7 @@
     margin: 0 1rem 0 0;
     padding: 0.3rem 0.9rem;
     background: none;
-    width: fit-content;
+    width: 80%;
     color: black;
     border: 0.01rem solid black;
     font-size: 0.6rem;
@@ -205,7 +207,12 @@
     justify-items: center
   }
 }
-@media only screen and (min-width: 30rem) {
+@media only screen and (min-width: 21.5rem) {
+  .top-left {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+  }
   .main-description {
     font-size: 0.7rem;
     width: 17rem;

@@ -27,7 +27,7 @@
   justify-self: center;
   text-align: center;
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: white;
   text-shadow: 0.12rem 0.12rem 2rem;
   padding-top: 3rem;
@@ -109,7 +109,10 @@
 }
 
 .linksSubtitles {
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+.linksContent {
+  font-size: 0.85rem;
 }
 @media only screen and (min-width: 40rem) {
   .mainGrid {

@@ -194,7 +194,7 @@
 }
 @media only screen and (min-width: 58rem) {
   .navLink {
-    font-size: 1.1rem;
+
     padding: 0.2rem 0.5rem;
   }
   .NavBar {
@@ -204,7 +204,6 @@
 }
 @media only screen and (min-width: 60rem) {
   .navLink {
-    font-size: 1rem;
     transition: all 0.3s ease;
   }
 
