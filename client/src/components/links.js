@@ -23,17 +23,17 @@ const WebLinks = () => {
                   Sadahana Surfboards (Christchurch)
                 </a>
               </p>
-              <p>
+              <p className={styles.linksContent}>
                 <a href="https://www.newwavenz.com/">
                   New Wave NZ Surfboards (Gisbourne)
                 </a>
               </p>
-              <p>
+              <p className={styles.linksContent}>
                 <a href="http://www.hcsurfboards.com/">
                   HC Surfboards (Ruakaka)
                 </a>
               </p>
-              <p>
+              <p className={styles.linksContent}>
                 <a href="https://andersonsurfboards.co.nz/">
                   Anderson Surfboards (Whangamata)
                 </a>
@@ -41,41 +41,41 @@ const WebLinks = () => {
             </div>
             <div className={styles.gridItem2Content2}>
               <h3 className={styles.linksSubtitles}>Forecast Websites</h3>
-              <p>
+              <p className={styles.linksContent}>
                 <a href="https://magicseaweed.com/New-Zealand-Surf-Forecast/4/">
                   Magicseaweed
                 </a>
               </p>
-              <p>
+              <p className={styles.linksContent}>
                 <a href="https://www.surf-forecast.com/countries/New-Zealand/breaks">
                   Surf Forecast
                 </a>
               </p>
-              <p>
+              <p className={styles.linksContent}>
                 <a href="https://www.surfline.com/">Surfline</a>
               </p>
-              <p>
+              <p className={styles.linksContent}>
                 <a href="https://www.windy.com/?-43.538,172.615,5">Windy</a>
               </p>
             </div>
             <div className={styles.gridItem2Content3}>
               <h3 className={styles.linksSubtitles}>Best Footage</h3>
-              <p>
+              <p className={styles.linksContent}>
                 <a href="https://www.youtube.com/watch?v=MmA5gmwgbVQ&list=LL&index=36">
                   Indonesia - Giant Tubes (Uluwatu)
                 </a>
               </p>
-              <p>
+              <p className={styles.linksContent}>
                 <a href=" https://www.youtube.com/watch?v=pAtzsif4MzA&list=LL&index=144">
                   Australia - The Pros Roll into Town (Snapper Rocks)
                 </a>
               </p>
-              <p>
+              <p className={styles.linksContent}>
                 <a href="https://www.youtube.com/watch?v=-ilFR_rI_ow">
                   Indonesia - Josh Kerr Twin-Fin Master (Nias)
                 </a>
               </p>
-              <p>
+              <p className={styles.linksContent}>
                 <a href="https://www.youtube.com/watch?v=GFyxlXAaQLk&list=LL&index=224">
                   Portugal - Post-Contest Pro Session (Peniche)
                 </a>

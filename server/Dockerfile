@@ -4,4 +4,4 @@ COPY package*.json /app/
 RUN ["npm", "install"]
 COPY . /app/
 EXPOSE 5001
-ENTRYPOINT ["npm", "start-dev"]
+ENTRYPOINT ["npm", "run", "start-dev"]

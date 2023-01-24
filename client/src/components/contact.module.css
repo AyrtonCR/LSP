@@ -1,3 +1,4 @@
+@media only screen and (min-width: 14.5rem) {
 .container {
   background: #767370;
   background: linear-gradient(
@@ -26,12 +27,12 @@
   justify-self: center;
   text-align: center;
   color: white;
-  font-size: 1.8rem;
+  font-size: 1rem;
   color: white;
   text-shadow: 0.12rem 0.12rem 2rem;
   padding-top: 1rem;
   text-align: center;
-  width: 22rem;
+  width: fit-content;
   border-bottom: 0.07rem solid rgb(80, 80, 80);
   transition: all 0.3s ease;
   cursor: default;
@@ -43,6 +44,7 @@
 
 .mainContainer {
   display: grid;
+  justify-content: center;
 }
 
 .mainGrid {
@@ -68,8 +70,8 @@
 }
 .formContainer {
   display: grid;
-  justify-content: center;
-  width: 20rem;
+  justify-items: center;
+  width: fit-content;
 }
 .formContainerContainer {
   transition: all 0.3s ease;
@@ -78,6 +80,7 @@
   transform: scale(1.02);
 }
 .form {
+
   border: 0.01rem solid black;
   width: fit-content;
   align-items: center;
@@ -88,6 +91,7 @@
 .formTitle {
   text-align: center;
   display: grid;
+  font-size: 1rem;
 }
 
 .formGroup {
@@ -106,13 +110,14 @@
   margin-right: 0.3rem;
   width: 5rem;
   box-sizing: border-box;
+  font-size: 0.8rem;
 }
 
 .formControl {
   border-radius: 0.25rem;
   border: 0.125rem solid #999;
   padding: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   width: 100%;
   box-sizing: border-box;
 }
@@ -126,7 +131,7 @@
   background: #f4e285;
   border: none;
   padding: 0.7rem 1.5rem;
-  font-size: 1rem;
+  font-size: 0.7rem;
   border-radius: 0.5rem;
   transition: background-color 150ms;
   cursor: pointer;
@@ -157,6 +162,7 @@
   padding: 0.24rem;
   margin: 0 2rem;
   width: fit-content;
+  font-size: 0.8rem;
 }
 
 .imageContainer {
@@ -176,8 +182,25 @@
   border: 0.01rem solid black;
   border-radius: 0.25rem;
   box-shadow: 0 0 1rem -0.1rem black;
-}
+}}
+@media only screen and (min-width: 21.5rem) {
+  .MainTitle {
+    font-size: 1.5rem;
+  }
+  .formButton {
+    font-size: 0.9rem;
+  }
+  .formControl {
+    font-size: 0.6rem;
+  }
+  .formLabel {
+    font-size: 0.9rem;
 
+  }
+  .formTitle {
+    font-size: 1rem;
+  }
+}
 @media only screen and (min-width: 40rem) {
   .mainGrid {
     margin: 5rem;
