@@ -22,7 +22,7 @@
   background: linear-gradient(#f4c857);
 }
 
-@media only screen and (min-width: 22.5rem) {
+@media only screen and (min-width: 14.5rem) {
   .main-title {
     font-size: 1.3rem;
     color: white;
@@ -32,7 +32,7 @@
     text-align: center;
     margin-top: 4rem;
     border-bottom: 0.07rem solid rgb(80, 80, 80);
-    width: 18rem;
+    width: 15rem;
     transition: all 0.3s ease;
     cursor: default;
   }
@@ -179,7 +179,7 @@
   }
 
   .sub-title-container:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
   .sub-title {
     margin-top: 3rem;
@@ -188,8 +188,8 @@
     text-shadow: 0.12rem 0.12rem 2rem;
     border-bottom: 0.07rem solid #393e46;
     margin-bottom: 0;
-    font-size: 2.3em;
-    width: 20rem;
+    font-size: 1.8rem;
+    width: 13rem;
     cursor: default;
   }
 
@@ -202,6 +202,7 @@
   .title-container {
     display: grid;
     margin-bottom: 6rem;
+    justify-items: center
   }
 }
 @media only screen and (min-width: 30rem) {
@@ -320,13 +321,13 @@
     font-size: 0.95rem;
   }
   .main-buttons {
-    font-size: 0.7rem;
+    font-size: 0.66rem;
     padding: 0.3rem 0.68rem;
   }
   .sub-title {
     width: 24rem;
     margin-top: 4rem;
-    font-size: 2.8em;
+    font-size: 2.4rem;
   }
   .mini-image {
     width: 10rem;
@@ -347,16 +348,16 @@
     font-size: 1rem;
   }
   .main-buttons {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 }
 @media only screen and (min-width: 80rem) {
   .main-description {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     width: 35rem;
   }
   .main-title {
-    font-size: 3rem;
+    font-size: 2rem;
     width: 34rem;
   }
   .top-left {
@@ -371,17 +372,17 @@
   }
 
   .surfbreaks-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .surfbreaks-blurb {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
   .main-buttons {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
   .sub-title {
     width: 27rem;
-    font-size: 3.3rem;
+    font-size: 2.5rem;
   }
   .surfbreaks-title:hover {
     margin-left: 2.7rem;
@@ -390,11 +391,11 @@
 
 @media only screen and (min-width: 95rem) {
   .surfbreaks-title:hover {
-    margin-left: 3.4rem;
+    margin-left: 2.4rem;
   }
   .surfbreaks-grid-container {
     box-shadow: 0 0 2rem -0.1rem black;
     border-radius: 0.25rem;
-    margin: 0 14rem;
+    margin: 0 16rem;
   }
 }
