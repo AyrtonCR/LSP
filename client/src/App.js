@@ -15,6 +15,7 @@ const App = () => {
   return (
     <div className="container">
       <NavBar />
+
       <Routes>
         <Route path="/" element={<Main />} />
         <Route exact path="/surfbreak" element={<Surfbreak />} />
