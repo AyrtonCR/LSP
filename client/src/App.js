@@ -1,6 +1,5 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-// import { HashRouter } from "react-router-dom";
 import NavBar from "./components/Navbar/Navbar";
 import Footer from "./components/footer";
 import Main from "./components/main";
@@ -12,12 +11,12 @@ import Links from "./components/links";
 import Forecasts from "./components/forecasts";
 import Contact from "./components/contact";
 
-function App() {
+const App = () => {
   return (
     <div className="container">
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<Main />} />
+        <Route path="/" element={<Main />} />
         <Route exact path="/surfbreak" element={<Surfbreak />} />
         <Route exact path="/surfboard" element={<Surfboard />} />
         <Route exact path="/forum" element={<Forum />} />
@@ -29,6 +28,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -9,7 +9,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Auth0ProviderWithHistory>
-        <App />
+        <Routes>
+          <Route path="*" element={<App />}></Route>
+        </Routes>
       </Auth0ProviderWithHistory>
     </Router>
   </React.StrictMode>,
