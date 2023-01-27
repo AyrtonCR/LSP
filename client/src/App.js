@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Hashrouter, Routes, Route } from "react-router-dom";
 // import { HashRouter } from "react-router-dom";
 import NavBar from "./components/Navbar/Navbar";
 import Footer from "./components/footer";
@@ -14,22 +14,20 @@ import Contact from "./components/contact";
 
 function App() {
   return (
-    <>
-      <div className="container">
-        <NavBar />
-        <Routes>
-          <Route exact path="/" element={<Main />} />
-          <Route exact path="/surfbreak" element={<Surfbreak />} />
-          <Route exact path="/surfboard" element={<Surfboard />} />
-          <Route exact path="/forum" element={<Forum />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/links" element={<Links />} />
-          <Route exact path="/forecasts" element={<Forecasts />} />
-          <Route exact path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
-    </>
+    <div className="container">
+      <NavBar />
+      <Routes>
+        <Route exact path="/" element={<Main />} />
+        <Route exact path="/surfbreak" element={<Surfbreak />} />
+        <Route exact path="/surfboard" element={<Surfboard />} />
+        <Route exact path="/forum" element={<Forum />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/links" element={<Links />} />
+        <Route exact path="/forecasts" element={<Forecasts />} />
+        <Route exact path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
