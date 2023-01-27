@@ -18,14 +18,14 @@ function App() {
       <div className="container">
         <NavBar />
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/surfbreak" element={<Surfbreak />} />
-          <Route path="/surfboard" element={<Surfboard />} />
-          <Route path="/forum" element={<Forum />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/links" element={<Links />} />
-          <Route path="/forecasts" element={<Forecasts />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route exact path="/" element={<Main />} />
+          <Route exact path="/surfbreak" element={<Surfbreak />} />
+          <Route exact path="/surfboard" element={<Surfboard />} />
+          <Route exact path="/forum" element={<Forum />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/links" element={<Links />} />
+          <Route exact path="/forecasts" element={<Forecasts />} />
+          <Route exact path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
