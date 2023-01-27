@@ -19,7 +19,7 @@ const Contact = () => {
                 >
                   <h3 className={styles.formTitle}>Contact Form</h3>
                   <div className={styles.formGroup}>
-                    <label for="name" class={styles.formLabel}>
+                    <label htmlFor="name" className={styles.formLabel}>
                       Name:
                     </label>
 
@@ -27,13 +27,13 @@ const Contact = () => {
                       id="name"
                       name="Name"
                       type="text"
-                      class={styles.formControl}
+                      className={styles.formControl}
                       placeholder="Enter your name here"
                     />
                   </div>
 
                   <div className={styles.formGroup}>
-                    <label for="email" class={styles.formLabel}>
+                    <label htmlFor="email" className={styles.formLabel}>
                       Email:
                     </label>
 
@@ -41,13 +41,13 @@ const Contact = () => {
                       id="email"
                       name="Email"
                       type="text"
-                      class={styles.formControl}
+                      className={styles.formControl}
                       placeholder="Enter your email address here"
                     />
                   </div>
 
                   <div className={styles.formGroup}>
-                    <label for="phone" class={styles.formLabel}>
+                    <label htmlFor="phone" className={styles.formLabel}>
                       Mobile:
                     </label>
 
@@ -55,20 +55,20 @@ const Contact = () => {
                       id="phone"
                       name="Phone"
                       type="tel"
-                      class={styles.formControl}
+                      className={styles.formControl}
                       placeholder="Enter your mobile number here"
                     />
                   </div>
 
                   <div className={styles.formGroup}>
-                    <label for="message" class={styles.formLabel}>
+                    <label htmlFor="message" className={styles.formLabel}>
                       Message:
                     </label>
 
                     <textarea
                       id="message"
                       name="Message"
-                      class={styles.formControl}
+                      className={styles.formControl}
                       placeholder="Enter your message here"
                     />
                   </div>
