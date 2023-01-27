@@ -52,7 +52,6 @@
     left: 1.5rem;
   }
 
-
   .main-description {
     box-shadow: 0 0 2rem -0.1rem rgb(223, 186, 117);
     text-shadow: 0.12rem 0.12rem 2.5rem;
@@ -98,10 +97,6 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     padding: 0.5rem;
-    background-color: #f4c857;
-    background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
-    border: 0.01rem solid black;
-    border-radius: 0.5rem;
   }
 
   .single-surfbreak {
@@ -178,12 +173,26 @@
     justify-content: center;
     grid-template-rows: 0.6fr 0.9fr;
     transition: all 0.3s ease;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 23px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.6px);
+    -webkit-backdrop-filter: blur(112.6px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
   }
 
   .sub-title-container:hover {
-    transform: scale(1.1);
+    border: 0.05rem solid black;
+    border-radius: 0.1rem;
+  }
+  .sub-title:hover {
+    transform: scale(1.2);
+  }
+  .sub-title:active {
+    margin-right: 10rem;
   }
   .sub-title {
+    display: grid;
     margin-top: 3rem;
     text-align: center;
     color: rgb(37, 37, 37);
@@ -192,19 +201,27 @@
     margin-bottom: 0;
     font-size: 1.8rem;
     width: 13rem;
-    cursor: default;
+    cursor: pointer;
+    transition: all 0.2s ease;
   }
-
+  .mini-image:hover {
+    transform: scale(1.3);
+  }
+  .mini-image:active {
+    margin-left: 10rem;
+  }
   .mini-image {
     display: grid;
     justify-self: center;
     width: 7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
 
   .title-container {
     display: grid;
     margin-bottom: 6rem;
-    justify-items: center
+    justify-items: center;
   }
 }
 @media only screen and (min-width: 21.5rem) {
@@ -234,6 +251,7 @@
   .main-buttons {
     font-size: 0.8rem;
     padding: 0.3rem 0.9rem;
+    width: unset;
   }
 }
 @media only screen and (min-width: 40rem) {

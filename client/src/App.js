@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+// import { HashRouter } from "react-router-dom";
 import NavBar from "./components/Navbar/Navbar";
 import Footer from "./components/footer";
 import Main from "./components/main";
@@ -11,25 +12,25 @@ import Links from "./components/links";
 import Forecasts from "./components/forecasts";
 import Contact from "./components/contact";
 
-const App = () => {
+function App() {
   return (
     <>
-      <NavBar />
       <div className="container">
+        <NavBar />
         <Routes>
-          <Route path="/" element={<Main />}></Route>
-          <Route path="/surfbreak" element={<Surfbreak />}></Route>
-          <Route path="/surfboard" element={<Surfboard />}></Route>
-          <Route path="/forum" element={<Forum />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/links" element={<Links />}></Route>
-          <Route path="/forecasts" element={<Forecasts />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/" element={<Main />} />
+          <Route path="/surfbreak" element={<Surfbreak />} />
+          <Route path="/surfboard" element={<Surfboard />} />
+          <Route path="/forum" element={<Forum />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/links" element={<Links />} />
+          <Route path="/forecasts" element={<Forecasts />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
     </>
   );
-};
+}
 
 export default App;
