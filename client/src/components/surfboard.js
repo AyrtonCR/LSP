@@ -26,10 +26,15 @@ const Surfboard = () => {
           <h4 className={styles.surfboardsBlurb}>
             To best understand what surfboard to take out, it is helpful to
             recognize how different each break can be. Some breaks need a small
-            amount of swell from a wide range of angles to turn on, and others
-            may need a lot of swell from a particular angle before they become
-            surfable. Big waves can be weak, and small waves can be powerful so
-            it is best to learn your break and learn how it responds to
+            amount of swell from a wide range of angles to start working, and
+            others may need a lot of swell from a particular angle before they
+            become good. Big waves can be weak, and small waves can be powerful
+            so it is best to learn your break and learn how it responds to
+            different conditions.
+            <br></br>
+          </h4>
+          <h4>
+            Below is an indication on what kind of surfboards work best in
             different conditions.
           </h4>
         </div>
