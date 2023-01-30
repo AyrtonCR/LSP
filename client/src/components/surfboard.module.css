@@ -15,6 +15,9 @@
     );
     margin-top: 0rem;
   }
+  .spaceSaver {
+    padding: 1.5rem;
+  }
   .surfboardContainer {
     display: GRID;
   }
@@ -23,26 +26,63 @@
     justify-content: center;
     padding: 1rem;
   }
-  .surfboardTitle {
-    display: grid;
-    justify-self: center;
-    text-align: center;
-    color: white;
-    font-size: 1.7rem;
-    color: white;
-    text-shadow: 0.12rem 0.12rem 2rem;
-    padding-top: 1rem;
-    text-align: center;
-    margin: 2rem 0;
-    width: 15rem;
-    border-bottom: 0.07rem solid rgb(80, 80, 80);
-    transition: all 0.3s ease;
-    cursor: default;
-  }
+
   .surfboardTitle:hover {
     transform: scale(1.1);
   }
+  .titleAndImage {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .titleAndImage {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 0.6fr 0.9fr;
+    transition: all 0.3s ease;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 23px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.6px);
+    -webkit-backdrop-filter: blur(112.6px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+  }
 
+  .titleAndImage:hover {
+    border: 0.05rem solid black;
+    border-radius: 0.1rem;
+  }
+  .surfboardTitle:hover {
+    transform: scale(1.2);
+  }
+  .surfboardTitle:active {
+    margin-right: 10rem;
+  }
+  .surfboardTitle {
+    display: grid;
+    margin-top: 3rem;
+    text-align: center;
+    color: rgb(37, 37, 37);
+    text-shadow: 0.12rem 0.12rem 2rem;
+    border-bottom: 0.07rem solid #393e46;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    width: 13rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .mini-image:hover {
+    transform: scale(1.3);
+  }
+  .mini-image:active {
+    margin-left: 10rem;
+  }
+  .mini-image {
+    display: grid;
+    justify-self: center;
+    width: 7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
   .singleSurfboardGrid {
     border: 0.1rem solid black;
     padding: 2rem;
@@ -126,8 +166,7 @@
   .surfboardsBlurbContainer {
     display: grid;
     justify-self: center;
-    border: 0.01rem solid black;
-    box-shadow: 0 0 2rem -0.1rem black;
+
     border-radius: 0.25rem;
     margin: 2rem 1rem;
     padding: 0.6rem;
@@ -145,21 +184,50 @@
   .lowerBlurbContainerContainer {
     padding: 1rem;
     display: grid;
-    width: 40rem;
-
     margin: 0rem;
   }
   .lowerBlurbContainer {
     display: grid;
-    border: 0.01rem solid black;
-    box-shadow: 0 0 2rem -0.1rem black;
+    grid-template-columns: 1fr 1fr;
+    color: white;
     border-radius: 0.25rem;
     margin: 2rem 1rem;
   }
+  .lowerBlurb1 {
+    font-size: 0.9rem;
+    max-width: 80%;
+  }
+  .lowerBlurb2 {
+    font-size: 0.9rem;
+    display: grid;
+    text-align: right;
+    margin: 0;
+  }
+  .lowerBlurb2Container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-self: right;
+    max-width: 60%;
+    text-align: right;
+  }
+  .lowerBlurb1Content {
+    margin: 1rem;
+  }
+  .lowerBlurb2Content {
+    margin-right: 1rem;
+  }
+
   .lowerBlurbDescription {
     padding: 1rem;
     display: grid;
     justify-self: center;
+  }
+  .sadhanaLink {
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  .sadhanaLink:hover {
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 21.5rem) {
@@ -184,8 +252,10 @@
   }
   .lowerBlurbContainer,
   .surfboardsBlurbContainer {
+    display: grid;
     margin: 0 4rem;
   }
+
   .singleSurfboardGrid {
     background: linear-gradient(
       180deg,
