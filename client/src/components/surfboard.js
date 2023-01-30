@@ -24,16 +24,11 @@ const Surfboard = () => {
         <h2 className={styles.surfboardTitle}>Surfboards</h2>
         <div className={styles.surfboardsBlurbContainer}>
           <h4 className={styles.surfboardsBlurb}>
-            To best understand what surfboard to take out, it is helpful to
-            recognize how different each break can be. Some breaks need a small
-            amount of swell from a wide range of angles to start working, and
-            others may need a lot of swell from a particular angle before they
-            become good. Big waves can be weak, and small waves can be powerful
-            so it is best to learn your break and learn how it responds to
-            different conditions.
-            <br></br>
+            Surfboards can come in many different shapes and sizes. From long to
+            short, wide to skinny there is always a board that best fits the
+            conditions.
           </h4>
-          <h4>
+          <h4 className={styles.surfboardsBlurb}>
             Below is an indication on what kind of surfboards work best in
             different conditions.
           </h4>
@@ -64,6 +59,20 @@ const Surfboard = () => {
             );
           })}
         </ul>
+      </div>
+      <div className={styles.lowerBlurbContainerContainer}>
+        <div className={styles.lowerBlurbContainer}>
+          <h4 className={styles.surfboardsBlurb}>
+            This is a just a brief indication of what can these types of
+            surfboards can do.{" "}
+          </h4>
+          <h4 className={styles.surfboardsBlurb}>
+            There are many different shapes, build materials and setups for each
+            type of board that can completely change the way a board functions,
+            allowing it to often be either more easy and fun, or more tricky and
+            rippable.{" "}
+          </h4>
+        </div>
       </div>
       <LowerNavBar />
     </div>

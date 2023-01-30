@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./about.module.css";
 import LowerNavBar from "./lowerNavBar";
-import MyFace from "../utils/myFaceCloser.png";
 import Southshore from "../utils/southshore.png";
 
 const About = () => {
@@ -14,7 +13,7 @@ const About = () => {
             <img
               className={styles.image1}
               alt="ayrtons-face"
-              src={MyFace}
+              src={Southshore}
             ></img>
           </div>
           <div className={styles.textGrid}>

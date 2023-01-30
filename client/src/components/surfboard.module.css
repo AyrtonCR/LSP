@@ -5,16 +5,18 @@
       180deg,
       #767370 0%,
       #767370 13.99%,
-      #767370 14%,
-      #f27c0e 49.9%,
+      #767370 31%,
+      #f27c0e 31%,
       #f27c0e 50%,
       #f27c0e 62%,
       #f27c0e 75%,
+      #767370 70%,
       #767370 96%
     );
     margin-top: 0rem;
   }
   .surfboardContainer {
+    display: GRID;
   }
   .surfboardGridContainer {
     display: grid;
@@ -47,16 +49,24 @@
     box-shadow: 0 0 2rem -0.1rem black;
     border: 0.1rem solid black;
     border-radius: 0.25rem;
-    background-color: #f4c857;
     padding-bottom: 5rem;
     margin: 0 1rem;
     transition: all 0.3s ease;
     margin-top: 2rem;
+    background: linear-gradient(
+      180deg,
+      #f3ceab 0%,
+      #f0ac6c 31.9%,
+      #f3ceab 39%,
+      #f3ceab 65.5%,
+      #f0ac6c 70.5%,
+      #f3ceab 99%
+    );
   }
 
   .singleSurfboardDescriptionContainer {
     display: grid;
-    grid-template-rows: 0.7fr 1fr;
+    grid-template-rows: 0.6fr 1fr;
     margin-top: 1rem 0;
     padding: 1rem;
     border-top-left-radius: 0.25rem;
@@ -74,7 +84,7 @@
 
   .surfboardStrength {
     display: block;
-
+    align-self: center;
     justify-self: center;
     list-style-type: none;
     font-size: 1.3rem;
@@ -132,6 +142,25 @@
     color: white;
     font-size: 0.7rem;
   }
+  .lowerBlurbContainerContainer {
+    padding: 1rem;
+    display: grid;
+    width: 40rem;
+
+    margin: 0rem;
+  }
+  .lowerBlurbContainer {
+    display: grid;
+    border: 0.01rem solid black;
+    box-shadow: 0 0 2rem -0.1rem black;
+    border-radius: 0.25rem;
+    margin: 2rem 1rem;
+  }
+  .lowerBlurbDescription {
+    padding: 1rem;
+    display: grid;
+    justify-self: center;
+  }
 }
 @media only screen and (min-width: 21.5rem) {
   .surfboardTitle {
@@ -145,14 +174,17 @@
   }
 }
 @media only screen and (min-width: 50rem) {
-  .singleSurfboardGrid,
-  .surfboardsBlurbContainer {
+  .singleSurfboardGrid {
     margin: 0 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     margin-top: 2rem;
     transition: all 0.3s ease;
+  }
+  .lowerBlurbContainer,
+  .surfboardsBlurbContainer {
+    margin: 0 4rem;
   }
   .singleSurfboardGrid {
     background: linear-gradient(
@@ -166,13 +198,12 @@
     );
   }
   .surfboardsBlurbContainer {
-    max-width: 100%;
-    transition: all 0.3s ease;
   }
 }
 @media only screen and (min-width: 60rem) {
   .singleSurfboardGrid,
-  .surfboardsBlurbContainer {
+  .surfboardsBlurbContainer,
+  .lowerBlurbContainer {
     margin: 0 6rem;
     margin-top: 2rem;
     transition: all 0.3s ease;
@@ -188,7 +219,8 @@
     font-size: 1rem;
   }
   .singleSurfboardGrid,
-  .surfboardsBlurbContainer {
+  .surfboardsBlurbContainer,
+  .lowerBlurbContainer {
     display: grid;
     justify-self: center;
     margin: 0 10rem;
@@ -205,8 +237,9 @@
   .surfboardGridContainer {
   }
   .singleSurfboardGrid,
-  .surfboardsBlurbContainer {
-    margin: 0 16rem;
+  .surfboardsBlurbContainer,
+  .lowerBlurbContainer {
+    margin: 2 16rem;
   }
 }
 
@@ -214,16 +247,18 @@
   .surfboardGridContainer {
   }
   .singleSurfboardGrid,
-  .surfboardsBlurbContainer {
-    margin: 0 18rem;
+  .surfboardsBlurbContainer,
+  .lowerBlurbContainer {
+    margin: 2 18rem;
   }
 }
 @media only screen and (min-width: 110rem) {
   .surfboardGridContainer {
   }
   .singleSurfboardGrid,
-  .surfboardsBlurbContainer {
-    margin: 0 32rem;
+  .surfboardsBlurbContainer,
+  .lowerBlurbContainer {
+    margin: 2 32rem;
   }
 }
 
@@ -231,7 +266,8 @@
   .surfboardGridContainer {
   }
   .singleSurfboardGrid,
-  .surfboardsBlurbContainer {
+  .surfboardsBlurbContainer,
+  .lowerBlurbContainer {
     margin: 0 38rem;
   }
 }
