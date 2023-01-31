@@ -1,17 +1,20 @@
 [
   {
-    "surfboard_strength": "Small",
-    "surfboard_description": "On smaller days and when starting out it is best to ride a board with more volume to help get you on the wave. Mid-lengths and longboards are the best, but bigger wide shortboards are also a good choice.",
-    "surfboard_image": "https://i.ytimg.com/vi/yrTI1Mdgi-4/maxresdefault.jpg"
+    "surfboard_strength": "Longboards",
+    "surfboard_length": "8ft - 10ft",
+    "surfboard_description": "For waves that are weak, fat and small it is often best to take out a board with as much volume as possible to help get into the wave. This calls for a longboard. With very high volume they can paddle into the smallest waves while offering a unique style of surfing like 'nose-riding'",
+    "surfboard_image": "https://cdn.shopify.com/s/files/1/0550/5751/4715/products/14.png"
   },
   {
-    "surfboard_strength": "Medium",
-    "surfboard_description": "For intermediate surfers and days when the conditions have a bit of power and good shape, you can branch out and ride boards with less volume. There is no fixed rule though so if you prefer longboards and mid-lengths they are still a good choice for these conditions.",
-    "surfboard_image": "https://waikikibeachstays.com/wp-content/uploads/2020/11/oahu-surf-spots-hawaii-facebook.jpeg"
+    "surfboard_strength": "Midlengths",
+    "surfboard_length": "7ft - 8ft",
+    "surfboard_description": "This board is perfect for a surfer who wants the easy paddling of a longboard combined with some maneuverability of a shortboard. A great choice for small to medium size days where catching lots of waves and having fun is the priority.",
+    "surfboard_image": "https://cdn.shopify.com/s/files/1/0550/5751/4715/products/Sadhana-Surfboard-Harbourmaster-top.png"
   },
   {
-    "surfboard_strength": "Big",
-    "surfboard_description": "When the conditions are heavy and pumping there are certain boards that are necessary to surf the waves. At this point it is worth considering that the board is going to be fast enough to make it through the barrels.For very large beach break waves a shortboard that is squashed and stretched out to mid-length size works. If the waves are barreling with an easier take off then a high performance shortboard should work. ",
-    "surfboard_image": "https://www.theinertia.com/wp-content/gallery/mckenna-teahupoo/dsc_1155.jpg"
+    "surfboard_strength": "Shortboards",
+    "surfboard_length": "5ft - 7ft",
+    "surfboard_description": "The most maneuverable and 'rippable', a shortboard is the most fun for many people to use in decent waves. The ability to drive through turns in sharp arcs, generate speed quickly and unload power with precise control makes this type of board the most popular around the world for experienced surfers.",
+    "surfboard_image": "https://cdn.shopify.com/s/files/1/0550/5751/4715/products/2.png"
   }
 ]
