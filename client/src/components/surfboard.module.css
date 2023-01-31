@@ -85,7 +85,7 @@
   }
   .singleSurfboardGrid {
     border: 0.1rem solid black;
-    padding: 2rem;
+    padding: 0rem;
     box-shadow: 0 0 2rem -0.1rem black;
     border: 0.1rem solid black;
     border-radius: 0.25rem;
@@ -96,10 +96,10 @@
     background: linear-gradient(
       180deg,
       #f3ceab 0%,
-      #f0ac6c 31.9%,
-      #f3ceab 39%,
-      #f3ceab 65.5%,
-      #f0ac6c 70.5%,
+      #f3ceab 23.9%,
+
+      #f0ac6c 61.5%,
+      #f3ceab 70.5%,
       #f3ceab 99%
     );
   }
@@ -188,30 +188,29 @@
   }
   .lowerBlurbContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     color: white;
     border-radius: 0.25rem;
     margin: 2rem 1rem;
   }
   .lowerBlurb1 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     max-width: 80%;
   }
   .lowerBlurb2 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     display: grid;
-    text-align: right;
+    text-align: left;
     margin: 0;
   }
   .lowerBlurb2Container {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-self: right;
+    grid-template-rows: 1fr;
+    justify-self: left;
     max-width: 60%;
-    text-align: right;
   }
   .lowerBlurb1Content {
-    margin: 1rem;
+    margin: 1rem 0;
   }
   .lowerBlurb2Content {
     margin-right: 1rem;
@@ -223,7 +222,7 @@
     justify-self: center;
   }
   .sadhanaLink {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     transition: all 0.3s ease;
   }
   .sadhanaLink:hover {
@@ -255,7 +254,32 @@
     display: grid;
     margin: 0 4rem;
   }
-
+  .lowerBlurb2Container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-self: right;
+    max-width: 60%;
+    text-align: right;
+  }
+  .lowerBlurb2 {
+    text-align: right;
+  }
+  .lowerBlurb2Content {
+    margin: 0rem;
+  }
+  .lowerBlurbContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    border-radius: 0.25rem;
+  }
+  .sadhanaLink {
+    font-size: 0.9rem;
+  }
+  .lowerBlurb1,
+  .lowerBlurb2 {
+    font-size: 0.9rem;
+  }
   .singleSurfboardGrid {
     background: linear-gradient(
       180deg,
