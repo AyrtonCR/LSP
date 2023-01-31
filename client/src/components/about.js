@@ -2,12 +2,17 @@ import { Link } from "react-router-dom";
 import styles from "./about.module.css";
 import LowerNavBar from "./lowerNavBar";
 import Southshore from "../utils/southshore.png";
+import Wave from "../utils/wave3.png";
 
 const About = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.mainContainer}>
+      <div className={styles.spaceSaver}></div>
+      <div className={styles.titleContainer}>
         <h1 className={styles.mainTitle}>About Me</h1>
+        <img className={styles.image} src={Wave} alt="wave"></img>
+      </div>
+      <div className={styles.mainContainer}>
         <div className={styles.mainGrid}>
           <div className={styles.imageGrid}>
             <img

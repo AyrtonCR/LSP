@@ -13,36 +13,63 @@
       #767370 96%
     );
   }
-
+  .spaceSaver {
+    padding: 1.5rem 0;
+  }
   .mainContainer {
     display: grid;
     padding: 1rem;
   }
 
-  .mainTitle {
+  .titleContainer {
     display: grid;
-    text-align: center;
-    color: white;
-    display: grid;
-    justify-self: center;
-    text-align: center;
-    color: white;
-    font-size: 1.2rem;
-    color: white;
-    text-shadow: 0.12rem 0.12rem 2rem;
-    padding: 1rem;
-    text-align: center;
-    width: 7rem;
-    border-bottom: 0.07rem solid rgb(80, 80, 80);
+    justify-content: center;
+    grid-template-rows: 0.6fr 0.9fr;
     transition: all 0.3s ease;
-    cursor: default;
-    margin-bottom: 3.5rem;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 23px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.6px);
+    -webkit-backdrop-filter: blur(112.6px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
   }
 
+  .titleContainer:hover {
+    border: 0.05rem solid black;
+    border-radius: 0.1rem;
+  }
   .mainTitle:hover {
     transform: scale(1.2);
   }
-
+  .mainTitle:active {
+    margin-right: 10rem;
+  }
+  .mainTitle {
+    display: grid;
+    margin-top: 3rem;
+    text-align: center;
+    color: rgb(37, 37, 37);
+    text-shadow: 0.12rem 0.12rem 2rem;
+    border-bottom: 0.07rem solid #393e46;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    width: 13rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .image:hover {
+    transform: scale(1.3);
+  }
+  .image:active {
+    margin-left: 10rem;
+  }
+  .image {
+    display: grid;
+    justify-self: center;
+    width: 7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
   .mainGrid {
     display: grid;
     grid-template-rows: 0.7fr 0.6fr;
@@ -121,10 +148,6 @@
   }
 }
 @media only screen and (min-width: 21.5rem) {
-  .mainTitle {
-    font-size: 1.5rem;
-    width: 15rem;
-  }
   .subText {
     font-size: 1rem;
   }
@@ -145,6 +168,9 @@
 @media only screen and (min-width: 60rem) {
   .mainGrid {
     grid-template-columns: 1fr 1fr;
+  }
+  .image {
+    width: 10rem;
   }
 }
 @media only screen and (min-width: 70rem) {

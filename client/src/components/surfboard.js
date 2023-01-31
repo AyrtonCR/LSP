@@ -71,8 +71,8 @@ const Surfboard = () => {
             <em>
               There are many different shapes, build materials and setups for
               each type of board that can completely change the way a board
-              functions, allowing it to often be more slow and fun, or more fast
-              and maneuverable.{" "}
+              functions, allowing it to be more slow and fun, or more fast and
+              maneuverable.{" "}
             </em>
           </h4>
           <div className={styles.lowerBlurb2Container}>

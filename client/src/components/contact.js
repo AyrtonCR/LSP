@@ -2,13 +2,18 @@ import styles from "./contact.module.css";
 import { Link } from "react-router-dom";
 import LowerNavBar from "./lowerNavBar";
 import EverythingImage from "../utils/everythingCr.png";
+import Wave from "../utils/wave3.png";
 
 const Contact = () => {
   return (
     <>
       <div className={styles.container}>
+        <div className={styles.spaceSaver}></div>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.mainTitle}>Feel free to get in touch ...</h1>
+          <img className={styles.image} src={Wave} alt="wave"></img>
+        </div>
         <div className={styles.mainContainer}>
-          <h1 className={styles.MainTitle}>Feel free to get in touch ...</h1>
           <div className={styles.mainGrid}>
             <div className={styles.formContainerContainer}>
               <div className={styles.formContainer}>
