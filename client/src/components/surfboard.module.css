@@ -85,7 +85,7 @@
   }
   .singleSurfboardGrid {
     border: 0.1rem solid black;
-    padding: 0rem;
+    padding: 1.3rem 0;
     box-shadow: 0 0 2rem -0.1rem black;
     border: 0.1rem solid black;
     border-radius: 0.25rem;
