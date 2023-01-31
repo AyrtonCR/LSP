@@ -4,7 +4,7 @@ import LowerNavBar from "./lowerNavBar";
 import React, { useState, useEffect } from "react";
 import ForecastIfStatement1 from "./forecastsIfStatement";
 import Wave from "../utils/wave3.png";
-
+import { motion } from "framer-motion";
 const API_URL = process.env.REACT_APP_API_URL;
 
 const Forecasts = () => {
@@ -22,10 +22,16 @@ const Forecasts = () => {
   return (
     <div className={forecastStyles.container}>
       <div className={forecastStyles.spaceSaver}></div>
-      <div className={forecastStyles.titleContainer}>
+      <motion.div
+        className={forecastStyles.titleContainer}
+        initial={{ scale: 1, opacity: 0, x: -290 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ from: 90, duration: 1.4 }}
+      >
         <h2 className={forecastStyles.title}>Forecasts</h2>
         <img className={forecastStyles.image} src={Wave} alt="wave"></img>
-      </div>
+      </motion.div>
+
       <div className={forecastStyles.forecastsContainer}>
         <div className={forecastStyles.forecastsGrid}>
           <h4 className={forecastStyles.mainBlurb}>

@@ -5,7 +5,7 @@ import LowerNavBar from "./lowerNavBar";
 import Wall_1 from "../utils/wallpaper1.jpg";
 import Wave from "../utils/wave3.png";
 import "./main.css";
-
+import { motion } from "framer-motion";
 const API_URL = process.env.REACT_APP_API_URL;
 
 const Main = () => {
@@ -22,14 +22,24 @@ const Main = () => {
 
   return (
     <>
-      <div className="main-container">
-        <div className="title-container">
+      <motion.div
+        className="main-container"
+        initial={{ opacity: 0.89 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.9 }}
+      >
+        <motion.div
+          className="title-container"
+          initial={{ scale: 1, opacity: 0, x: 300 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.4 }}
+        >
           <h1 className="main-title">
             <em>
               <strong>Pegasus Bay Surf</strong>
             </em>
           </h1>
-        </div>
+        </motion.div>
 
         <div className="description-and-image">
           <img className="new-brighton-image" src={Wall_1} alt="" />
@@ -96,7 +106,7 @@ const Main = () => {
         <div className="lowerNavBar">
           <LowerNavBar />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

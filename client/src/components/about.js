@@ -3,15 +3,22 @@ import styles from "./about.module.css";
 import LowerNavBar from "./lowerNavBar";
 import Southshore from "../utils/southshore.png";
 import Wave from "../utils/wave3.png";
-
+import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className={styles.container}>
       <div className={styles.spaceSaver}></div>
-      <div className={styles.titleContainer}>
+
+      <motion.div
+        className={styles.titleContainer}
+        initial={{ scale: 1, opacity: 0, x: -290 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ from: 90, duration: 1.4 }}
+      >
         <h1 className={styles.mainTitle}>About Me</h1>
         <img className={styles.image} src={Wave} alt="wave"></img>
-      </div>
+      </motion.div>
+
       <div className={styles.mainContainer}>
         <div className={styles.mainGrid}>
           <div className={styles.imageGrid}>
