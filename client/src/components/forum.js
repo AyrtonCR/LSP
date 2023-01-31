@@ -5,6 +5,7 @@ import forecastStyles from "./forecasts.module.css";
 import LowerNavBar from "./lowerNavBar";
 import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
+import Wave from "../utils/wave3.png";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -34,7 +35,11 @@ const Forum = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.mainTitle}>Swell Watcher</h2>
+      <div className={styles.spaceSaver}></div>
+      <div className={styles.titleContainer}>
+        <h2 className={styles.mainTitle}>Swell Watcher</h2>
+        <img className={styles.image} src={Wave} alt="wave"></img>
+      </div>
       <div className={styles.mainDescriptionContainer}>
         <h3 className={styles.mainDescription}>
           Stay connected with local updates on the surf and let others know when

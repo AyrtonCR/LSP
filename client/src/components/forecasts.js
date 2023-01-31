@@ -3,6 +3,7 @@ import forecastStyles from "./forecasts.module.css";
 import LowerNavBar from "./lowerNavBar";
 import React, { useState, useEffect } from "react";
 import ForecastIfStatement1 from "./forecastsIfStatement";
+import Wave from "../utils/wave3.png";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -20,15 +21,28 @@ const Forecasts = () => {
 
   return (
     <div className={forecastStyles.container}>
+      <div className={forecastStyles.spaceSaver}></div>
+      <div className={forecastStyles.titleContainer}>
+        <h2 className={forecastStyles.title}>Forecasts</h2>
+        <img className={forecastStyles.image} src={Wave} alt="wave"></img>
+      </div>
       <div className={forecastStyles.forecastsContainer}>
         <div className={forecastStyles.forecastsGrid}>
-          <h2 className={forecastStyles.forecastMainName}>Forecasts</h2>
           <h4 className={forecastStyles.mainBlurb}>
-            Here you can find access to the top forecast websites on the web.
+            Access the top forecast websites on the web.
+          </h4>
+          <h4 className={forecastStyles.mainBlurb}>
             'Magicseaweed' offers great swell information and an easy to read
-            star rating, and 'Surf Forecast' does the same but does not give out
-            stars so easily. By comparing the two and using the surf cams you
-            can find out what the waves are like before heading to the beach!
+            star rating.
+          </h4>
+          <h4 className={forecastStyles.mainBlurb}>
+            'Surf Forecast' displays important information but does not give out
+            stars so easily.
+          </h4>
+          <h4 className={forecastStyles.mainBlurb}>
+            {" "}
+            By comparing the two and using the surf cams you can find out what
+            the waves are like before heading to the beach!
           </h4>
           <ul className={forecastStyles.forecastsSingleGrid}>
             {forecasts.map((forecast) => {
