@@ -247,7 +247,7 @@
   .singleSurfboardGrid {
     margin: 0 4rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 0.8fr;
     gap: 3rem;
     margin-top: 2rem;
     transition: all 0.3s ease;
@@ -339,6 +339,9 @@
   .surfboardsBlurbContainer,
   .lowerBlurbContainer {
     margin: 2 16rem;
+  }
+  .singleSurfboardGrid {
+    grid-template-columns: 1fr 0.6fr;
   }
 }
 

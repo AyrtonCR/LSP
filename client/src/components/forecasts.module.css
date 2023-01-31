@@ -162,6 +162,7 @@
   margin: 1rem;
   padding-bottom: 2rem;
   max-width: 49rem;
+  background-color: #f4c857;
 }
 .forecastsSingleGrid {
   display: grid;
@@ -256,7 +257,7 @@
   }
   .forecastsSingleGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     margin: 0 1rem;
   }
   .image {
