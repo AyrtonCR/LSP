@@ -5,7 +5,7 @@ import LowerNavBar from "./lowerNavBar";
 import Wall_1 from "../utils/wallpaper1.jpg";
 import Wave from "../utils/wave3.png";
 import "./main.css";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 const API_URL = process.env.REACT_APP_API_URL;
 
 const Main = () => {
@@ -15,6 +15,7 @@ const Main = () => {
     const data = await response.json();
     setSurfbreaks(data);
   };
+  const { scrollY } = useScroll();
 
   useEffect(() => {
     fetchData();

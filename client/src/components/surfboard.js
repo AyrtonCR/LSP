@@ -3,12 +3,11 @@ import styles from "./surfboard.module.css";
 import LowerNavBar from "./lowerNavBar";
 import React, { useState, useEffect } from "react";
 import Wave from "../utils/wave3.png";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 const API_URL = process.env.REACT_APP_API_URL;
 
 const Surfboard = () => {
   const [surfboards, setSurfboards] = useState([]);
-  const [isToggled, setToggle] = useState(1);
 
   const fetchData = async () => {
     const response = await fetch(`${API_URL}/surfboards`);
@@ -27,12 +26,29 @@ const Surfboard = () => {
 
       <motion.div
         className={styles.titleAndImage}
-        initial={{ scale: 1, opacity: 0, x: -290 }}
+        initial={{ scale: 1, opacity: 0, x: -300 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ from: 90, duration: 1.4 }}
       >
-        <h2 className={styles.surfboardTitle}>Surfboards</h2>
-        <img className="mini-image" src={Wave} alt="wave"></img>
+        <motion.h2
+          className={styles.surfboardTitle}
+          initial={{ opacity: 0.3 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Surfboards
+        </motion.h2>
+        <motion.img
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            x: { duration: 1.2 },
+            opacity: { duration: 1.2 },
+          }}
+          className={styles.image}
+          src={Wave}
+          alt="wave"
+        ></motion.img>
       </motion.div>
 
       <div className={styles.surfboardGridContainer}>

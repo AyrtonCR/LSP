@@ -12,12 +12,29 @@ const Contact = () => {
 
         <motion.div
           className={styles.titleContainer}
-          initial={{ scale: 1, opacity: 0, x: -290 }}
+          initial={{ scale: 1, opacity: 0, x: -300 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ from: 90, duration: 1.4 }}
         >
-          <h1 className={styles.mainTitle}>Feel free to get in touch ...</h1>
-          <img className={styles.image} src={Wave} alt="wave"></img>
+          <motion.h2
+            className={styles.mainTitle}
+            initial={{ opacity: 0.3 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Feel free to get in touch ...
+          </motion.h2>
+          <motion.img
+            initial={{ opacity: 0, x: 200 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              x: { duration: 1.2 },
+              opacity: { duration: 1.2 },
+            }}
+            className={styles.image}
+            src={Wave}
+            alt="wave"
+          ></motion.img>
         </motion.div>
 
         <div className={styles.mainContainer}>

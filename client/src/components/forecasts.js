@@ -24,12 +24,29 @@ const Forecasts = () => {
       <div className={forecastStyles.spaceSaver}></div>
       <motion.div
         className={forecastStyles.titleContainer}
-        initial={{ scale: 1, opacity: 0, x: -290 }}
+        initial={{ scale: 1, opacity: 0, x: -300 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ from: 90, duration: 1.4 }}
       >
-        <h2 className={forecastStyles.title}>Forecasts</h2>
-        <img className={forecastStyles.image} src={Wave} alt="wave"></img>
+        <motion.h2
+          className={forecastStyles.title}
+          initial={{ opacity: 0.3 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Forecast
+        </motion.h2>
+        <motion.img
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            x: { duration: 1.2 },
+            opacity: { duration: 1.2 },
+          }}
+          className={forecastStyles.image}
+          src={Wave}
+          alt="wave"
+        ></motion.img>
       </motion.div>
 
       <div className={forecastStyles.forecastsContainer}>
