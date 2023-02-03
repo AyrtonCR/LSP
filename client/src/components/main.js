@@ -40,11 +40,18 @@ const Main = () => {
       <motion.div className="super-container">
         <motion.div
           className="description-and-image"
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0.4 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8 }}
         >
-          <img className="new-brighton-image" src={Wall_1} alt="" />
+          <motion.img
+            className="new-brighton-image"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            src={Wall_1}
+            alt=""
+          />
 
           <motion.div
             className="new-title-container"
@@ -100,7 +107,7 @@ const Main = () => {
             style={{
               transform: isInView3 ? "none" : "translateX(200px)",
               opacity: isInView3 ? 1 : 0,
-              transition: "all 1.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              transition: "all 1.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
             }}
             className="sub-title-container"
             ref={ref2}
@@ -108,7 +115,17 @@ const Main = () => {
             <h3 className="sub-title">
               <i>The Breaks</i>
             </h3>
-            <img className="mini-image" src={Wave} alt="wave" ref={ref3}></img>
+            <motion.img
+              className="mini-image"
+              src={Wave}
+              alt="wave"
+              ref={ref3}
+              style={{
+                transform: isInView2 ? "none" : "translateX(-300px)",
+                opacity: isInView2 ? 1 : 0,
+                transition: "all 1.4s cubic-bezier(0.25, 0.50, 0.75, 1) 0.8s",
+              }}
+            ></motion.img>
           </motion.div>
           <motion.div
             className="main-color-wrapper"
@@ -122,16 +139,7 @@ const Main = () => {
               <ul className="surfbreaks-grid">
                 {surfbreaks.map((surfbreak) => {
                   return (
-                    <motion.li
-                      className="single-surfbreak"
-                      key={surfbreak.id}
-                      style={{
-                        transform: isInView4 ? "none" : "translateX(200px)",
-                        opacity: isInView4 ? 1 : 0,
-                        transition:
-                          "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-                      }}
-                    >
+                    <motion.li className="single-surfbreak" key={surfbreak.id}>
                       <img
                         alt="pegasus-bay"
                         className="surfbreaks-image"

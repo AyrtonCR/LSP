@@ -14,7 +14,7 @@ const Contact = () => {
           className={styles.titleContainer}
           initial={{ scale: 1, opacity: 0, x: -300 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ from: 90, duration: 1.4 }}
+          transition={{ duration: 1.4 }}
         >
           <motion.h2
             className={styles.mainTitle}
@@ -28,8 +28,9 @@ const Contact = () => {
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
-              x: { duration: 1.2 },
+              x: { duration: 1 },
               opacity: { duration: 1.2 },
+              delay: 0.5,
             }}
             className={styles.image}
             src={Wave}

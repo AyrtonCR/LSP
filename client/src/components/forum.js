@@ -3,10 +3,10 @@ import styles from "./forum.module.css";
 import "./forum.css";
 import forecastStyles from "./forecasts.module.css";
 import LowerNavBar from "./lowerNavBar";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 import Wave from "../utils/wave3.png";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 const API_URL = process.env.REACT_APP_API_URL;
 
 const Forum = () => {
@@ -23,9 +23,7 @@ const Forum = () => {
 
   useEffect(() => {
     const L = require("leaflet");
-
     delete L.Icon.Default.prototype._getIconUrl;
-
     L.Icon.Default.mergeOptions({
       iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
       iconUrl: require("leaflet/dist/images/marker-icon.png"),
@@ -33,15 +31,18 @@ const Forum = () => {
     });
   }, []);
 
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
   return (
     <div className={styles.container}>
       <div className={styles.spaceSaver}></div>
 
       <motion.div
         className={styles.titleContainer}
-        initial={{ scale: 1, opacity: 0, x: -300 }}
+        initial={{ scale: 1, opacity: 0, x: 300 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ from: 90, duration: 1.4 }}
+        transition={{ duration: 1.4 }}
       >
         <motion.h2
           className={styles.mainTitle}
@@ -52,11 +53,12 @@ const Forum = () => {
           Swell Watcher
         </motion.h2>
         <motion.img
-          initial={{ opacity: 0, x: 200 }}
+          initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{
-            x: { duration: 1.2 },
+            x: { duration: 1 },
             opacity: { duration: 1.2 },
+            delay: 0.5,
           }}
           className={styles.image}
           src={Wave}
@@ -64,12 +66,25 @@ const Forum = () => {
         ></motion.img>
       </motion.div>
 
-      <div className={styles.mainDescriptionContainer}>
-        <h3 className={styles.mainDescription}>
+      <motion.div
+        className={styles.mainDescriptionContainer}
+        initial={{ opacity: 0, x: -300 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{
+          x: { duration: 1.2 },
+          opacity: { duration: 1 },
+        }}
+      >
+        <motion.h3
+          className={styles.mainDescription}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 0.6 }}
+        >
           Stay connected with local updates on the surf and let others know when
           the waves are good near you.
-        </h3>
-      </div>
+        </motion.h3>
+      </motion.div>
       <div className={styles.mainGrid}>
         <div className={styles.singleItemMainGrid}>
           {forumInfo.map((forumData) => {

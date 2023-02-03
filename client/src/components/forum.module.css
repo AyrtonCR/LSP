@@ -8,6 +8,7 @@
     #f4c857 78%,
     #f4c857 100%
   );
+  overflow-x: hidden;
 }
 .spaceSaver {
   padding: 1.5rem 0;
@@ -26,7 +27,7 @@
   display: grid;
   justify-content: center;
   grid-template-rows: 0.6fr 0.9fr;
-  transition: all 0.3s ease;
+
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.22);
   box-shadow: 0 23px 30px rgba(0, 0, 0, 0.1);
@@ -36,8 +37,6 @@
 }
 
 .titleContainer:hover {
-  border: 0.05rem solid black;
-  border-radius: 0.1rem;
 }
 .mainTitle:hover {
 }
@@ -149,8 +148,8 @@
       #767370 0%,
       #767370 24.4%,
       #393e46 24.5%,
-      #393e46 79.9%,
-      #f4c857 80%,
+      #393e46 83%,
+      #f4c857 83%,
       #f4c857 100%
     );
   }

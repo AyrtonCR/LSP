@@ -24,34 +24,35 @@ const Surfboard = () => {
   return (
     <div className={styles.container}>
       <div className={styles.spaceSaver}></div>
-
-      <motion.div
-        className={styles.titleAndImage}
-        initial={{ scale: 1, opacity: 0, x: -300 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ from: 90, duration: 1.4 }}
-      >
-        <motion.h2
-          className={styles.surfboardTitle}
-          initial={{ opacity: 0.3 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+      <div className="overflow">
+        <motion.div
+          className={styles.titleAndImage}
+          initial={{ scale: 1, opacity: 0, x: 300 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.4 }}
         >
-          Surfboards
-        </motion.h2>
-        <motion.img
-          initial={{ opacity: 0, x: 200 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            x: { duration: 1.2 },
-            opacity: { duration: 1.2 },
-          }}
-          className={styles.image}
-          src={Wave}
-          alt="wave"
-        ></motion.img>
-      </motion.div>
-
+          <motion.h2
+            className={styles.surfboardTitle}
+            initial={{ opacity: 0.3 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Surfboards
+          </motion.h2>
+          <motion.img
+            initial={{ opacity: 0, x: -200 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              x: { duration: 1 },
+              opacity: { duration: 1.2 },
+              delay: 0.5,
+            }}
+            className={styles.image}
+            src={Wave}
+            alt="wave"
+          ></motion.img>
+        </motion.div>
+      </div>
       <motion.div
         initial={{ opacity: 0, x: -500 }}
         animate={{ opacity: 1, x: 0 }}
