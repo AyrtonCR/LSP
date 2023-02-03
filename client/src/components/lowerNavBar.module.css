@@ -6,7 +6,7 @@
 
   .lowerNavbarContainer {
     background: none;
-    border-bottom: 0.05rem solid black;
+    border-bottom: 0.05rem solid rgb(0, 0, 0);
   }
   .lowerNavbarItem a:active,
   .lowerNavbarItem a:hover {
@@ -35,7 +35,7 @@
     font-size: 0.85rem;
     text-shadow: 0.12rem 0.12rem 2.5rem;
     white-space: nowrap;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
 }
@@ -77,7 +77,7 @@
     font-size: 1rem;
     text-shadow: 0.12rem 0.12rem 2.5rem;
     white-space: nowrap;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
 }

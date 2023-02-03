@@ -3,7 +3,7 @@
 * {
   font-family: "Nunito", sans-serif;
 }
-.main-container {
+.super-container {
   background: #767370;
   background: linear-gradient(
     180deg,
@@ -17,43 +17,55 @@
     #767370 96%
   );
 }
+.main-container {
+  overflow-x: hidden;
+  display: grid;
+}
 
 .main-color-wrapper {
   background: linear-gradient(#f4c857);
 }
+.lowerNavBarContainer {
+}
 
 @media only screen and (min-width: 14.5rem) {
-  .main-title {
+  .new-main-title {
     font-size: 1.3rem;
     color: white;
     text-shadow: 0.12rem 0.12rem 2rem;
     margin-bottom: 0rem;
-    padding-top: 1rem;
     text-align: center;
-    margin-top: 4rem;
     border-bottom: 0.07rem solid rgb(80, 80, 80);
-    width: 15rem;
-    transition: all 0.3s ease;
-    cursor: default;
+    max-width: 25rem;
   }
-  .main-title:hover {
-    transform: scale(1.2);
+  .new-title-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    position: absolute;
+    top: 1.5rem;
+    left: 2.5rem;
+    justify-items: center;
+  }
+  .canterbury {
+  }
+  .below-title {
+    margin: 0.5rem;
+    font-size: 0.65rem;
+    color: white;
+    text-shadow: 0.12rem 0.12rem 2rem;
+    text-align: center;
   }
   .description-and-image {
+    box-shadow: 0 0 2rem -0.1rem #293232;
     position: relative;
     color: black;
   }
-
-  /* Top left text */
-
-  .top-left {
-    position: absolute;
-    top: 1rem;
-    left: 1.5rem;
-  }
-
   .main-description {
-    box-shadow: 0 0 2rem -0.1rem rgb(223, 186, 117);
+    display: grid;
+    justify-self: center;
+    text-align: center;
+    /* box-shadow: 0 0 1rem -0.1rem rgb(223, 186, 117); */
     text-shadow: 0.12rem 0.12rem 2.5rem;
     border-radius: 0.25rem;
     margin-right: 1rem;
@@ -61,11 +73,12 @@
     color: whitesmoke;
     font-size: 0.55rem;
     width: 11rem;
-    transition: all 0.3s ease;
     cursor: default;
   }
-  .main-description:hover {
-    transform: scale(1.1);
+
+  .description-holder {
+    display: grid;
+    overflow-x: hidden;
   }
   .main-links {
     color: black;
@@ -77,11 +90,10 @@
     border-bottom: 0.07rem solid rgb(74, 74, 74);
     border-radius: 0.1rem;
     max-width: 100%;
+    max-height: 50rem;
+    width: 100%;
+    overflow-x: hidden;
     align-self: center;
-    transition: all 0.3s ease;
-  }
-  .new-brighton-image:hover {
-    transform: scale(1.01);
   }
 
   /* Single Surfbreaks Grid */
@@ -217,14 +229,10 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
-
-  .title-container {
-    display: grid;
-    margin-bottom: 6rem;
-    justify-items: center;
-  }
 }
 @media only screen and (min-width: 21.5rem) {
+  .new-title-container {
+  }
   .top-left {
     position: absolute;
     top: 1rem;
@@ -234,13 +242,7 @@
     font-size: 0.7rem;
     width: 17rem;
   }
-  .main-title {
-    display: grid;
-    justify-self: center;
-    font-size: 2.3rem;
-    text-align: center;
-    margin-left: 0;
-    padding: 0 2rem;
+  .new-main-title {
   }
   .surfbreaks-title {
     font-size: 1.2rem;
@@ -259,7 +261,7 @@
     font-size: 0.85rem;
     width: 12rem;
   }
-  .main-title {
+  .new-main-title {
     border-bottom: 0.07rem solid rgb(80, 80, 80);
   }
   .surfbreaks-grid {
@@ -282,11 +284,12 @@
     font-size: 0.95;
     width: 14rem;
   }
-  .main-title {
-    font-size: 2.3rem;
-    width: 24rem;
-    border-bottom: 0.07rem solid rgb(80, 80, 80);
-    padding: 0 1rem;
+  .new-main-title {
+    font-size: 2rem;
+    width: 34rem;
+  }
+  .below-title {
+    font-size: 1rem;
   }
   .surfbreaks-title {
     font-size: 1.2rem;
@@ -299,10 +302,6 @@
     padding: 0.3rem;
   }
   .title-container {
-    display: grid;
-    justify-content: start;
-    margin-bottom: 6rem;
-    margin-left: 6rem;
   }
 }
 
@@ -315,7 +314,10 @@
     box-shadow: 0 0 2rem -0.1rem black;
     margin: 0 3rem;
   }
-
+  .new-main-title {
+    font-size: 2rem;
+    width: 34rem;
+  }
   .surfbreaks-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -379,9 +381,9 @@
 @media only screen and (min-width: 80rem) {
   .main-description {
     font-size: 0.95rem;
-    width: 35rem;
+    width: 55rem;
   }
-  .main-title {
+  .new-main-title {
     font-size: 2rem;
     width: 34rem;
   }
