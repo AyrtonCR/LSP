@@ -4,7 +4,7 @@ import LowerNavBar from "./lowerNavBar";
 import React, { useState, useEffect } from "react";
 import ForecastIfStatement1 from "./forecastsIfStatement";
 import Wave from "../utils/wave3.png";
-
+import { motion } from "framer-motion";
 const API_URL = process.env.REACT_APP_API_URL;
 
 const Forecasts = () => {
@@ -22,10 +22,34 @@ const Forecasts = () => {
   return (
     <div className={forecastStyles.container}>
       <div className={forecastStyles.spaceSaver}></div>
-      <div className={forecastStyles.titleContainer}>
-        <h2 className={forecastStyles.title}>Forecasts</h2>
-        <img className={forecastStyles.image} src={Wave} alt="wave"></img>
-      </div>
+      <motion.div
+        className={forecastStyles.titleContainer}
+        initial={{ scale: 1, opacity: 0, x: -300 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1.4 }}
+      >
+        <motion.h2
+          className={forecastStyles.title}
+          initial={{ opacity: 0.3 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Forecast
+        </motion.h2>
+        <motion.img
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            x: { duration: 1 },
+            opacity: { duration: 1.2 },
+            delay: 0.5,
+          }}
+          className={forecastStyles.image}
+          src={Wave}
+          alt="wave"
+        ></motion.img>
+      </motion.div>
+
       <div className={forecastStyles.forecastsContainer}>
         <div className={forecastStyles.forecastsGrid}>
           <h4 className={forecastStyles.mainBlurb}>

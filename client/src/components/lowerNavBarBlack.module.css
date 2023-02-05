@@ -10,7 +10,7 @@
   }
   .lowerNavbarItem a:active,
   .lowerNavbarItem a:hover {
-    color: #f27c0e;
+    color: #909090;
     text-decoration: underline;
   }
   .lowerNavbarItem {
@@ -52,7 +52,7 @@
   }
   .lowerNavbarItem a:active,
   .lowerNavbarItem a:hover {
-    color: #f27c0e;
+    color: #ffffff;
     text-decoration: underline;
   }
   .lowerNavbarItem {
@@ -77,7 +77,7 @@
     font-size: 1rem;
     text-shadow: 0.12rem 0.12rem 2.5rem;
     white-space: nowrap;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
   }
 }

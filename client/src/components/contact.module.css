@@ -27,7 +27,6 @@
     display: grid;
     justify-content: center;
     grid-template-rows: 0.6fr 0.9fr;
-    transition: all 0.3s ease;
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.22);
     box-shadow: 0 23px 30px rgba(0, 0, 0, 0.1);
@@ -60,17 +59,14 @@
     transition: all 0.2s ease;
   }
   .image:hover {
-    transform: scale(1.3);
   }
   .image:active {
-    margin-left: 10rem;
   }
   .image {
     display: grid;
     justify-self: center;
     width: 7rem;
     cursor: pointer;
-    transition: all 0.3s ease;
   }
 
   .mainContainer {
@@ -259,6 +255,9 @@
 }
 
 @media only screen and (min-width: 60rem) {
+  .image {
+    width: 10rem;
+  }
 }
 
 @media only screen and (min-width: 70rem) {

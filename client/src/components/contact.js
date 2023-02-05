@@ -3,16 +3,41 @@ import { Link } from "react-router-dom";
 import LowerNavBar from "./lowerNavBar";
 import EverythingImage from "../utils/everythingCr.png";
 import Wave from "../utils/wave3.png";
-
+import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.spaceSaver}></div>
-        <div className={styles.titleContainer}>
-          <h1 className={styles.mainTitle}>Feel free to get in touch ...</h1>
-          <img className={styles.image} src={Wave} alt="wave"></img>
-        </div>
+
+        <motion.div
+          className={styles.titleContainer}
+          initial={{ scale: 1, opacity: 0, x: -300 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.4 }}
+        >
+          <motion.h2
+            className={styles.mainTitle}
+            initial={{ opacity: 0.3 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Feel free to get in touch ...
+          </motion.h2>
+          <motion.img
+            initial={{ opacity: 0, x: 200 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              x: { duration: 1 },
+              opacity: { duration: 1.2 },
+              delay: 0.5,
+            }}
+            className={styles.image}
+            src={Wave}
+            alt="wave"
+          ></motion.img>
+        </motion.div>
+
         <div className={styles.mainContainer}>
           <div className={styles.mainGrid}>
             <div className={styles.formContainerContainer}>

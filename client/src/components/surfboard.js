@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import styles from "./surfboard.module.css";
 import LowerNavBar from "./lowerNavBar";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Wave from "../utils/wave3.png";
-
+import { motion, useInView, useScroll } from "framer-motion";
 const API_URL = process.env.REACT_APP_API_URL;
 
 const Surfboard = () => {
@@ -14,19 +14,51 @@ const Surfboard = () => {
     const data = await response.json();
     setSurfboards(data);
   };
-
   useEffect(() => {
     fetchData();
   }, []);
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  //Motion//
 
   return (
     <div className={styles.container}>
       <div className={styles.spaceSaver}></div>
-      <div className={styles.titleAndImage}>
-        <h2 className={styles.surfboardTitle}>Surfboards</h2>
-        <img className="mini-image" src={Wave} alt="wave"></img>
+      <div className="overflow">
+        <motion.div
+          className={styles.titleAndImage}
+          initial={{ scale: 1, opacity: 0, x: 300 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.4 }}
+        >
+          <motion.h2
+            className={styles.surfboardTitle}
+            initial={{ opacity: 0.3 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Surfboards
+          </motion.h2>
+          <motion.img
+            initial={{ opacity: 0, x: -200 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              x: { duration: 1 },
+              opacity: { duration: 1.2 },
+              delay: 0.5,
+            }}
+            className={styles.image}
+            src={Wave}
+            alt="wave"
+          ></motion.img>
+        </motion.div>
       </div>
-      <div className={styles.surfboardGridContainer}>
+      <motion.div
+        initial={{ opacity: 0, x: -500 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ x: { duration: 1 }, opacity: { duration: 1.9 } }}
+        className={styles.surfboardGridContainer}
+      >
         <div className={styles.surfboardsBlurbContainer}>
           <h4 className={styles.surfboardsBlurb}>
             Surfboards can come in many different shapes and sizes. From long to
@@ -64,25 +96,39 @@ const Surfboard = () => {
             );
           })}
         </ul>
-      </div>
+      </motion.div>
       <div className={styles.lowerBlurbContainerContainer}>
-        <div className={styles.lowerBlurbContainer}>
-          <h4 className={styles.lowerBlurb1}>
+        <motion.div ref={ref} className={styles.lowerBlurbContainer}>
+          <motion.h4
+            className={styles.lowerBlurb1}
+            style={{
+              transform: isInView ? "none" : "translateX(-200px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+          >
             <em>
               There are many different shapes, build materials and setups for
               each type of board that can completely change the way a board
               functions, allowing it to be more slow and fun, or more fast and
               maneuverable.{" "}
             </em>
-          </h4>
-          <div className={styles.lowerBlurb2Container}>
+          </motion.h4>
+          <motion.div
+            className={styles.lowerBlurb2Container}
+            style={{
+              transform: isInView ? "none" : "translateX(200px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+          >
             <h4 className={styles.lowerBlurb2}>
               <em className={styles.lowerBlurb1Content}>
                 This is a just a brief indication of what these types of
                 surfboards can do.{" "}
               </em>
             </h4>
-            <h4 className={styles.lowerBlurb2}>
+            <motion.h4 className={styles.lowerBlurb2}>
               <em className={styles.lowerBlurb2Content}>
                 Images are from a great Christchurch shaper <br></br>
                 <a
@@ -92,11 +138,19 @@ const Surfboard = () => {
                   @Sadhana Surfboards
                 </a>
               </em>
-            </h4>
-          </div>
-        </div>
+            </motion.h4>
+          </motion.div>
+        </motion.div>
       </div>
-      <LowerNavBar />
+      <motion.div
+        style={{
+          transform: isInView ? "none" : "translateY(50px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
+        <LowerNavBar />
+      </motion.div>
     </div>
   );
 };
