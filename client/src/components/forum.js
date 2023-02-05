@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./forum.module.css";
 import "./forum.css";
 import forecastStyles from "./forecasts.module.css";
-import LowerNavBar from "./lowerNavBar";
+import LowerNavBar2 from "./lowerNavBarBlack";
 import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 import Wave from "../utils/wave3.png";
@@ -159,7 +159,7 @@ const Forum = () => {
       </div>
 
       <div className={forecastStyles.lowerNavBar}>
-        <LowerNavBar />
+        <LowerNavBar2 />
       </div>
     </div>
   );

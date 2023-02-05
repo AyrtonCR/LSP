@@ -40,9 +40,9 @@ const Main = () => {
       <motion.div className="super-container">
         <motion.div
           className="description-and-image"
-          initial={{ opacity: 0.4 }}
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.8 }}
         >
           <motion.img
             className="new-brighton-image"
