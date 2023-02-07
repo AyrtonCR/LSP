@@ -95,7 +95,7 @@ const Forecasts = () => {
                           className={forecastStyles.forecastButton}
                         >
                           <button className={forecastStyles.nestedButton}>
-                            <strong>MS Surf Report</strong>
+                            <strong>Magic Seaweed Report</strong>
                           </button>
                         </a>
 
@@ -104,7 +104,7 @@ const Forecasts = () => {
                           className={forecastStyles.forecastButton}
                         >
                           <button className={forecastStyles.nestedButton}>
-                            <strong>SF Surf Report</strong>
+                            <strong>Surf Forecast Report</strong>
                           </button>
                         </a>
                         <a
@@ -112,7 +112,7 @@ const Forecasts = () => {
                           className={forecastStyles.forecastButton}
                         >
                           <button className={forecastStyles.nestedButton}>
-                            <strong>Surf Cam - 1</strong>
+                            <strong>Surf Cam (1)</strong>
                           </button>
                         </a>
 
@@ -121,7 +121,7 @@ const Forecasts = () => {
                           className={forecastStyles.forecastButton}
                         >
                           <button className={forecastStyles.nestedButton}>
-                            <strong>Surf Cam - 2</strong>
+                            <strong>Surf Cam (2)</strong>
                           </button>
                         </a>
                       </div>
