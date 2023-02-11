@@ -6,7 +6,7 @@
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/New-Brighton-Beach/forecasts/latest",
     "forecasts_cam_1": "https://www.surfline.com/surf-report/new-brighton/584204204e65fad6a770967d?camId=618dc0b3285443cca6282eeb",
     "forecasts_cam_2": "http://www.waimairisurf.org.nz/webcam4",
-    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/new-brighton"
+    "forecast_info": "The optimal swell direction for Brighton is from the NE with optimal wind direction from the West. Brighton is normally best around 4-6ft getting a swell with an interval of around 12s. Watch out for south swells, they often will not make it into this part of Pegasus bay with much of a punch despite what the forecast says."
   },
   {
     "forecasts_name": "Sumner Beach",
@@ -15,7 +15,7 @@
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/Scarborough_1/forecasts/latest/six_day",
     "forecasts_cam_1": "https://sumnersurf.nz/",
     "forecasts_cam_2": "http://www.surfcam.co.nz/",
-    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/scarborough"
+    "forecast_info": "The optimal swell direction for Sumner is also from the NE with optimal wind directions from the West. Sumner can make some small choppy small interval swells quite surfable, most notably it is where to go when it is to big everywhere else. The wave is often fatter and wallier than anywhere, but can still have a solid inside. Expect to compete with long-boarders. This can be one of the most crowded breaks in the south island due to it normally being very beginner friendly."
   },
   {
     "forecasts_name": "Taylors Mistake Beach",
@@ -24,7 +24,7 @@
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/Taylors-Mistake/forecasts/latest",
     "forecasts_cam_1": "https://www.taylorssurf.co.nz/",
     "forecasts_cam_2": "",
-    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/taylors-mistake"
+    "forecast_info": "The optimal swell direction for Taylors is also from the NE with optimal wind directions from the West. Taylors has better banks then most other spots around Christchurch, and is a bit shallower in the corners making it a hotspot for intermediate to advanced surfers in the area. High tide is often not that great unless the swell is big, and low-tide can put out steep fast waves."
   },
   {
     "forecasts_name": "Waikuku Beach",
@@ -33,7 +33,7 @@
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/Waikuku-Beach/forecasts/latest/six_day",
     "forecasts_cam_1": "https://sumnersurf.nz/",
     "forecasts_cam_2": "http://www.surfcam.co.nz/",
-    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/waikuku-beach"
+    "forecast_info": "The optimal swell direction for Waikuku is from the E to SE with optimal wind directions from the WNW to NW. Waikuku will often have slightly better banks than Brighton, and has a bit more punch in it. The main reason for going here from Christchurch is it catches the SE swells that just do not make it in to Brighton. A decent size SE swell with NW winds will put out fun barreling rights."
   },
   {
     "forecasts_name": "Amberly Beach",
@@ -42,7 +42,7 @@
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/Amberley-Beach/forecasts/latest/six_day",
     "forecasts_cam_1": "",
     "forecasts_cam_2": "",
-    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/amberley-beach"
+    "forecast_info": "The optimal swell direction for Amberly beach is from the SE with optimal wind directions from the NW. Amberly, similair to Waikuku is where you want to go when the South swell is not making it into the southern areas of Pegasus Bay. It will often have a dumpy inside section to watch out for, and becomes very fickle and often not surfable at high-tide. Low-tide is much better."
   },
   {
     "forecasts_name": "Magnet Bay",
@@ -51,6 +51,6 @@
     "forecasts_info_2": "https://www.surf-forecast.com/breaks/Magnet-Bay/forecasts/latest/six_day",
     "forecasts_cam_1": "",
     "forecasts_cam_2": "",
-    "forecast_info": "http://surfseeker.co.nz/surf_breaks/canterbury/magnet-bay"
+    "forecast_info": "The optimal swell direction for Magnet Bay is from the S to SE with optimal wind directions from the N to NW. Magnet will often need a good bit of swell to start breaking properly, and puts out a nice left-hander. It can hold bigger swells but is arguably a bit dodgy and left to better surfers. Around 5ft 12s would be good for a smaller day. Best surfed around Low-tide as it starts breaking very close to the rocks as the tide comes in."
   }
 ]
