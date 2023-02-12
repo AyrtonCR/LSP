@@ -86,7 +86,15 @@ const Forum = () => {
         </motion.h3>
       </motion.div>
       <div className={styles.mainGrid}>
-        <div className={styles.singleItemMainGrid}>
+        <motion.div
+          className={styles.singleItemMainGrid}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            opacity: { duration: 1.2 },
+            delay: 0.7,
+          }}
+        >
           {forumInfo.map((forumData) => {
             return (
               <>
@@ -111,8 +119,17 @@ const Forum = () => {
               </>
             );
           })}
-        </div>
-        <div className={styles.mainGridImageContainer}>
+        </motion.div>
+        <motion.div
+          className={styles.mainGridImageContainer}
+          initial={{ opacity: 0, x: 200 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            x: { duration: 1 },
+            opacity: { duration: 1.2 },
+            delay: 0.5,
+          }}
+        >
           <div className={styles.map}>
             <MapContainer
               center={[-43.5642322, 172.6498945, 10.34]}
@@ -155,7 +172,7 @@ const Forum = () => {
               </Marker>
             </MapContainer>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className={forecastStyles.lowerNavBar}>
