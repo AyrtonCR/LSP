@@ -4,13 +4,10 @@
   background: linear-gradient(
     180deg,
     #767370 0%,
-    #767370 13.99%,
-    #767370 14%,
-    #f27c0e 49.9%,
-    #f27c0e 50%,
-    #f27c0e 62%,
-    #f27c0e 75%,
-    #767370 96%
+
+    #464646 50%,
+
+    #313131 96%
   );
   overflow-x: hidden;
 }
@@ -288,6 +285,12 @@
 
   .lowerNavBar {
   }
+  .mainBlurbContainer {
+    display: grid;
+    border-bottom: 0.01rem solid black;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
   .mainBlurb {
     display: grid;
     justify-self: center;
@@ -316,7 +319,7 @@
     padding: 0.3rem;
     margin: 0.2rem 0;
     max-width: 70rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .breakBlurb {
     font-size: 0.9rem;
@@ -376,6 +379,9 @@
     grid-template-columns: 1fr 1fr 1fr;
     text-align: CENTER;
     gap: 3rem;
+  }
+  .mainBlurb {
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 50rem) {

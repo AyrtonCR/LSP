@@ -53,23 +53,70 @@ const Forecasts = () => {
       </div>
       <div className={forecastStyles.forecastsContainer}>
         <div className={forecastStyles.forecastsGrid}>
-          <h4 className={forecastStyles.mainBlurb}>
-            Access the top forecast websites on the web.
-          </h4>
-          <h4 className={forecastStyles.mainBlurb}>
-            'Magicseaweed' offers great swell information and an easy to read
-            star rating.
-          </h4>
-          <h4 className={forecastStyles.mainBlurb}>
-            'Surf Forecast' displays important information but does not give out
-            stars so easily.
-          </h4>
-          <h4 className={forecastStyles.mainBlurb}>
-            {" "}
-            By comparing the two and using the surf cams you can find out what
-            the waves are like before heading to the beach!
-          </h4>
-          <ul className={forecastStyles.forecastsSingleGrid}>
+          <div className={forecastStyles.mainBlurbContainer}>
+            <motion.h4
+              className={forecastStyles.mainBlurb}
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                y: { duration: 1 },
+                opacity: { duration: 1.2 },
+                delay: 0.3,
+              }}
+            >
+              Access the top forecast websites on the web.
+            </motion.h4>
+            <motion.h4
+              className={forecastStyles.mainBlurb}
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                y: { duration: 1 },
+                opacity: { duration: 1.2 },
+                delay: 0.6,
+              }}
+            >
+              'Magicseaweed' offers great swell information and an easy to read
+              star rating.
+            </motion.h4>
+            <motion.h4
+              className={forecastStyles.mainBlurb}
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                y: { duration: 1 },
+                opacity: { duration: 1.2 },
+                delay: 0.9,
+              }}
+            >
+              'Surf Forecast' displays important information but does not give
+              out stars so easily.
+            </motion.h4>
+            <motion.h4
+              className={forecastStyles.mainBlurb}
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                y: { duration: 1 },
+                opacity: { duration: 1.2 },
+                delay: 1.2,
+              }}
+            >
+              {" "}
+              By comparing the two and using the surf cams you can find out what
+              the waves are like before heading to the beach!
+            </motion.h4>
+          </div>
+          <motion.ul
+            className={forecastStyles.forecastsSingleGrid}
+            initial={{ opacity: 0, x: -200 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              x: { duration: 0.8 },
+              opacity: { duration: 0.8 },
+              delay: 1.2,
+            }}
+          >
             {forecasts.map((forecast) => {
               return (
                 <>
@@ -144,7 +191,7 @@ const Forecasts = () => {
                 </>
               );
             })}
-          </ul>
+          </motion.ul>
         </div>
       </div>
       <LowerNavBar />

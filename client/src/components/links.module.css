@@ -12,6 +12,7 @@
     #f27c0e 75%,
     #767370 96%
   );
+  overflow: hidden;
 }
 .spaceSaver {
   padding: 1.5rem 0;
@@ -137,10 +138,17 @@
 .linksContent {
   font-size: 0.85rem;
 }
+
 @media only screen and (min-width: 40rem) {
   .mainGrid {
     grid-template-rows: none;
     grid-template-columns: 1fr;
+  }
+  .linkMover {
+    transition: 0.5s all ease;
+  }
+  .linkMover:hover {
+    margin-left: 1rem;
   }
 }
 

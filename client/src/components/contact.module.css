@@ -12,6 +12,7 @@
       #f27c0e 75%,
       #767370 96%
     );
+    overflow-x: hidden;
   }
   .spaceSaver {
     padding: 1.5rem;
@@ -101,7 +102,6 @@
     width: fit-content;
   }
   .formContainerContainer {
-    transition: all 0.3s ease;
   }
   .formContainerContainer:hover {
     transform: scale(1.02);
@@ -197,7 +197,6 @@
     justify-content: center;
     padding-right: 1rem;
     margin: 0 1rem;
-    transition: all 0.3s ease;
   }
 
   .imageContainer:hover {

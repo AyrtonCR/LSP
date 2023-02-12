@@ -39,14 +39,39 @@ const About = () => {
 
       <div className={styles.mainContainer}>
         <div className={styles.mainGrid}>
-          <div className={styles.imageGrid}>
-            <img
+          <motion.div
+            className={styles.imageGrid}
+            initial={{ rotate: 300, scale: 0.5, opacity: 0 }}
+            animate={{ rotate: 360, scale: 1, opacity: 1 }}
+            transition={{
+              rotate: { duration: 1.2 },
+              scale: { duration: 1.2 },
+              opacity: { duration: 1.2 },
+              delay: 0.5,
+            }}
+          >
+            <motion.img
               className={styles.image1}
               alt="ayrtons-face"
               src={Southshore}
-            ></img>
-          </div>
-          <div className={styles.textGrid}>
+              initial={{ scale: 1.2 }}
+              animate={{ scale: 1 }}
+              transition={{
+                scale: { duration: 0.92 },
+                delay: 1,
+              }}
+            ></motion.img>
+          </motion.div>
+          <motion.div
+            className={styles.textGrid}
+            initial={{ opacity: 0, x: 200 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              x: { duration: 1 },
+              opacity: { duration: 1.2 },
+              delay: 0.5,
+            }}
+          >
             <div className={styles.mainTextContainer}>
               <p className={styles.mainText}>
                 Hi, my name is Ayrton and I am a student in the last stages of
@@ -76,7 +101,7 @@ const About = () => {
                 <i>https://github.com/AyrtonCR</i>
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <LowerNavBar />
