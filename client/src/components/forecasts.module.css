@@ -1,249 +1,350 @@
 .container {
+  display: grid;
   background: #767370;
   background: linear-gradient(
     180deg,
     #767370 0%,
-    #767370 13.99%,
-    #767370 14%,
-    #f27c0e 49.9%,
-    #f27c0e 50%,
-    #f27c0e 62%,
-    #f27c0e 75%,
-    #767370 96%
+
+    #464646 50%,
+
+    #313131 96%
   );
+  overflow-x: hidden;
 }
 .spaceSaver {
   padding: 1.5rem 0;
 }
-.nestedButton {
-  display: grid;
 
-  border: 0rem;
-  padding: 0rem;
-  background: none;
-  cursor: pointer;
-  font-size: 0.6rem;
-  text-decoration: none;
-}
-.nestedButton:visited {
-  text-decoration: none;
-}
-.nestedButton:hover {
-  text-decoration: none;
-}
-.nestedButton:active {
-  text-decoration: none;
-}
-.forecastButton {
-  display: grid;
-  justify-items: center;
-  margin: 0;
-  padding: 0rem 0.5rem;
-  background: none;
-  width: fit-content;
-  color: black;
-  border: 0.01rem solid black;
-  padding: 0.5rem;
-  background-color: #ddb48b;
-  border-radius: 0.15rem;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-.forecastButton:active,
-.forecastButton:hover {
-  background-color: white;
-  text-decoration: underline;
-  transform: scale(1.15);
-}
-
-.forecastsContainer {
-  padding: 1rem;
-}
-
-.forecastMainName {
-  display: grid;
-  text-align: center;
-  color: white;
-  display: grid;
-  justify-self: center;
-  text-align: center;
-  color: white;
-  font-size: 1.8rem;
-  color: white;
-  text-shadow: 0.12rem 0.12rem 2rem;
-  padding-top: 1rem;
-  text-align: center;
-  margin: 2rem 0;
-  width: 20rem;
-  border-bottom: 0.07rem solid rgb(80, 80, 80);
-  cursor: default;
-  margin-bottom: 4rem;
-}
-.forecastMainName:hover {
-}
-.titleContainer {
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 0.6fr 0.9fr;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.22);
-  box-shadow: 0 23px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(14.6px);
-  -webkit-backdrop-filter: blur(112.6px);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-}
-
-.titleContainer:hover {
-}
-.title:hover {
-  transform: scale(1.2);
-}
-.title:active {
-}
-.title {
-  display: grid;
-  margin-top: 3rem;
-  text-align: center;
-  color: rgb(37, 37, 37);
-  text-shadow: 0.12rem 0.12rem 2rem;
-  border-bottom: 0.07rem solid #393e46;
-  margin-bottom: 0;
-  font-size: 1.8rem;
-  width: 13rem;
-  cursor: pointer;
-}
-.image:hover {
-}
-.image:active {
-}
-.image {
-  display: grid;
-  justify-self: center;
-  width: 7rem;
-  cursor: pointer;
-}
-.forecastsGrid {
-  display: grid;
-  padding: 1rem;
-}
-
-.forecastsMainGrid {
-  border: 0.1rem solid black;
-  box-shadow: 0 0 1rem -0.1rem black;
-  border: 0.1rem solid black;
-  border-radius: 0.25rem;
-  margin: 1rem;
-  padding: 0rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
-}
-
-.forecastsSingleItem {
-  display: grid;
-  justify-self: center;
-  list-style-type: none;
-  border: 0.1rem solid black;
-  box-shadow: 0 0 1rem -0.1rem black;
-  border: 0.1rem solid black;
-  border-radius: 0.25rem;
-  display: grid;
-  grid-template-rows: 0.2fr 1fr;
-  margin: 1rem;
-  padding-bottom: 2rem;
-  max-width: 49rem;
-  background-color: #f4c857;
-}
-.forecastsSingleGrid {
-  display: grid;
-  padding: 0rem;
-}
-.mainGridPart1 {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-.forecastsItemGridPart1 {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
-.forecastsItemGridPart2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  align-items: center;
-  justify-items: center;
-}
-
-.mainGridPart2 {
-  display: grid;
-  grid-template-columns: 1fr 0.4fr;
-  align-items: center;
-}
-.forecastName {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.forecastsImage {
-  max-width: 90%;
-  display: grid;
-  align-self: center;
-  justify-self: center;
-  box-shadow: 0 0 1rem -0.1rem black;
-  border: 0.1rem solid black;
-  border-radius: 0.25rem;
-  transition: all 0.3s ease;
-}
-
-.forecastsImage:hover {
-  transform: scale(1.1);
-  margin-left: 1rem;
-}
-.forecastsItemGridPart1 {
-  display: grid;
-  align-self: center;
-}
-
-.forecastsLink {
-  margin: 0.5rem 0;
-  margin-left: 1.4rem;
-  list-style-type: none;
-  text-decoration: none;
-}
-
-.lowerNavBar {
-}
-.mainBlurb {
-  display: grid;
-  justify-self: center;
-  color: white;
-  padding: 0.3rem;
-  margin: 0.2rem 0;
-  max-width: 70rem;
-}
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 13.5rem) {
+  .mainGridPart1 {
+    margin-bottom: 1rem;
+  }
+  .forecastsItemGridPart2 {
+  }
   .forecastsSingleItem {
+    display: grid;
+    grid-template-rows: none;
+    max-width: 100%;
+  }
+  .mainGridPart2 {
+    grid-template-rows: 1fr 0.2fr 0.2fr;
+    gap: 2rem;
+  }
+  .breakBlurb {
+    padding-left: 1rem;
+    font-size: 0.7rem;
+  }
+  .reportName {
+    justify-self: unset;
+    font-size: 0.6rem;
+  }
+  .forecastsSingleGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+  .image {
+    width: 10rem;
+  }
+  .forecastsImage {
+    max-width: 100%;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 0 0 1rem -0.1rem black;
+    border: 0.1rem solid black;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+  }
+  .forecastButton {
+    display: grid;
+    justify-self: center;
+    margin: 0.5rem 0;
+    max-width: 6rem;
   }
 
   .forecastName {
     font-size: 1.2rem;
   }
+  .forecastsItemGridPart3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: CENTER;
+  }
+  /* ADD */
+  .nestedButton {
+    display: grid;
+    border: 0rem;
+    padding: 0rem;
+    background: none;
+    cursor: pointer;
+    font-size: 0.6rem;
+    text-decoration: none;
+    color: blue;
+  }
+  .nestedButton:visited {
+    text-decoration: none;
+  }
+  .nestedButton:hover {
+    text-decoration: none;
+  }
+  .nestedButton:active {
+    text-decoration: none;
+  }
+  .forecastButton {
+    display: grid;
+    justify-items: center;
+    margin: 0;
+    padding: 0rem 0.5rem;
+    background: none;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 0.15rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.9s all ease;
+  }
+  .forecastButton:active,
+  .forecastButton:hover {
+    background-color: rgb(193, 150, 71);
+    text-decoration: underline;
+    transform: scale(1.05);
+    margin-left: 1rem;
+  }
+
+  .forecastsContainer {
+    padding: 1rem;
+    display: grid;
+  }
+
+  .forecastMainName {
+    display: grid;
+    text-align: center;
+    color: white;
+    display: grid;
+    justify-self: center;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    color: white;
+    text-shadow: 0.12rem 0.12rem 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+    width: 20rem;
+    border-bottom: 0.07rem solid rgb(80, 80, 80);
+    cursor: default;
+    margin-bottom: 4rem;
+  }
+  .forecastMainName:hover {
+  }
+  .titleContainer {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 0.6fr 0.9fr;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: 0 23px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.6px);
+    -webkit-backdrop-filter: blur(112.6px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .titleContainer:hover {
+  }
+  .title:hover {
+  }
+  .title:active {
+  }
+  .title {
+    display: grid;
+    margin-top: 3rem;
+    text-align: center;
+    color: rgb(37, 37, 37);
+    text-shadow: 0.12rem 0.12rem 2rem;
+    border-bottom: 0.07rem solid #393e46;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    width: 8rem;
+  }
+  .image:hover {
+  }
+  .image:active {
+  }
+  .image {
+    display: grid;
+    justify-self: center;
+    width: 7rem;
+    cursor: pointer;
+  }
+  .forecastsGrid {
+    display: grid;
+    align-self: center;
+    align-content: center;
+    align-items: CENTER;
+    justify-self: center;
+    justify-content: CENTER;
+    justify-items: center;
+    padding: 1rem;
+  }
+
+  .forecastsMainGrid {
+    border: 0.1rem solid black;
+    box-shadow: 0 0 1rem -0.1rem black;
+    border: 0.1rem solid black;
+    border-radius: 0.25rem;
+    margin: 1rem;
+    padding: 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
+  }
+
+  .forecastsSingleItem {
+    display: grid;
+    justify-self: center;
+    list-style-type: none;
+    box-shadow: 0 0 1rem -0.1rem black;
+    border: 0.1rem solid black;
+    border-radius: 0.25rem;
+    display: grid;
+    margin: 1rem;
+    padding-bottom: 2rem;
+    max-width: 100%;
+    background-color: #f4c857;
+    padding: 1rem;
+    border: 0.05rem solid black;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 1rem -0.1rem black;
+  }
+  .forecastsSingleGrid {
+    display: grid;
+    padding: 0rem;
+    border: 0.01rem solid black;
+    box-shadow: 0 0 2rem -0.1rem black;
+    border-radius: 0.25rem;
+  }
+  .mainGridPart1 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
   .forecastsItemGridPart1 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .forecastsItemGridPart2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .mainGridPart2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  .forecastName {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .forecastsImage {
+    max-width: 100%;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 0 0 1rem -0.1rem black;
+    border: 0.1rem solid black;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+  }
+
+  .forecastsImage:hover {
+    transform: scale(1.02);
+  }
+  .forecastsItemGridPart1 {
+    display: grid;
+    align-self: center;
+  }
+
+  .forecastsLink {
+    margin: 0.5rem 0;
+    margin-left: 1.4rem;
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  .lowerNavBar {
+  }
+  .mainBlurbContainer {
+    display: grid;
+    border-bottom: 0.01rem solid black;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  .mainBlurb {
+    display: grid;
+    justify-self: center;
+    color: white;
+    padding: 0.3rem;
+    margin: 0.2rem 0;
+    max-width: 70rem;
+    font-size: 0.7rem;
   }
 }
-@media only screen and (min-width: 50rem) {
-  .forecastsItemGridPart1 {
+@media only screen and (min-width: 21.5rem) {
+  .titleContainer {
+    grid-template-rows: 0.6fr 0.9fr;
+  }
+  .mainGridPart2 {
+    grid-template-rows: 0.3fr 0.7fr 0.2fr;
+    gap: 2rem;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .mainBlurb {
+    display: grid;
+    justify-self: center;
+    color: white;
+    padding: 0.3rem;
+    margin: 0.2rem 0;
+    max-width: 70rem;
+    font-size: 0.8rem;
+  }
+  .breakBlurb {
+    font-size: 0.9rem;
+  }
+  .reportName {
+    font-size: 0.8rem;
   }
 }
-@media only screen and (min-width: 60rem) {
-  .forecastsItemGridPart1 {
+@media only screen and (min-width: 40rem) {
+  .mainGridPart1 {
+    margin-bottom: 1rem;
+  }
+  .forecastsItemGridPart2 {
+  }
+  .forecastsSingleItem {
+    display: grid;
+    grid-template-rows: none;
+    max-width: 33rem;
+  }
+  .mainGridPart2 {
+    grid-template-rows: 0.3fr 0.7fr 0.2fr;
+    gap: 2rem;
+  }
+  .breakBlurb {
+    padding-left: 1rem;
   }
   .forecastsSingleGrid {
     display: grid;
@@ -253,24 +354,114 @@
   .image {
     width: 10rem;
   }
+  .forecastsImage {
+    max-width: 30rem;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 0 0 1rem -0.1rem black;
+    border: 0.1rem solid black;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+  }
+  .forecastButton {
+    display: grid;
+    justify-self: center;
+    margin: 0.5rem 0;
+    max-width: 6rem;
+  }
+
+  .forecastName {
+    font-size: 1.2rem;
+  }
+  .forecastsItemGridPart3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: CENTER;
+    gap: 3rem;
+  }
+  .mainBlurb {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 50rem) {
+  .forecastsItemGridPart1 {
+  }
+}
+@media only screen and (min-width: 60rem) {
 }
 @media only screen and (min-width: 70rem) {
+}
+@media only screen and (min-width: 80rem) {
+  .mainGridPart1 {
+    margin-bottom: 1rem;
+  }
+  .forecastsItemGridPart2 {
+  }
+  .forecastsItemGridPart3 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .mainGridPart2 {
+    grid-template-rows: none;
+    grid-template-columns: 0.5fr 0.9fr 0.5fr;
+    gap: 2rem;
+  }
+
+  .forecastsSingleGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 1rem;
+  }
+  .image {
+    width: 10rem;
+  }
+  .forecastsImage {
+    max-width: 30rem;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 0 0 1rem -0.1rem black;
+    border: 0.1rem solid black;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+  }
+  .forecastButton {
+    margin: 0.5rem 0;
+    max-width: 6rem;
+  }
+  .breakBlurb {
+    justify-self: left;
+    padding: none;
+    padding-left: 1rem;
+  }
+  .reportName {
+    justify-self: unset;
+  }
+  .forecastsSingleGrid {
+    margin: 0 6rem;
+  }
+  .forecastsItemGridPart3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 0rem;
+  }
   .forecastsContainer {
+  }
+  .forecastsSingleItem {
+    display: grid;
+    grid-template-rows: none;
+    max-width: none;
   }
   .forecastsItemGridPart1 {
   }
   .forecastsSingleGrid {
     margin: 0 4rem;
   }
+
   .nestedButton {
     font-size: 0.8rem;
-  }
-}
-@media only screen and (min-width: 80rem) {
-  .forecastsItemGridPart1 {
-  }
-  .forecastsSingleGrid {
-    margin: 0 6rem;
   }
 }
 @media only screen and (min-width: 90rem) {

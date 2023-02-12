@@ -40,7 +40,16 @@ const Contact = () => {
 
         <div className={styles.mainContainer}>
           <div className={styles.mainGrid}>
-            <div className={styles.formContainerContainer}>
+            <motion.div
+              className={styles.formContainerContainer}
+              initial={{ opacity: 0, x: -200 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                x: { duration: 1 },
+                opacity: { duration: 1.2 },
+                delay: 0.5,
+              }}
+            >
               <div className={styles.formContainer}>
                 <form
                   action="https://formspree.io/f/xoqrdzrw"
@@ -126,14 +135,23 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className={styles.imageContainer}>
+            </motion.div>
+            <motion.div
+              className={styles.imageContainer}
+              initial={{ opacity: 0, x: 200 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                x: { duration: 1 },
+                opacity: { duration: 1.2 },
+                delay: 0.5,
+              }}
+            >
               <img
                 alt="everything-will-kill-you"
                 className={styles.everythingImage}
                 src={EverythingImage}
               ></img>
-            </div>
+            </motion.div>
           </div>
         </div>
         <LowerNavBar />
