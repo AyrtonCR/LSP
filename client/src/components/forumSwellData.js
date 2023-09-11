@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { formatDate } from "../utils/formatDate";
-import forumApiRequests from "./forumApiRequests";
+import { getSwells } from "./forumApiRequests";
 
 const NBSwellReturn = () => {
   const [swellLoading, setSwellLoading] = useState(false);
@@ -8,7 +8,7 @@ const NBSwellReturn = () => {
 
   const fetchSwellData = async () => {
     setSwellLoading(true);
-    const response = await forumApiRequests.getNbSwell();
+    const response = await getSwells.getNbSwell();
     if (response.ok) {
       const data = await response.json();
       setNbApiData(data);
@@ -37,7 +37,4 @@ const NBSwellReturn = () => {
         <p>Swell data loading ..</p>
       </>
     );
-  return NBSwellReturn();
 };
-
-export { NBSwellReturn };

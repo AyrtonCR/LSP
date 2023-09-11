@@ -7,18 +7,17 @@ import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 import Wave from "../utils/wave3.png";
 import { motion, useInView } from "framer-motion";
-import forumApiRequests from "./forumApiRequests";
-import { format } from "date-fns";
-import { formatDate } from "../utils/formatDate";
-import { NBSwellReturn } from "../components/forumSwellData";
+import { getMainApi, getSwells } from "./forumApiRequests";
+import BreakObjectNb from "./forumBreakData/forumBreakObject";
 
 const Forum = () => {
+  // State Management //
   const [forumInfo, setForumInfo] = useState([]);
-  const [nbApiData, setNbApiData] = useState([]);
   const [swellLoading, setSwellLoading] = useState(false);
+  const [nbApiData, setNbApiData] = useState([]);
 
   const fetchData = async () => {
-    const response = await forumApiRequests.getMainData();
+    const response = await getMainApi.getMainData();
     const data = await response.json();
     setForumInfo(data);
     console.log(data);
@@ -26,7 +25,7 @@ const Forum = () => {
 
   const fetchSwellData = async () => {
     setSwellLoading(true);
-    const response = await forumApiRequests.getNbSwell();
+    const response = await getSwells.getNbSwell();
     if (response.ok) {
       const data = await response.json();
       setNbApiData(data);
@@ -50,23 +49,23 @@ const Forum = () => {
     });
   }, []);
 
-  const NBSwellReturn = () => {
-    if (swellLoading === false)
-      return (
-        <>
-          <p>{formatDate(nbApiData.values[3].time)}</p>
-          <p> Low Tide: {nbApiData.values[3].value}M</p>
-          <p>{formatDate(nbApiData.values[4].time)}</p>
-          <p> High Tide: {nbApiData.values[4].value}M</p>
-        </>
-      );
-    else if (swellLoading === true)
-      return (
-        <>
-          <p>Swell data loading ..</p>
-        </>
-      );
-  };
+  // const NBSwellReturn = () => {
+  //   if (swellLoading === false)
+  //     return (
+  //       <>
+  //         <p>{formatDate(nbApiData.values[3].time)}</p>
+  //         <p> Low Tide: {nbApiData.values[3].value}M</p>
+  //         <p>{formatDate(nbApiData.values[4].time)}</p>
+  //         <p> High Tide: {nbApiData.values[4].value}M</p>
+  //       </>
+  //     );
+  //   else if (swellLoading === true)
+  //     return (
+  //       <>
+  //         <p>Swell data loading ..</p>
+  //       </>
+  //     );
+  // };
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -164,8 +163,7 @@ const Forum = () => {
               <Marker position={[-43.503715, 172.735158]}>
                 <Popup>
                   New Brighton Beach <br /> (API Swell Data Here) <br />
-                  {swellLoading}
-                  <NBSwellReturn />
+                  <BreakObjectNb prop={nbApiData} swellLoading={swellLoading} />
                 </Popup>
               </Marker>
               <Marker position={[-43.288442, 172.723546]}>
