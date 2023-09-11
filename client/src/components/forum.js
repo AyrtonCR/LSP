@@ -7,18 +7,34 @@ import React, { useState, useEffect, useRef } from "react";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 import Wave from "../utils/wave3.png";
 import { motion, useInView } from "framer-motion";
-const API_URL = process.env.REACT_APP_API_URL;
+import forumApiRequests from "./forumApiRequests";
 
 const Forum = () => {
   const [forumInfo, setForumInfo] = useState([]);
+  const [nbApiData, setNbApiData] = useState([]);
+  const [swellLoading, setSwellLoading] = useState(false);
+
   const fetchData = async () => {
-    const response = await fetch(`${API_URL}/forum`);
+    const response = await forumApiRequests.getMainData();
     const data = await response.json();
     setForumInfo(data);
+    console.log(data);
+  };
+
+  const fetchSwellData = async () => {
+    setSwellLoading(true);
+    const response = await forumApiRequests.getNbSwell();
+    if (response.ok) {
+      const data = await response.json();
+      setNbApiData(data);
+      console.log(data);
+      setSwellLoading(false);
+    }
   };
 
   useEffect(() => {
     fetchData();
+    fetchSwellData();
   }, []);
 
   useEffect(() => {
@@ -31,6 +47,11 @@ const Forum = () => {
     });
   }, []);
 
+  const NBSwellReturn = () => {
+    if (swellLoading === false) return <p>{nbApiData.values[3].time}</p>;
+    else if (swellLoading === true) return <p>Swell data loading ..</p>;
+  };
+
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -38,18 +59,8 @@ const Forum = () => {
     <div className={styles.container}>
       <div className={styles.spaceSaver}></div>
 
-      <motion.div
-        className={styles.titleContainer}
-        initial={{ scale: 1, opacity: 0, x: 300 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1.4 }}
-      >
-        <motion.h2
-          className={styles.mainTitle}
-          initial={{ opacity: 0.3 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
+      <motion.div className={styles.titleContainer} initial={{ scale: 1, opacity: 0, x: 300 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1.4 }}>
+        <motion.h2 className={styles.mainTitle} initial={{ opacity: 0.3 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
           Swell Watcher
         </motion.h2>
         <motion.img
@@ -75,14 +86,8 @@ const Forum = () => {
           opacity: { duration: 1 },
         }}
       >
-        <motion.h3
-          className={styles.mainDescription}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 0.6 }}
-        >
-          Stay connected with local updates on the surf and let others know when
-          the waves are good near you.
+        <motion.h3 className={styles.mainDescription} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2, delay: 0.6 }}>
+          Stay connected with local updates on the surf and let others know when the waves are good near you.
         </motion.h3>
       </motion.div>
       <div className={styles.mainGrid}>
@@ -100,14 +105,8 @@ const Forum = () => {
               <>
                 <li className={styles.forumSingleItem} key={forumData.id}>
                   <div className={styles.singleItemGrid1}>
-                    <img
-                      alt="forum_pic"
-                      className={styles.accountImage}
-                      src={forumData.forum_image}
-                    ></img>
-                    <p className={styles.accountName}>
-                      {forumData.forum_acc_name}
-                    </p>
+                    <img alt="forum_pic" className={styles.accountImage} src={forumData.forum_image}></img>
+                    <p className={styles.accountName}>{forumData.forum_acc_name}</p>
                   </div>
                   <div className={styles.singleItemGrid2}>
                     <p className={styles.accountMessage}>
@@ -131,11 +130,7 @@ const Forum = () => {
           }}
         >
           <div className={styles.map}>
-            <MapContainer
-              center={[-43.5642322, 172.6498945, 10.34]}
-              zoom={9}
-              scrollWheelZoom={true}
-            >
+            <MapContainer center={[-43.5642322, 172.6498945, 10.34]} zoom={9} scrollWheelZoom={true}>
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -152,7 +147,9 @@ const Forum = () => {
               </Marker>
               <Marker position={[-43.503715, 172.735158]}>
                 <Popup>
-                  New Brighton Beach <br /> (API Swell Data Here)
+                  New Brighton Beach <br /> (API Swell Data Here) <br />
+                  {swellLoading}
+                  <NBSwellReturn />
                 </Popup>
               </Marker>
               <Marker position={[-43.288442, 172.723546]}>
