@@ -8,6 +8,8 @@ import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 import Wave from "../utils/wave3.png";
 import { motion, useInView } from "framer-motion";
 import forumApiRequests from "./forumApiRequests";
+import { format } from "date-fns";
+import { formatDate } from "../utils/formatDate";
 
 const Forum = () => {
   const [forumInfo, setForumInfo] = useState([]);
@@ -48,8 +50,21 @@ const Forum = () => {
   }, []);
 
   const NBSwellReturn = () => {
-    if (swellLoading === false) return <p>{nbApiData.values[3].time}</p>;
-    else if (swellLoading === true) return <p>Swell data loading ..</p>;
+    if (swellLoading === false)
+      return (
+        <>
+          <p>{formatDate(nbApiData.values[3].time)}</p>
+          <p> Low Tide: {nbApiData.values[3].value}M</p>
+          <p>{formatDate(nbApiData.values[4].time)}</p>
+          <p> High Tide: {nbApiData.values[4].value}M</p>
+        </>
+      );
+    else if (swellLoading === true)
+      return (
+        <>
+          <p>Swell data loading ..</p>
+        </>
+      );
   };
 
   const ref = useRef(null);
