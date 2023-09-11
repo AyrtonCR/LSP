@@ -10,6 +10,7 @@ import { motion, useInView } from "framer-motion";
 import forumApiRequests from "./forumApiRequests";
 import { format } from "date-fns";
 import { formatDate } from "../utils/formatDate";
+import { NBSwellReturn } from "../components/forumSwellData";
 
 const Forum = () => {
   const [forumInfo, setForumInfo] = useState([]);
