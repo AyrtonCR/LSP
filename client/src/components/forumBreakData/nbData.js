@@ -1,7 +1,6 @@
 // Product //
 
-const ReturnNbData = ({ swellLoading, firstDate, firstTide, secondDate, secondTide }) => {
-  // if (swellLoading === false)
+const ReturnNbData = ({ firstDate, firstTide, secondDate, secondTide }) => {
   return (
     <>
       <p>{firstDate}</p>
@@ -10,12 +9,6 @@ const ReturnNbData = ({ swellLoading, firstDate, firstTide, secondDate, secondTi
       <p> High Tide:{secondTide}M</p>
     </>
   );
-  // else if (swellLoading === true)
-  //   return (
-  //     <>
-  //       <p>Swell data loading ..</p>
-  //     </>
-  //   );
 };
 
 export { ReturnNbData };
