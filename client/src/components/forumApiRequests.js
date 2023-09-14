@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 const API_URL = process.env.REACT_APP_API_URL;
-const SWELL_API_KEY = process.env.SWELL_DATA_API_KEY;
+const SWELL_API_KEY = process.env.REACT_APP_SWELL_DATA_API_KEY;
 
 // Main Forum Data Local API Request //
 const getMainApi = {
