@@ -4,10 +4,10 @@ import { formatDate } from "../../utils/formatDate";
 
 const BreakObject = ({ prop, swellLoading }) => {
   if (swellLoading === false) {
-    console.log(swellLoading);
+    // console.log(swellLoading);
     swellLoading = true;
-    console.log("This is the prop");
-    console.log(prop);
+    // console.log("This is the prop");
+    // console.log(prop);
     if (swellLoading) {
       return (
         <ReturnNbData
@@ -19,12 +19,12 @@ const BreakObject = ({ prop, swellLoading }) => {
         />
       );
     }
-  } else if (swellLoading === true) console.log(swellLoading);
-  return (
-    <>
-      <p>Swell data loading ..</p>
-    </>
-  );
+  } else if (swellLoading === true)
+    return (
+      <>
+        <p>Swell data loading ..</p>
+      </>
+    );
 };
 
 export default BreakObject;

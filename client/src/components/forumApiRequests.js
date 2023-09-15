@@ -26,6 +26,7 @@ const getSwells =
     {
       getSumnerSwell: async () =>
         // Sumner API Request //
+
         await fetch("https://api.niwa.co.nz/tides/data?lat=-43.57054505131858&long=172.76693872602053", {
           method: "get",
           dataType: "json",
