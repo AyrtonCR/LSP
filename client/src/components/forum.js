@@ -3,10 +3,10 @@ import styles from "./forum.module.css";
 import "./forum.css";
 import forecastStyles from "./forecasts.module.css";
 import LowerNavBar2 from "./lowerNavBarBlack";
-import React, { useState, useEffect, useRef } from "react";
-import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
+import React, { useState, useEffect, useCallback } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import Wave from "../utils/wave3.png";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { getMainApi, getSwells } from "./forumApiRequests";
 import BreakObject from "./forumBreakData/forumBreakObject";
 
@@ -34,16 +34,40 @@ const Forum = () => {
     const response = await getMainApi.getMainData();
     const data = await response.json();
     setForumInfo(data);
+    console.log("Main Data Fetch");
     console.log(data);
   };
+
+  // const fetchRequest = useCallback(async () => {
+  //   setNbSwellLoading(true);
+  //   const response = await getSwells[0].getNbSwell();
+  //   if (response.ok) {
+  //     const data = await response.json();
+  //     if (response.name === "ChildProcessError") console.log("FUCKING ERROR");
+  //     setNbApiData(data);
+  //     console.log(data);
+  //     setNbSwellLoading(false);
+  //     setErrorFetchedChecker(false);
+  //   }
+  //   return (
+  //     <>
+  //       <BreakObject prop={nbApiData} swellLoading={nbSwellLoading} />;
+  //     </>
+  //   );
+  // }, [nbApiData, nbSwellLoading]);
 
   //NB Data Fetch //
   const fetchNbSwellData = async () => {
     setNbSwellLoading(true);
     const response = await getSwells[0].getNbSwell();
-    if (response.ok) {
-      const data = await response.json();
+    const data = await response.json();
+
+    if (data.name === "ChildProcessError") {
+      console.log("Child Process Error");
+      setNbSwellLoading(false);
+    } else {
       setNbApiData(data);
+      console.log("New Brighton Fetch");
       console.log(data);
       setNbSwellLoading(false);
       setErrorFetchedChecker(false);
@@ -53,9 +77,14 @@ const Forum = () => {
   const fetchSumnerSwellData = async () => {
     setSumnerSwellLoading(true);
     const response = await getSwells[1].getSumnerSwell();
-    if (response.ok) {
-      const data = await response.json();
+    const data = await response.json();
+
+    if (data.name === "ChildProcessError") {
+      console.log("Child Process Error");
+      setSumnerSwellLoading(true);
+    } else {
       setSumnerApiData(data);
+      console.log("Sumner Fetch");
       console.log(data);
       setSumnerSwellLoading(false);
       setErrorFetchedChecker(false);
@@ -65,23 +94,30 @@ const Forum = () => {
   const fetchTaylorsSwellData = async () => {
     setTaylorsSwellLoading(true);
     const response = await getSwells[5].getTaylorsSwell();
-    if (response.ok) {
-      const data = await response.json();
-
+    const data = await response.json();
+    if (data.name === "ChildProcessError") {
+      console.log("Child Process Error");
+      setTaylorsSwellLoading(true);
+    } else {
       setTaylorsApiData(data);
+      console.log("Taylors Fetch");
       console.log(data);
       setErrorFetchedChecker(false);
       setTaylorsSwellLoading(false);
     }
   };
+
   //Waikuku Data Fetch //
   const fetchWaikukuSwellData = async () => {
     setWaikukuSwellLoading(true);
     const response = await getSwells[3].getWaikukuSwell();
-    if (response.ok) {
-      const data = await response.json();
-
+    const data = await response.json();
+    if (data.name === "ChildProcessError") {
+      console.log("Child Process Error");
+      setWaikukuSwellLoading(true);
+    } else {
       setWaikukuApiData(data);
+      console.log("Waikuku Fetch");
       console.log(data);
       setWaikukuSwellLoading(false);
       setErrorFetchedChecker(false);
@@ -91,9 +127,13 @@ const Forum = () => {
   const fetchMagnetSwellData = async () => {
     setMagnetSwellLoading(true);
     const response = await getSwells[2].getMagnetSwell();
-    if (response.ok) {
-      const data = await response.json();
+    const data = await response.json();
+    if (data.name === "ChildProcessError") {
+      console.log("Child Process Error");
+      setMagnetSwellLoading(true);
+    } else {
       setMagnetApiData(data);
+      console.log("Magnet Fetch");
       console.log(data);
       setMagnetSwellLoading(false);
     }
@@ -103,11 +143,13 @@ const Forum = () => {
   const fetchAmberlySwellData = async () => {
     setAmberlySwellLoading(true);
     const response = await getSwells[4].getAmberlySwell();
-
-    if (response.ok) {
-      const data = await response.json();
-
+    const data = await response.json();
+    if (data.name === "ChildProcessError") {
+      console.log("Child Process Error");
+      setAmberlySwellLoading(true);
+    } else {
       setAmberlyApiData(data);
+      console.log("Amberly Fetch");
       console.log(data);
       setAmberlySwellLoading(false);
     }
@@ -117,9 +159,13 @@ const Forum = () => {
   const fetchAhiparaSwellData = async () => {
     setAhiparaSwellLoading(true);
     const response = await getSwells[6].getAhiparaSwell();
-    if (response.ok) {
-      const data = await response.json();
+    const data = await response.json();
+    if (data.name === "ChildProcessError") {
+      console.log("Child Process Error");
+      setAhiparaSwellLoading(true);
+    } else {
       setAhiparaApiData(data);
+      console.log("Ahipara Fetch");
       console.log(data);
       setAhiparaSwellLoading(false);
     }
@@ -136,7 +182,6 @@ const Forum = () => {
     fetchSumnerSwellData();
     fetchAhiparaSwellData();
   }, []);
-
   // Maps //
   useEffect(() => {
     const L = require("leaflet");
