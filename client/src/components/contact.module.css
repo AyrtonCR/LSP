@@ -1,17 +1,7 @@
 @media only screen and (min-width: 14.5rem) {
   .container {
     background: #767370;
-    background: linear-gradient(
-      180deg,
-      #767370 0%,
-      #767370 13.99%,
-      #767370 14%,
-      #f27c0e 49.9%,
-      #f27c0e 50%,
-      #f27c0e 62%,
-      #f27c0e 75%,
-      #767370 96%
-    );
+    background: linear-gradient(180deg, #767370 0%, #767370 13.99%, #767370 14%, #f27c0e 49.9%, #f27c0e 50%, #f27c0e 62%, #f27c0e 75%, #767370 96%);
     overflow-x: hidden;
   }
   .spaceSaver {
@@ -79,39 +69,31 @@
     display: grid;
     grid-template-rows: 1fr;
     gap: 1rem;
-    /* border: 0.01rem solid black;
-  border-radius: 0.25rem;
-  box-shadow: 0 0 1rem -0.1rem;
-  margin: 1rem; */
   }
   .formContainerContainer {
-    border: 0.01rem solid black;
     display: grid;
     justify-self: center;
-    border: 0.01rem solid black;
     border-radius: 0.25rem;
-    box-shadow: 0 0 1rem -0.1rem;
     margin: 1rem;
-    width: fit-content;
+    max-width: 100%;
     max-height: fit-content;
     background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
   }
   .formContainer {
     display: grid;
     justify-items: center;
-    width: fit-content;
+    max-width: 100%;
   }
   .formContainerContainer {
+    border: 0.01rem solid black;
   }
   .formContainerContainer:hover {
     transform: scale(1.02);
   }
   .form {
-    border: 0.01rem solid black;
     width: fit-content;
     align-items: center;
-    margin: 1rem;
-    box-shadow: 0 0 1rem -0.1rem black;
+    margin: 0.5rem;
     border-radius: 0.25rem;
   }
   .formTitle {
@@ -144,7 +126,7 @@
     border: 0.125rem solid #999;
     padding: 0.5rem;
     font-size: 0.5rem;
-    width: 100%;
+    width: 13rem;
     box-sizing: border-box;
   }
 
@@ -156,7 +138,7 @@
   .formButton {
     background: #f4e285;
     border: none;
-    padding: 0.7rem 1.5rem;
+    padding: 0.4rem 1.4rem;
     font-size: 0.7rem;
     border-radius: 0.5rem;
     transition: background-color 150ms;
@@ -168,13 +150,12 @@
     background-color: #f7f3f3;
   }
   .contactCardContainer {
-    border: 0.01rem solid black;
+    box-shadow: 0 0 0.5rem -0.15rem black;
     margin: 1rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-    max-width: 100%;
+    width: 18rem;
     padding-bottom: 2rem;
-    box-shadow: 0 0 1rem -0.1rem black;
     border-radius: 0.25rem;
   }
   .contactCard {
@@ -183,14 +164,23 @@
     gap: 0.3rem;
   }
 
-  .contactCardContent {
-    display: grid;
+  .contactCardContent,
+  .contactCardContentEmail {
+    display: inline-block;
     padding: 0.24rem;
     margin: 0 2rem;
     width: fit-content;
     font-size: 0.8rem;
   }
-
+  .contactCardContentEmail {
+    color: #0000ee;
+    padding: 0rem;
+    margin: 0rem;
+  }
+  .contactCardContentMaps {
+    padding: 0rem;
+    margin: 0rem;
+  }
   .imageContainer {
     display: grid;
     align-items: center;
@@ -211,19 +201,19 @@
 }
 @media only screen and (min-width: 21.5rem) {
   .MainTitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .formButton {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .formControl {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
   .formLabel {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .formTitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (min-width: 40rem) {
@@ -233,21 +223,28 @@
   .mainTitle {
     width: 24rem;
   }
+  .formControl {
+    width: 30rem;
+  }
+  .contactCardContainer {
+    width: 34rem;
+  }
 }
 @media only screen and (min-width: 50rem) {
   .mainGrid {
     grid-template-rows: none;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 1fr;
   }
-  .everythingImage {
+  /* .everythingImage {
     height: 50rem;
     max-height: 96.4%;
-  }
+  } */
   .formContainerContainer {
-    border: 0.01rem solid black;
     display: grid;
     justify-self: right;
+    width: 40rem;
   }
+
   .mainGrid {
     margin: 0;
   }
