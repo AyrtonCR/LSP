@@ -38,24 +38,6 @@ const Forum = () => {
     console.log(data);
   };
 
-  // const fetchRequest = useCallback(async () => {
-  //   setNbSwellLoading(true);
-  //   const response = await getSwells[0].getNbSwell();
-  //   if (response.ok) {
-  //     const data = await response.json();
-  //     if (response.name === "ChildProcessError") console.log("FUCKING ERROR");
-  //     setNbApiData(data);
-  //     console.log(data);
-  //     setNbSwellLoading(false);
-  //     setErrorFetchedChecker(false);
-  //   }
-  //   return (
-  //     <>
-  //       <BreakObject prop={nbApiData} swellLoading={nbSwellLoading} />;
-  //     </>
-  //   );
-  // }, [nbApiData, nbSwellLoading]);
-
   //NB Data Fetch //
   const fetchNbSwellData = async () => {
     setNbSwellLoading(true);

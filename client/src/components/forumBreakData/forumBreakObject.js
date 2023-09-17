@@ -8,7 +8,7 @@ const BreakObject = ({ prop, swellLoading }) => {
     swellLoading = true;
     // console.log("This is the prop");
     // console.log(prop);
-    if (swellLoading) {
+    if (prop.values[3].time !== undefined) {
       return (
         <ReturnNbData
           key={prop.metadata.start}
