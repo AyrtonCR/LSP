@@ -13,6 +13,7 @@ const Main = () => {
   const [surfbreaks, setSurfbreaks] = useState([]);
   const fetchData = async () => {
     const response = await fetch(`${API_URL}/surfbreaks`);
+    if (response.body.isEmpty) return "Data loading. Can take up to 30secs...";
     const data = await response.json();
     setSurfbreaks(data);
   };
@@ -35,15 +36,95 @@ const Main = () => {
 
   const ref5 = useRef(null);
   const isInView5 = useInView(ref5);
+
+  // const LoadMongoData = () => {
+  //   if (surfbreaks) {
+  //     console.log("true");
+  //     console.log(surfbreaks[0]);
+  //     return surfbreaks.map((surfbreak) => {
+  //       return (
+  //         <>
+  //           <motion.li className="single-surfbreak" key={surfbreak.id}>
+  //             <img alt="pegasus-bay" className="surfbreaks-image" src={surfbreak.surfbreak_image} />
+  //             <a href={surfbreak.forecast_info} className="surfbreaks-title">
+  //               <strong>
+  //                 <em>
+  //                   <u>{surfbreak.surfbreak_title}</u>
+  //                 </em>
+  //               </strong>
+  //             </a>
+  //             <p className="surfbreaks-blurb">{surfbreak.surfbreak_blurb}</p>
+  //             <div className="button-grid">
+  //               <Link to={`/surfboard`} className="button-link">
+  //                 <button className="main-buttons">
+  //                   <strong>Learn More</strong>
+  //                 </button>
+  //               </Link>
+  //               <Link to={`/forecasts`}>
+  //                 <button className="main-buttons">
+  //                   <strong>Check Forecast</strong>
+  //                 </button>
+  //               </Link>
+  //             </div>
+  //           </motion.li>
+  //         </>
+  //       );
+  //     });
+  //   } else if (surfbreaks[0] === undefined) console.log("false");
+  //   return (
+  //     <>
+  //       <h4>Please wait 30 seconds while the free plan for the MongoDB Database loads ...</h4>
+  //     </>
+  //   );
+  // };
+
+  const LoadMongoData = () => {
+    if (surfbreaks[0] === undefined) return console.log("Initial undefined, DB Loading ...");
+    if (!(surfbreaks[0].surfbreak_title = "Amberly Beach")) {
+      console.log("Accessing DB, please wait up to 30 seconds while DB Loads ...");
+      return (
+        <>
+          <h3>The database takes about 30 seconds to load when first accessing the site due to using a free plan.</h3>
+        </>
+      );
+    } else {
+      console.log("Data is ready, loading now ...");
+      return surfbreaks.map((surfbreak) => {
+        return (
+          <>
+            <motion.li className="single-surfbreak" key={surfbreak.id}>
+              <img alt="pegasus-bay" className="surfbreaks-image" src={surfbreak.surfbreak_image} />
+              <a href={surfbreak.forecast_info} className="surfbreaks-title">
+                <strong>
+                  <em>
+                    <u>{surfbreak.surfbreak_title}</u>
+                  </em>
+                </strong>
+              </a>
+              <p className="surfbreaks-blurb">{surfbreak.surfbreak_blurb}</p>
+              <div className="button-grid">
+                <Link to={`/surfboard`} className="button-link">
+                  <button className="main-buttons">
+                    <strong>Learn More</strong>
+                  </button>
+                </Link>
+                <Link to={`/forecasts`}>
+                  <button className="main-buttons">
+                    <strong>Check Forecast</strong>
+                  </button>
+                </Link>
+              </div>
+            </motion.li>
+          </>
+        );
+      });
+    }
+  };
+
   return (
     <>
       <motion.div className="super-container">
-        <motion.div
-          className="description-and-image"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.8 }}
-        >
+        <motion.div className="description-and-image" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.8 }}>
           <motion.img
             className="new-brighton-image"
             initial={{ opacity: 0 }}
@@ -53,12 +134,7 @@ const Main = () => {
             alt=""
           />
 
-          <motion.div
-            className="new-title-container"
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.4 }}
-          >
+          <motion.div className="new-title-container" initial={{ opacity: 0, x: 300 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.4 }}>
             <h1 className="new-main-title">
               <em>
                 <strong>Pegasus Bay Surf</strong>
@@ -71,12 +147,7 @@ const Main = () => {
             </motion.div>
           </motion.div>
         </motion.div>
-        <motion.div
-          className="main-container"
-          initial={{ opacity: 0.89 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.9 }}
-        >
+        <motion.div className="main-container" initial={{ opacity: 0.89 }} animate={{ opacity: 1 }} transition={{ duration: 0.9 }}>
           <motion.div className="description-holder">
             <motion.h3
               className="main-description"
@@ -97,9 +168,8 @@ const Main = () => {
                 transition: "all 1.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
               }}
             >
-              From Forecasts to Fibreglass, this site hopes to offer a place
-              where you can learn all about the wonderful and occasionally epic
-              breaks around Canterbury.
+              From Forecasts to Fibreglass, this site hopes to offer a place where you can learn all about the wonderful and occasionally epic breaks around
+              Canterbury.
               <br></br>
             </motion.h3>
           </motion.div>
@@ -137,42 +207,7 @@ const Main = () => {
           >
             <div className="surfbreaks-grid-container" ref={ref4}>
               <ul className="surfbreaks-grid">
-                {surfbreaks.map((surfbreak) => {
-                  return (
-                    <motion.li className="single-surfbreak" key={surfbreak.id}>
-                      <img
-                        alt="pegasus-bay"
-                        className="surfbreaks-image"
-                        src={surfbreak.surfbreak_image}
-                      />
-                      <a
-                        href={surfbreak.forecast_info}
-                        className="surfbreaks-title"
-                      >
-                        <strong>
-                          <em>
-                            <u>{surfbreak.surfbreak_title}</u>
-                          </em>
-                        </strong>
-                      </a>
-                      <p className="surfbreaks-blurb">
-                        {surfbreak.surfbreak_blurb}
-                      </p>
-                      <div className="button-grid">
-                        <Link to={`/surfboard`} className="button-link">
-                          <button className="main-buttons">
-                            <strong>Learn More</strong>
-                          </button>
-                        </Link>
-                        <Link to={`/forecasts`}>
-                          <button className="main-buttons">
-                            <strong>Check Forecast</strong>
-                          </button>
-                        </Link>
-                      </div>
-                    </motion.li>
-                  );
-                })}
+                <LoadMongoData />
               </ul>
             </div>
           </motion.div>
