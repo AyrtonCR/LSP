@@ -80,7 +80,7 @@ const Main = () => {
 
   const LoadMongoData = () => {
     if (surfbreaks[0] === undefined) return console.log("Initial undefined, DB Loading ...");
-    if (!(surfbreaks[0].surfbreak_title = "Amberly Beach")) {
+    if (!surfbreaks[0].surfbreak_title === "Amberly Beach") {
       console.log("Accessing DB, please wait up to 30 seconds while DB Loads ...");
       return (
         <>
