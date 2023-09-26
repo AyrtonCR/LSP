@@ -46,45 +46,45 @@ const Main = () => {
 
   const LoadMongoData = () => {
     if (surfbreaks) {
-      if (isLoading === true);
-      console.log("Initial undefined, DB Loading ...");
-      return (
-        <>
-          <h3>Currently DB is undefined.</h3>
-        </>
-      );
-    } else if (isLoading === false) {
-      console.log("Data is ready, loading now ...");
-      return surfbreaks.map((surfbreak) => {
-        return (
-          <>
-            <motion.li className="single-surfbreak" key={surfbreak.id}>
-              <img alt="pegasus-bay" className="surfbreaks-image" src={surfbreak.surfbreak_image} />
-              <a href={surfbreak.forecast_info} className="surfbreaks-title">
-                <strong>
-                  <em>
-                    <u>{surfbreak.surfbreak_title}</u>
-                  </em>
-                </strong>
-              </a>
-              <p className="surfbreaks-blurb">{surfbreak.surfbreak_blurb}</p>
-              <div className="button-grid">
-                <Link to={`/surfboard`} className="button-link">
-                  <button className="main-buttons">
-                    <strong>Learn More</strong>
-                  </button>
-                </Link>
-                <Link to={`/forecasts`}>
-                  <button className="main-buttons">
-                    <strong>Check Forecast</strong>
-                  </button>
-                </Link>
-              </div>
-            </motion.li>
-          </>
-        );
-      });
-    }
+      if (isLoading === false) {
+        console.log("Data is ready, loading now ...");
+        return surfbreaks.map((surfbreak) => {
+          return (
+            <>
+              <motion.li className="single-surfbreak" key={surfbreak.id}>
+                <img alt="pegasus-bay" className="surfbreaks-image" src={surfbreak.surfbreak_image} />
+                <a href={surfbreak.forecast_info} className="surfbreaks-title">
+                  <strong>
+                    <em>
+                      <u>{surfbreak.surfbreak_title}</u>
+                    </em>
+                  </strong>
+                </a>
+                <p className="surfbreaks-blurb">{surfbreak.surfbreak_blurb}</p>
+                <div className="button-grid">
+                  <Link to={`/surfboard`} className="button-link">
+                    <button className="main-buttons">
+                      <strong>Learn More</strong>
+                    </button>
+                  </Link>
+                  <Link to={`/forecasts`}>
+                    <button className="main-buttons">
+                      <strong>Check Forecast</strong>
+                    </button>
+                  </Link>
+                </div>
+              </motion.li>
+            </>
+          );
+        });
+      }
+    } else if (isLoading === true);
+    console.log("Initial undefined, DB Loading ...");
+    return (
+      <>
+        <h3>Currently DB is undefined.</h3>
+      </>
+    );
   };
 
   useEffect(() => {
