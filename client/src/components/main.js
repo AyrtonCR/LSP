@@ -11,16 +11,23 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 const Main = () => {
   const [surfbreaks, setSurfbreaks] = useState([]);
-  const fetchData = async () => {
-    const response = await fetch(`${API_URL}/surfbreaks`);
-    if (response.body.isEmpty) return "Data loading. Can take up to 30secs...";
-    const data = await response.json();
-    setSurfbreaks(data);
-  };
+  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const fetchData = async () => {
+    setIsLoading(true);
+    const response = await fetch(`${API_URL}/surfbreaks`);
+    const data = await response.json();
+    console.log(data[0]);
+    if (data[0] === undefined) {
+      console.log("fetch error");
+      console.log("loading is staying true, state will not be updated");
+      setIsLoading(true);
+    } else if (data[0] !== undefined) {
+      setSurfbreaks(data);
+      console.log("settings loading to false");
+      setIsLoading(false);
+    }
+  };
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -37,64 +44,16 @@ const Main = () => {
   const ref5 = useRef(null);
   const isInView5 = useInView(ref5);
 
-  // const LoadMongoData = () => {
-  //   if (surfbreaks) {
-  //     console.log("true");
-  //     console.log(surfbreaks[0]);
-  //     return surfbreaks.map((surfbreak) => {
-  //       return (
-  //         <>
-  //           <motion.li className="single-surfbreak" key={surfbreak.id}>
-  //             <img alt="pegasus-bay" className="surfbreaks-image" src={surfbreak.surfbreak_image} />
-  //             <a href={surfbreak.forecast_info} className="surfbreaks-title">
-  //               <strong>
-  //                 <em>
-  //                   <u>{surfbreak.surfbreak_title}</u>
-  //                 </em>
-  //               </strong>
-  //             </a>
-  //             <p className="surfbreaks-blurb">{surfbreak.surfbreak_blurb}</p>
-  //             <div className="button-grid">
-  //               <Link to={`/surfboard`} className="button-link">
-  //                 <button className="main-buttons">
-  //                   <strong>Learn More</strong>
-  //                 </button>
-  //               </Link>
-  //               <Link to={`/forecasts`}>
-  //                 <button className="main-buttons">
-  //                   <strong>Check Forecast</strong>
-  //                 </button>
-  //               </Link>
-  //             </div>
-  //           </motion.li>
-  //         </>
-  //       );
-  //     });
-  //   } else if (surfbreaks[0] === undefined) console.log("false");
-  //   return (
-  //     <>
-  //       <h4>Please wait 30 seconds while the free plan for the MongoDB Database loads ...</h4>
-  //     </>
-  //   );
-  // };
-
   const LoadMongoData = () => {
     if (surfbreaks) {
-      if (surfbreaks[0] === undefined);
+      if (isLoading === true);
       console.log("Initial undefined, DB Loading ...");
       return (
         <>
-          <h3>The database takes about 30 seconds to load when first accessing the site due to using a free plan.</h3>
+          <h3>Currently DB is undefined.</h3>
         </>
       );
-    } else if (!surfbreaks[0].surfbreak_title === "Amberly Beach") {
-      console.log("Accessing DB, please wait up to 30 seconds while DB Loads ...");
-      return (
-        <>
-          <h3>Data has been found, loading now.</h3>
-        </>
-      );
-    } else {
+    } else if (isLoading === false) {
       console.log("Data is ready, loading now ...");
       return surfbreaks.map((surfbreak) => {
         return (
@@ -128,6 +87,12 @@ const Main = () => {
     }
   };
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+  // useEffect(() => {
+  //   LoadMongoData();
+  // }, [fetchData()]);
   return (
     <>
       <motion.div className="super-container">
