@@ -79,12 +79,19 @@ const Main = () => {
   // };
 
   const LoadMongoData = () => {
-    if (surfbreaks[0] === undefined) return console.log("Initial undefined, DB Loading ...");
-    if (!surfbreaks[0].surfbreak_title === "Amberly Beach") {
-      console.log("Accessing DB, please wait up to 30 seconds while DB Loads ...");
+    if (surfbreaks) {
+      if (surfbreaks[0] === undefined);
+      console.log("Initial undefined, DB Loading ...");
       return (
         <>
           <h3>The database takes about 30 seconds to load when first accessing the site due to using a free plan.</h3>
+        </>
+      );
+    } else if (!surfbreaks[0].surfbreak_title === "Amberly Beach") {
+      console.log("Accessing DB, please wait up to 30 seconds while DB Loads ...");
+      return (
+        <>
+          <h3>Data has been found, loading now.</h3>
         </>
       );
     } else {
