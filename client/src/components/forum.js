@@ -9,9 +9,11 @@ import Wave from "../utils/wave3.png";
 import { motion } from "framer-motion";
 import { getMainApi, getSwells } from "./forumApiRequests";
 import BreakObject from "./forumBreakData/forumBreakObject";
+import LoadMongoData from "./loadingMongoData";
 
 const Forum = () => {
   // State Management //
+  const [isLoading, setIsLoading] = useState([]);
   const [errorFetchedChecker, setErrorFetchedChecker] = useState(false);
   const [forumInfo, setForumInfo] = useState([]);
   const [nbSwellLoading, setNbSwellLoading] = useState(false);
@@ -31,11 +33,19 @@ const Forum = () => {
 
   // Main Fetch //
   const fetchMainData = async () => {
+    setIsLoading(true);
     const response = await getMainApi.getMainData();
     const data = await response.json();
-    setForumInfo(data);
-    console.log("Main Data Fetch");
-    console.log(data);
+    console.log(data[0]);
+    if (data[0] === undefined) {
+      console.log("fetch error");
+      console.log("loading is staying true, state will not be updated");
+      setIsLoading(true);
+    } else if (data[0] !== undefined) {
+      setForumInfo(data);
+      console.log("settings loading to false");
+      setIsLoading(false);
+    }
   };
 
   //NB Data Fetch //
@@ -212,6 +222,30 @@ const Forum = () => {
     }
   };
 
+  const ReturnMappedData = () => {
+    return forumInfo.map((forumData) => {
+      return (
+        <>
+          <div key={forumData.id}>
+            <li className={styles.forumSingleItem} key={forumData._id}>
+              <div className={styles.singleItemGrid1} key={forumData.id}>
+                <img alt="forum_pic" key="img" className={styles.accountImage} src={forumData.forum_image}></img>
+                <p className={styles.accountName} key="p">
+                  {forumData.forum_acc_name}
+                </p>
+              </div>
+              <div key="adiv" className={styles.singleItemGrid2}>
+                <p key="anotherthing" className={styles.accountMessage}>
+                  {forumData.forum_acc_message_time}: &ensp;
+                  {forumData.forum_acc_message}
+                </p>
+              </div>
+            </li>
+          </div>
+        </>
+      );
+    });
+  };
   // Returning Content //
   return (
     <div className={styles.container}>
@@ -259,28 +293,8 @@ const Forum = () => {
             delay: 0.7,
           }}
         >
-          {forumInfo.map((forumData) => {
-            return (
-              <>
-                <div key={forumData.id}>
-                  <li className={styles.forumSingleItem} key={forumData._id}>
-                    <div className={styles.singleItemGrid1} key={forumData.id}>
-                      <img alt="forum_pic" key="img" className={styles.accountImage} src={forumData.forum_image}></img>
-                      <p className={styles.accountName} key="p">
-                        {forumData.forum_acc_name}
-                      </p>
-                    </div>
-                    <div key="adiv" className={styles.singleItemGrid2}>
-                      <p key="anotherthing" className={styles.accountMessage}>
-                        {forumData.forum_acc_message_time}: &ensp;
-                        {forumData.forum_acc_message}
-                      </p>
-                    </div>
-                  </li>
-                </div>
-              </>
-            );
-          })}
+          {/* ADD */}
+          {ReturnMappedData(forumInfo, isLoading, ReturnMappedData)}
         </motion.div>
         <motion.div
           className={styles.mainGridImageContainer}
