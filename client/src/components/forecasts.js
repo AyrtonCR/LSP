@@ -5,20 +5,86 @@ import React, { useState, useEffect } from "react";
 import ForecastIfStatement1 from "./forecastsIfStatement";
 import Wave from "../utils/wave3.png";
 import { motion } from "framer-motion";
+import LoadMongoData from "./loadingMongoData";
 const API_URL = process.env.REACT_APP_API_URL;
 
 const Forecasts = () => {
   const [forecasts, setForecasts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
+    setIsLoading(true);
     const response = await fetch(`${API_URL}/forecasts`);
     const data = await response.json();
-    setForecasts(data);
+    console.log(data[0]);
+    if (data[0] === undefined) {
+      console.log("fetch error");
+      console.log("loading is staying true, state will not be updated");
+      setIsLoading(true);
+    } else if (data[0] !== undefined) {
+      setForecasts(data);
+      console.log("Looks good, settings loading to false");
+      setIsLoading(false);
+    }
   };
+
   useEffect(() => {
     fetchData();
   }, []);
 
+  const ReturnMappedData = () => {
+    return forecasts.map((forecast) => {
+      return (
+        <>
+          <li className={forecastStyles.forecastsSingleItem} key={forecasts._id}>
+            <div className={forecastStyles.mainGridPart1}>
+              <h2 className={forecastStyles.forecastName}>{forecast.forecasts_name}</h2>
+            </div>
+            <div className={forecastStyles.mainGridPart2}>
+              <div className={forecastStyles.forecastsItemGridPart1}>
+                <p className={forecastStyles.breakBlurb}>{forecast.forecast_info}</p>
+              </div>
+              <div className={forecastStyles.forecastsItemGridPart2}>
+                <img alt="forecasts" className={forecastStyles.forecastsImage} src={forecast.forecasts_image}></img>
+              </div>
+              <div className={forecastStyles.forecastsItemGridPart3}>
+                {" "}
+                <p className={forecastStyles.reportName}>
+                  Magic Seaweed Report:
+                  <a href={forecast.forecasts_info_1} className={forecastStyles.forecastButton}>
+                    <button className={forecastStyles.nestedButton}>
+                      <strong>Click Here</strong>
+                    </button>
+                  </a>
+                </p>
+                <p className={forecastStyles.reportName}>
+                  Surf Forecast Report:
+                  <a href={forecast.forecasts_info_2} className={forecastStyles.forecastButton}>
+                    <button className={forecastStyles.nestedButton}>
+                      <strong>Click Here</strong>
+                    </button>
+                  </a>
+                </p>
+                <p className={forecastStyles.reportName}>
+                  Surf Cams:
+                  <a href={forecast.forecasts_cam_1} className={forecastStyles.forecastButton}>
+                    <button className={forecastStyles.nestedButton}>
+                      <strong>Cam (1)</strong>
+                    </button>
+                  </a>
+                  <a href={forecast.forecasts_cam_2} className={forecastStyles.forecastButton}>
+                    <button className={forecastStyles.nestedButton}>
+                      <strong>Cam (2)</strong>
+                    </button>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </li>
+        </>
+      );
+    });
+  };
   return (
     <div className={forecastStyles.container}>
       <div className={forecastStyles.spaceSaver}></div>
@@ -29,12 +95,7 @@ const Forecasts = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.4 }}
         >
-          <motion.h2
-            className={forecastStyles.title}
-            initial={{ opacity: 0.3 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
+          <motion.h2 className={forecastStyles.title} initial={{ opacity: 0.3 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
             Forecast
           </motion.h2>
           <motion.img
@@ -76,8 +137,7 @@ const Forecasts = () => {
                 delay: 0.6,
               }}
             >
-              'Magicseaweed' offers great swell information and an easy to read
-              star rating.
+              'Magicseaweed' offers great swell information and an easy to read star rating.
             </motion.h4>
             <motion.h4
               className={forecastStyles.mainBlurb}
@@ -89,8 +149,7 @@ const Forecasts = () => {
                 delay: 0.9,
               }}
             >
-              'Surf Forecast' displays important information but does not give
-              out stars so easily.
+              'Surf Forecast' displays important information but does not give out stars so easily.
             </motion.h4>
             <motion.h4
               className={forecastStyles.mainBlurb}
@@ -103,8 +162,7 @@ const Forecasts = () => {
               }}
             >
               {" "}
-              By comparing the two and using the surf cams you can find out what
-              the waves are like before heading to the beach!
+              By comparing the two and using the surf cams you can find out what the waves are like before heading to the beach!
             </motion.h4>
           </div>
           <motion.ul
@@ -117,80 +175,8 @@ const Forecasts = () => {
               delay: 1.2,
             }}
           >
-            {forecasts.map((forecast) => {
-              return (
-                <>
-                  <li
-                    className={forecastStyles.forecastsSingleItem}
-                    key={forecasts._id}
-                  >
-                    <div className={forecastStyles.mainGridPart1}>
-                      <h2 className={forecastStyles.forecastName}>
-                        {forecast.forecasts_name}
-                      </h2>
-                    </div>
-                    <div className={forecastStyles.mainGridPart2}>
-                      <div className={forecastStyles.forecastsItemGridPart1}>
-                        <p className={forecastStyles.breakBlurb}>
-                          {forecast.forecast_info}
-                        </p>
-                      </div>
-                      <div className={forecastStyles.forecastsItemGridPart2}>
-                        <img
-                          alt="forecasts"
-                          className={forecastStyles.forecastsImage}
-                          src={forecast.forecasts_image}
-                        ></img>
-                      </div>
-                      <div className={forecastStyles.forecastsItemGridPart3}>
-                        {" "}
-                        <p className={forecastStyles.reportName}>
-                          Magic Seaweed Report:
-                          <a
-                            href={forecast.forecasts_info_1}
-                            className={forecastStyles.forecastButton}
-                          >
-                            <button className={forecastStyles.nestedButton}>
-                              <strong>Click Here</strong>
-                            </button>
-                          </a>
-                        </p>
-                        <p className={forecastStyles.reportName}>
-                          Surf Forecast Report:
-                          <a
-                            href={forecast.forecasts_info_2}
-                            className={forecastStyles.forecastButton}
-                          >
-                            <button className={forecastStyles.nestedButton}>
-                              <strong>Click Here</strong>
-                            </button>
-                          </a>
-                        </p>
-                        <p className={forecastStyles.reportName}>
-                          Surf Cams:
-                          <a
-                            href={forecast.forecasts_cam_1}
-                            className={forecastStyles.forecastButton}
-                          >
-                            <button className={forecastStyles.nestedButton}>
-                              <strong>Cam (1)</strong>
-                            </button>
-                          </a>
-                          <a
-                            href={forecast.forecasts_cam_2}
-                            className={forecastStyles.forecastButton}
-                          >
-                            <button className={forecastStyles.nestedButton}>
-                              <strong>Cam (2)</strong>
-                            </button>
-                          </a>
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                </>
-              );
-            })}
+            {/* ADD */}
+            {LoadMongoData(forecasts, isLoading, ReturnMappedData)}
           </motion.ul>
         </div>
       </div>

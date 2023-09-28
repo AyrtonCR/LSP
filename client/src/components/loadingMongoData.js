@@ -1,14 +1,19 @@
-const LoadMongoData = (surfbreaks, isLoading, MainProp) => {
-  if (surfbreaks) {
-    if (isLoading === false) {
+import loadingStyle from "./loadingMongoData.module.css";
+
+const LoadMongoData = (stateContent, stateLoading, ReturnProp) => {
+  if (stateContent) {
+    if (stateLoading === false) {
       console.log("Data is ready, loading now ...");
-      return <MainProp />;
+      return <ReturnProp />;
     }
-  } else if (isLoading === true);
-  console.log("Initial undefined, DB Loading ...");
+  } else if (stateLoading === true);
+  console.log("DB Loading, please wait up to 30 seconds ...");
   return (
     <>
-      <h3>Currently DB is undefined, please wait up to 30 seconds for DB to load.</h3>
+      <div className={loadingStyle.loadingDiv}>
+        <p className={loadingStyle.loadingP}>MongoDB is currently loading ...</p>
+        <p className={loadingStyle.loadingP}>The free plan takes up to 30 seconds to boot up the database.</p>
+      </div>
     </>
   );
 };
