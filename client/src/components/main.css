@@ -5,17 +5,7 @@
 }
 .super-container {
   background: #767370;
-  background: linear-gradient(
-    180deg,
-    #767370 0%,
-    #767370 13.99%,
-    #767370 14%,
-    #f27c0e 49.9%,
-    #f27c0e 50%,
-    #f27c0e 62%,
-    #f27c0e 75%,
-    #767370 96%
-  );
+  background: linear-gradient(180deg, #767370 0%, #767370 13.99%, #767370 14%, #393e46 49.9%, #393e46 50%, #393e46 62%, #393e46 75%, #767370 96%);
 }
 .main-container {
   overflow-x: hidden;
@@ -24,6 +14,8 @@
 
 .main-color-wrapper {
   background: linear-gradient(#f4c857);
+  display: grid;
+  margin: 1.5rem 0;
 }
 .lowerNavBarContainer {
 }

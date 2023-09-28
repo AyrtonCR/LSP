@@ -222,6 +222,30 @@ const Forum = () => {
     }
   };
 
+  // const arrayOfHandleCall = [
+  //   { fetch: "fetchAhiparaSwellData" },
+  //   { fetch: "fetchSumnerSwellData" },
+  //   { fetch: "fetchAmberlySwellData" },
+  //   { fetch: "fetchMagnetSwellData" },
+  //   { fetch: "fetchWaikukuSwellData" },
+  //   { fetch: "fetchTaylorsSwellData" },
+  //   { fetch: "fetchNbSwellData" },
+  // ];
+  // console.log(arrayOfHandleCall);
+
+  // const mapArrayOfHandleCalls = () => {
+  //   arrayOfHandleCall.map((handles) => {
+  //     return {
+  //       handles.fetch
+  //     }
+  //     console.log("HANDLES FETCH");
+  //     console.log(handles.fetch);
+
+  //   });
+  // };
+
+  // console.log(mapArrayOfHandleCalls());
+
   const ReturnMappedData = () => {
     return forumInfo.map((forumData) => {
       return (
@@ -294,7 +318,7 @@ const Forum = () => {
           }}
         >
           {/* ADD */}
-          {ReturnMappedData(forumInfo, isLoading, ReturnMappedData)}
+          {LoadMongoData(forumInfo, isLoading, ReturnMappedData)}
         </motion.div>
         <motion.div
           className={styles.mainGridImageContainer}
