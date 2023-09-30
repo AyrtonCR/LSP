@@ -5,7 +5,7 @@
 }
 .super-container {
   background: #767370;
-  background: linear-gradient(180deg, #767370 0%, #767370 13.99%, #767370 14%, #393e46 49.9%, #393e46 50%, #393e46 62%, #393e46 75%, #767370 96%);
+  background: linear-gradient(180deg, #767370 0%, #767370 13.99%, #767370 14%, #424750 49.9%, #424750 50%, #424750 62%, #424750 75%, #767370 96%);
 }
 .main-container {
   overflow-x: hidden;
@@ -311,8 +311,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
-    padding: 0.5rem;
-    margin-top: 3rem;
+    padding: 0.5rem 1.2rem;
   }
 
   .single-surfbreak {
