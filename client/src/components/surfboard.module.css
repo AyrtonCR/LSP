@@ -1,7 +1,7 @@
 @media only screen and (min-width: 14rem) {
   .container {
     background: #767370;
-    background: linear-gradient(180deg, #767370 0%, #767370 13.99%, #767370 31%, #f27c0e 31%, #f27c0e 50%, #f27c0e 62%, #f27c0e 75%, #767370 70%, #767370 96%);
+    background: linear-gradient(180deg, #767370 0%, #767370 13.99%, #767370 31%, #393e46 31%, #393e46 50%, #393e46 62%, #393e46 75%, #767370 70%, #767370 96%);
     margin-top: 0rem;
     overflow-x: hidden;
     overflow-y: hidden;

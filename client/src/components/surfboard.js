@@ -41,15 +41,17 @@ const Surfboard = () => {
     return surfboards.map((surfboard) => {
       return (
         <>
-          <div className={styles.singleSurfboardDescriptionContainer} key={surfboard.id}>
-            <h3 className={styles.surfboardStrength}>
-              <em> {surfboard.surfboard_strength}</em>
-            </h3>
-            <p className={styles.surfboardDescription}>{surfboard.surfboard_description}</p>
-          </div>
-          <div className={styles.singleSurfboardImage}>
-            <img alt="surfboard-surfboard_image" className={styles.surfboardsImage} src={surfboard.surfboard_image} />
-          </div>
+          <ul className={styles.singleSurfboardGrid}>
+            <div className={styles.singleSurfboardDescriptionContainer} key={surfboard.id}>
+              <h3 className={styles.surfboardStrength}>
+                <em> {surfboard.surfboard_strength}</em>
+              </h3>
+              <p className={styles.surfboardDescription}>{surfboard.surfboard_description}</p>
+            </div>
+            <div className={styles.singleSurfboardImage}>
+              <img alt="surfboard-surfboard_image" className={styles.surfboardsImage} src={surfboard.surfboard_image} />
+            </div>
+          </ul>
         </>
       );
     });
@@ -91,7 +93,7 @@ const Surfboard = () => {
         </div>
         {/* Add Prop Function Here */}
 
-        <ul className={styles.singleSurfboardGrid}>{LoadMongoData(surfboards, isLoading, ReturnBoardData)}</ul>
+        {LoadMongoData(surfboards, isLoading, ReturnBoardData)}
       </motion.div>
       <div className={styles.lowerBlurbContainerContainer}>
         <motion.div ref={ref} className={styles.lowerBlurbContainer}>
