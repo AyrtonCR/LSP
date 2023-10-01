@@ -27,11 +27,18 @@
   }
   .NavBar nav ul li {
     align-items: center;
-    
   }
 
   .NavBar {
-    
+    border: 0.01rem solid black;
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
+    box-shadow: 0 0 1rem -0.1rem rgb(248, 248, 248);
+    transition: all 0.3s ease;
+  }
+  .NavBar:hover {
+    transform: scale(1.005);
   }
 
   .NavBar .MobileNavigation .Hamburger {
@@ -71,7 +78,6 @@
     transition: all 0.3s ease;
     width: fit-content;
     border-radius: 0.25rem;
-
   }
   .nav {
     display: contents;
@@ -125,17 +131,18 @@
 @media only screen and (min-width: 21.5rem) {
   .mobileLogo {
     width: 1.7rem;
+  }
+  .Hamburger {
+    width: 1.3rem;
+  }
+  .navLink {
+    display: block;
+    font-size: 0.9rem;
+  }
+  .NavBar nav ul {
+    width: 25%;
+  }
 }
-.Hamburger {
-  width: 1.3rem;
-}
-.navLink {
-  display: block;
-  font-size: 0.9rem;
-}
-.NavBar nav ul {
-  width: 25%;
-}}
 @media only screen and (min-width: 55rem) {
   .NavBar .MobileNavigation {
     display: none;
@@ -143,7 +150,6 @@
 
   .NavBar .Navigation {
     display: grid;
-    border-bottom: 0.07rem solid rgb(80, 80, 80);
   }
   .NavBar nav ul {
     display: grid;
@@ -194,7 +200,6 @@
 }
 @media only screen and (min-width: 58rem) {
   .navLink {
-
     padding: 0.2rem 0.5rem;
   }
   .NavBar {
