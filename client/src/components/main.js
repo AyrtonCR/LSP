@@ -95,13 +95,13 @@ const Main = () => {
 
           <motion.div className="new-title-container" initial={{ opacity: 0, x: 300 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1.4 }}>
             <h1 className="new-main-title">
-              <em>
-                <strong>Pegasus Bay Surf</strong>
-              </em>
+              <p>
+                <strong className="strong-main-name">Pegasus Bay Surf</strong>
+              </p>
             </h1>
             <motion.div className="canterbury">
               <h5 className="below-title">
-                <em>Canterbury, NZ</em>
+                <p className="strong-main-name">Canterbury, NZ</p>
               </h5>
             </motion.div>
           </motion.div>
@@ -142,7 +142,7 @@ const Main = () => {
             ref={ref2}
           >
             <h3 className="sub-title">
-              <i>The Breaks</i>
+              <p className="sub-title-i">The Breaks</p>
             </h3>
             <motion.img
               className="mini-image"
