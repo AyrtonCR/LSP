@@ -70,8 +70,8 @@ const About = () => {
                 I am a recently graduated developer with experience building full-stack web applications in an agile environment to solve customers problems.
               </p>
               <p className={styles.mainText}>
-                I am fortunate enough to have been a part of building, and delivering a product that in the education sector that helps those looking to get
-                their Diploma in software development. I am based out of Christchurch and as you can probably tell I am quite passionate about surfing!
+                I am fortunate enough to have been a part of building, and delivering a product in the education sector that helps with educating those looking
+                to get their Diploma in software development. I am based out of Christchurch and as you can probably tell I am quite passionate about surfing!
               </p>
               <p className={styles.mainText}>
                 The goal of this project has been to use some of the different skills I have learnt so far to build a functional site that solves a real world
