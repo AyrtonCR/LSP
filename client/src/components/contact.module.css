@@ -1,7 +1,7 @@
 @media only screen and (min-width: 14.5rem) {
   .container {
     background: #767370;
-    background: linear-gradient(180deg, #767370 0%, #767370 13.99%, #767370 14%, #f27c0e 49.9%, #f27c0e 50%, #f27c0e 62%, #f27c0e 75%, #767370 96%);
+    background: 180deg, #767370;
     overflow-x: hidden;
   }
   .spaceSaver {
@@ -77,7 +77,7 @@
     margin: 1rem;
     max-width: 100%;
     max-height: fit-content;
-    background: linear-gradient(180deg, #f27c0e 0%, #f4c857 100%);
+    background: linear-gradient(180deg, #f0c147 0%, #f4c857 100%);
   }
   .formContainer {
     display: grid;
