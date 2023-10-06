@@ -41,7 +41,6 @@
     transform: scale(1.01);
     border: 0.01rem solid white;
     border-top: unset;
-    box-shadow: 0 0 1rem -0.05rem rgb(248, 248, 248);
   }
 
   .NavBar .MobileNavigation .Hamburger {
@@ -103,17 +102,17 @@
     color: white;
     text-shadow: 0.12rem 0.12rem 2.5rem;
     white-space: nowrap;
-    padding: 0.3rem 0.7rem;
+
     transition: all 0.3s ease;
     cursor: pointer;
-    border-radius: 0.35rem;
+    border-radius: 0.15rem;
     text-decoration: none;
     width: fit-content;
     transition: all 0.3s ease;
-    padding: 0rem 1rem;
+    padding: 0.5rem 3rem;
   }
   .navLink:hover {
-    color: #ed7a0e;
+    border: 0.01rem solid rgba(255, 255, 255, 0.58);
   }
   .navLink:hover {
   }

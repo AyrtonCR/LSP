@@ -45,8 +45,8 @@
     display: grid;
     margin-top: 3rem;
     text-align: center;
-    color: rgb(37, 37, 37);
-    text-shadow: 0.12rem 0.12rem 2rem;
+    color: rgb(255, 255, 255);
+
     border-bottom: 0.07rem solid #393e46;
     margin-bottom: 0;
     font-size: 1.8rem;
