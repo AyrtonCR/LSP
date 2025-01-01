@@ -3,10 +3,13 @@ const app = require("./app");
 const mongoose = require("mongoose");
 
 // This is the connection to the hosted Mongo Atlas Database //
-mongoose.connect("mongodb+srv://auth-user:auth-password@lsp.slfpy.mongodb.net/lsp?retryWrites=true&w=majority", {
+mongoose.connect("mongodb://surfing:rocks@mongo:27017/lsp?authSource=admin", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+// This is the Mongo Atlas DB that stopped working
+// mongodb+srv://auth-user:auth-password@lsp.slfpy.mongodb.net/lsp?retryWrites=true&w=majority //
 
 // This is the old connection for local database //
 // mongodb://surfing:rocks@mongo:27017/lsp?authSource=admin //
