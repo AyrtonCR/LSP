@@ -3,7 +3,7 @@ const app = require("./app");
 const mongoose = require("mongoose");
 
 // This is the connection to the hosted Mongo Atlas Database //
-mongoose.connect("mongodb+srv://surfing:rocks@lsp-cluster.sdi2n.mongodb.net/", {
+mongoose.connect("mongodb+srv://surfing:rocks@lsp-cluster.sdi2n.mongodb.net/lsp?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
