@@ -45,7 +45,8 @@ services:
       - key: API_PORT
         value: 80
       - key: DATABASE_URL
-        value: mongodb://surfing:rocks@mongo:27017/lsp?authSource=admin
+        # value: mongodb://surfing:rocks@mongo:27017/lsp?authSource=admin
+        value: mongodb+srv://surfing:rocks@lsp-cluster.sdi2n.mongodb.net/
     plan: free
   - type: pserv
     name: lsp-mongodb
