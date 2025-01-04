@@ -1,5 +1,6 @@
 services:
   - type: web
+    runtime: static
     name: lsp-client
     rootDir: client
     buildCommand: npm run build
@@ -36,6 +37,7 @@ services:
           name: api
           envVarKey: RENDER_EXTERNAL_AUTH0_DOMAIN
 
+
   - type: web
     name: lsp-api
     runtime: docker
@@ -45,10 +47,9 @@ services:
       - key: API_PORT
         value: 80
       - key: DATABASE_URL
-        # value: mongodb://surfing:rocks@mongo:27017/lsp?authSource=admin
-        # value: mongodb+srv://surfing:rocks@lsp-cluster.sdi2n.mongodb.net/
         value: mongodb+srv://surfing:rocks@lsp-cluster.sdi2n.mongodb.net/lsp?authSource=admin
     plan: free
+    
   - type: pserv
     name: lsp-mongodb
     runtime: docker
@@ -57,3 +58,9 @@ services:
       name: data
       mountPath: /data/db
       sizeGB: 10
+
+
+
+
+        # value: mongodb://surfing:rocks@mongo:27017/lsp?authSource=admin
+        # value: mongodb+srv://surfing:rocks@lsp-cluster.sdi2n.mongodb.net/
