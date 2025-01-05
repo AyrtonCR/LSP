@@ -1,11 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://surfing:rocks@lsp-cluster.sdi2n.mongodb.net/lsp?retryWrites=true&w=majority", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-mongoose.set("strictQuery", false);
+const mongooseConnectionImport = ("./server.js");
 const { celebrate, Joi, errors, Segments } = require("celebrate");
 const SurfbreakModel = require("./models/SurfbreakModel");
 const SurfboardModel = require("./models/SurfboardModel");

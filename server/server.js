@@ -10,7 +10,11 @@ mongoose.connect("mongodb+srv://surfing:rocks@lsp-cluster.sdi2n.mongodb.net/lsp?
 });
 
 
-const mongooseConnectionString = ""
+const MongooseConnectionString = mongoose.connect("mongodb+srv://surfing:rocks@lsp-cluster.sdi2n.mongodb.net/lsp?retryWrites=true&w=majority", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 // Making change
 // This is the Mongo Atlas DB that stopped working
 // mongodb+srv://auth-user:auth-password@lsp.slfpy.mongodb.net/lsp?retryWrites=true&w=majority 
@@ -21,3 +25,5 @@ const mongooseConnectionString = ""
 app.listen(port, () => {
   console.log(`API server started at http://localhost:${port}`);
 });
+
+export default MongooseConnectionString;
