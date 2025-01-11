@@ -8,9 +8,8 @@ const ForecastModel = require("./models/ForecastModel");
 const ForumModel = require("./models/ForumModel");
 const FormatForum = require("./formatForum");
 const cors = require("cors");
-import MongooseConnectionString from ("./server")
 
-MongooseConnectionString()
+
 
 app.use(cors());
 app.use(express.json());

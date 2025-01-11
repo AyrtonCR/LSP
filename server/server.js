@@ -25,5 +25,3 @@ const MongooseConnectionString = mongoose.connect("mongodb+srv://surfing:rocks@l
 app.listen(port, () => {
   console.log(`API server started at http://localhost:${port}`);
 });
-
-export default MongooseConnectionString;
